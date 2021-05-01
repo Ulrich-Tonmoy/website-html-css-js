@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+}
+
+header{
+    background-image: url("bg.png");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+a{
+    color:  white;
+    text-decoration: none;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 1rem;
+    width: 1000px;
+    max-width: 100%;
+}
+
+.pre-nav{
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    color: #026e78;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li{
+    flex: 1 auto;
+}
+
+nav li a{
+    padding: 1rem 2rem;
+    display: block;
+    background-color: #2d99a4;
+    text-align: center;
+}
+
+nav a.active{
+    background-color: white;
+    color: #026e78;
+    font-weight: bold;
+}
+
+nav a.highlight{
+    background-color: #026e78;
+    color: white;
+}
+
+nav a:hover{
+    opacity: 0.7;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 2rem;
+    margin-top: 5rem;
+}
+
+.content h1{
+    background-color: #026e78;
+    color: white;
+    display: inline-block;
+    padding: 1rem;
+    font-weight: 300;
+}
+
+.book-table{
+    background-color: white;
+    color: #2d99a4;
+    padding: 1rem;
+}
+.menu{
+    background-color: #2d99a4;
+    color: white;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    .pre-nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content {
+        font-size: 1.5rem;
+    }
+}

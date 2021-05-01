@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    font-family: "Prata", sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+aside{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1.5rem;
+    width: 15%;
+    height: 100vh;
+}
+
+aside ul{
+    padding: 0;
+    list-style-type: none;
+}
+
+aside a{
+    color: white;
+    display: inline-block;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin: 1rem;
+}
+
+aside a.active{
+    opacity: 0.5;
+}
+
+.special{
+    background-color: #deab51;
+    color: black;
+    display: block;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+main{
+    color: white;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+main h1{
+    margin: 0;
+}
+
+main h3{
+    color: #feab51;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    body{
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    }
+
+    main{
+        min-height: 80vh;
+    }
+
+    aside{
+        height: 15%;
+        width: 100%;
+    }
+
+    aside ul{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* .special{
+        display: none;
+    } */
+}
