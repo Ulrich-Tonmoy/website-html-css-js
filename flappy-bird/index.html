@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+</head>
+
+<body style="height: 100vh; background: #111; text-align: center;
+        background-image: url('bg.jpg');">
+    <canvas id="c" width="400" height="400"></canvas>
+    <script>
+        context = c.getContext('2d');
+        const bird = new Image();
+        bird.src = "bird.png"
+        birdX = 0;
+        birdY = 200;
+        birdYS = 0;
+        interval = 24;
+        birdSize = 24;
+        canvasSize = 400;
+        pipeX = 400;
+        pipeWidth = 24;
+        pipeGap = 200;
+        topPipeBotY = 24;
+        score = 0;
+        bestScore = 0;
+        c.onclick = () => (birdYS = 9)
+        setInterval(() => {
+            context.fillStyle = "skyblue";
+            context.fillRect(0, 0, canvasSize, canvasSize); // sky
+            birdY -= birdYS -= 0.5; // gravity
+            context.drawImage(bird, birdX, birdY, birdSize * (524 / 374), birdSize)
+            context.fillStyle = "green"
+            pipeX -= 8;
+            pipeX < -pipeWidth && ((pipeX = canvasSize), (topPipeBotY = pipeGap * Math.random()));
+            context.fillRect(pipeX, 0, pipeWidth, topPipeBotY) // draw pipe top
+            context.fillRect(pipeX, topPipeBotY + pipeGap, pipeWidth, canvasSize) // draw pipe BOT
+            context.fillStyle = "black";
+            context.fillText(score++, 9, 25);
+            bestScore = bestScore < score ? score : bestScore;
+            context.fillText(`Best Score: ${bestScore}`, 9, 50);
+            (((birdY < topPipeBotY || birdY > topPipeBotY + pipeGap) && pipeX < birdSize * (524 / 374)) // bird hit the pipe
+                || birdY > canvasSize) // bird fall of the screen
+                && ((birdYS = 0), (birdY = 200), (pipeX = canvasSize), (score = 0));
+        }, interval)
+    </script>
+</body>
+
+</html>
