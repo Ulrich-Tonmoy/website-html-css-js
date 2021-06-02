@@ -1,23 +1,27 @@
-.container-1, .container-2{
+.container-1,
+.container-2 {
     border: 1px solid black;
     width: 80%;
     margin: 0 auto;
     text-align: center;
 }
-.flex-box-container-1, .flex-box-container-2{
+
+.flex-box-container-1,
+.flex-box-container-2 {
     display: flex;
-    border: 1px solid black;
     padding: 10px;
+    border: 1px solid black;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.flex-box-container-1 div{
+
+.flex-box-container-1 div {
     display: flex;
     padding: 10px;
-    border: 1px solid black;
     align-items: center;
 }
-.flex-box-container-2 img{
+
+.flex-box-container-2 img {
     margin: 10px;
     box-shadow: 0px 10px 50px rgba(0, 0, 0, 7);
 }
