@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Finder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <form id="form">
+            <input type="text" id="search" placeholder="Search" class="search" />
+        </form>
+        <button class="home">
+            <h2>Movie Finder</h2>
+        </button>
+        <h1 id="page-no"></h1>
+    </header>
+    <main></main>
+    <button id="top-btn" class="top-btn"><i class="fas fa-arrow-alt-circle-up"></i></button>
+    <div class="btn">
+        <form id="goto-page-no-form">
+            <input type="number" placeholder="Go to page" class="goto-page-no" />
+        </form>
+        <button class="prev hidden"><i class="fas fa-angle-double-left"> Previous</i></button>
+        <button class="next">Next <i class="fas fa-angle-double-right"></i></button>
+    </div>
+</body>
+
+</html>

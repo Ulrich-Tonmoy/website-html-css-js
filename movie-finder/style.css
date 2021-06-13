@@ -1,0 +1,212 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #22254b;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #373b69;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+}
+
+.search {
+    background-color: transparent;
+    border: 2px solid #22254b;
+    border-radius: 50px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.search::placeholder {
+    color: #7378c5;
+}
+
+.search:focus {
+    background-color: #22254b;
+    outline: none;
+}
+
+h2 {
+    background-color: #7378c5;
+    border-radius: 10px;
+    color: #fff;
+    font-family: inherit;
+    padding: 0.5rem;
+    margin: 0;
+    position: absolute;
+    left: 45%;
+    top: 0;
+    font-size: 1.5rem;
+}
+
+h1 {
+    background-color: #7378c5;
+    border-radius: 10px;
+    color: #fff;
+    font-family: inherit;
+    padding: 0.5rem;
+    position: absolute;
+    left: 1rem;
+    top: 0.1rem;
+    font-size: 1rem;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie {
+    background-color: #373b69;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    margin: 1rem 2rem;
+    width: 300px;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin: 0;
+}
+
+.movie-info span {
+    background-color: #22254b;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+}
+
+.movie-info span.green {
+    color: rgb(39, 189, 39);
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: rgb(189, 42, 42);
+}
+
+.overview {
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.overview h3 {
+    margin-top: 0;
+}
+
+.movie:hover .overview {
+    transform: translateY(0);
+}
+
+.btn {
+    position: absolute;
+    right: 1rem;
+    font-size: 1rem;
+    padding: 1rem;
+
+    display: flex;
+}
+
+.btn.hidden {
+    display: none;
+}
+
+button {
+    background-color: transparent;
+    border: 2px solid #373b69;
+    border-radius: 50px;
+    color: #fff;
+    font-family: inherit;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+button:hover {
+    background-color: #7378c5;
+}
+
+button.hidden {
+    display: none;
+}
+
+.goto-page-no {
+    background-color: #373b69;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    margin-right: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.goto-page-no::placeholder {
+    color: #7378c5;
+}
+
+/* Remove Arrows/Spinners Chrome, Safari, Edge, Opera */
+.goto-page-no::-webkit-outer-spin-button,
+.goto-page-no::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove Arrows/Spinners Firefox */
+.goto-page-no[type=number] {
+    -moz-appearance: textfield;
+}
+
+.top-btn {
+    display: none;
+    position: fixed;
+    bottom: 70px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #7378c5;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
+
+.top-btn:hover {
+    background-color: #555;
+}
