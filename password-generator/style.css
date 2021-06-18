@@ -91,6 +91,11 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+    .pw-container {
+        min-width: 300px;
+        max-width: 350px;
+    }
+
     .pw button {
         opacity: 1;
         transform: translate(0, 0%);
