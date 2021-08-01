@@ -1,0 +1,110 @@
+.search-entry {
+    @include flexColumn;
+    padding-top: 40px;
+
+    .logo {
+        letter-spacing: -5px;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+
+        @include mq(768px) {
+            font-size: 4rem;
+            letter-spacing: -10px;
+        }
+    }
+
+    .search-bar {
+        width: 90vw;
+        display: flex;
+        border: 2px solid $search-bar-border;
+        border-radius: 400px;
+        padding: 0 0.5rem;
+
+        @include mq(768px) {
+            width: 80vw;
+            padding: 0 1rem;
+        }
+
+        @include mq(1025px) {
+            width: 50vw;
+        }
+
+        input[type="text"] {
+            flex-grow: 1;
+            font-size: 0.75rem;
+            text-align: left;
+            letter-spacing: 0.1rem;
+            border: 0;
+            outline: none;
+            min-width: 150px;
+
+            @include mq(768px) {
+                font-size: 1.25rem;
+            }
+        }
+
+        .button {
+            cursor: pointer;
+            border: 0;
+            background: transparent;
+            min-width: 48px;
+            min-height: 48px;
+            outline: none;
+
+            i {
+                font-family: "Font Awesome 5 Free";
+                font-size: 1rem;
+
+                @include mq(768px) {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .button:hover,
+        .button:focus {
+            i {
+                padding-bottom: 0.5rem;
+                border-bottom-width: 1px;
+                border-bottom-style: solid;
+            }
+        }
+
+        .search-button:hover,
+        .search-button:focus {
+            i {
+                color: $logo-green;
+            }
+        }
+
+        .clear:hover,
+        .clear:focus {
+            i {
+                color: $logo-red;
+            }
+        }
+
+        .search-button {
+            @include mq(768px) {
+                padding-left: 1rem;
+            }
+        }
+
+        .clear {
+            justify-content: center;
+            align-items: center;
+            color: $stats-color;
+            border-right: thin solid $clear-button-color;
+
+            @include mq(768px) {
+                padding: 0 1rem;
+            }
+        }
+    }
+
+    .search-bar:hover,
+    .search-bar:focus-within {
+        box-shadow: 0 2px 5px 2px $search-bar-border;
+    }
+}
