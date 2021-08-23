@@ -1,11 +1,14 @@
-const toggleBtn = document.querySelector('.sidebar-toggle');
-const closeBtn = document.querySelector('.close-btn');
-const sidebar = document.querySelector('.sidebar');
+let arrow = document.querySelectorAll(".arrow");
+let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".bx-menu");
 
-toggleBtn.addEventListener('click', function () {
-    sidebar.classList.toggle('show-sidebar');
-})
+for (var i = 0; i < arrow.length; i++) {
+    arrow[i].addEventListener("click", (e) => {
+        let arrowParent = e.target.parentElement.parentElement;
+        arrowParent.classList.toggle("showMenu");
+    });
+}
 
-closeBtn.addEventListener('click', function () {
-    sidebar.classList.remove('show-sidebar');
-})
+sidebarBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("close");
+});

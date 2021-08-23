@@ -1,72 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sidebar</title>
-  <!-- font-awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-
-  <!-- styles -->
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-  <button class="sidebar-toggle">
-    <i class="fas fa-bars"></i>
-  </button>
-  <aside class="sidebar">
-    <div class="sidebar-header">
-      <img src="logo.svg" class="logo" alt="" />
-      <button class="close-btn"><i class="fas fa-times"></i></button>
-    </div>
-    <!-- links -->
-    <ul class="links">
-      <li>
-        <a href="#">home</a>
-      </li>
-      <li>
-        <a href="#">about</a>
-      </li>
-      <li>
-        <a href="#">projects</a>
-      </li>
-      <li>
-        <a href="#">contact</a>
-      </li>
-    </ul>
-    <!-- social media -->
-    <ul class="social-icons">
-      <li>
-        <a href="https://www.facebook.com">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.twitter.com">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.behance.net">
-          <i class="fab fa-behance"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com">
-          <i class="fab fa-linkedin"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.sketch.com">
-          <i class="fab fa-sketch"></i>
-        </a>
-      </li>
-    </ul>
-  </aside>
-  <!-- javascript -->
-  <script src="app.js"></script>
-</body>
-
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <link href="style.css" rel="stylesheet" />
+        <title>Sidebar</title>
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="logo-details">
+                <i class="bx bx-code-block"></i>
+                <span class="logo-name">UlrichTonmoy</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="#">
+                        <i class="bx bx-grid-alt"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link-name" href="#">Dashboard</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="icon-link">
+                        <a href="#">
+                            <i class="bx bx-collection"></i>
+                            <span class="link-name">Category</span>
+                        </a>
+                        <i class="bx bxs-chevron-down arrow"></i>
+                    </div>
+                    <ul class="sub-menu">
+                        <li><a class="link-name" href="#">Category</a></li>
+                        <li><a href="#">Html and Css</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">C# PhP MySQL</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="icon-link">
+                        <a href="#">
+                            <i class="bx bx-book-alt"></i>
+                            <span class="link-name">Posts</span>
+                        </a>
+                        <i class="bx bxs-chevron-down arrow"></i>
+                    </div>
+                    <ul class="sub-menu">
+                        <li><a class="link-name" href="#">Posts</a></li>
+                        <li><a href="#">Web Design</a></li>
+                        <li><a href="#">Game Design</a></li>
+                        <li><a href="#">Ml Model Design</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bx bx-pie-chart-alt-2"></i>
+                        <span class="link-name">Analytics</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link-name" href="#">Analytics</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bx bx-line-chart"></i>
+                        <span class="link-name">Chart</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link-name" href="#">Chart</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="icon-link">
+                        <a href="#">
+                            <i class="bx bx-plug"></i>
+                            <span class="link-name">Plugins</span>
+                        </a>
+                        <i class="bx bxs-chevron-down arrow"></i>
+                    </div>
+                    <ul class="sub-menu">
+                        <li><a class="link-name" href="#">Plugins</a></li>
+                        <li><a href="#">UI Face</a></li>
+                        <li><a href="#">Box Icons</a></li>
+                        <li><a href="#">Pigments</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bx bx-compass"></i>
+                        <span class="link-name">Explore</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link-name" href="#">Explore</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bx bx-history"></i>
+                        <span class="link-name">History</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link-name" href="#">History</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="bx bx-cog"></i>
+                        <span class="link-name">Settings</span>
+                    </a>
+                    <ul class="sub-menu blank">
+                        <li><a class="link-name" href="#">Settings</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="profile-details">
+                        <div class="profile-content">
+                            <img src="profile.png" alt="profile" />
+                        </div>
+                        <div class="profile-name-job">
+                            <div class="profile-name">Ulrich</div>
+                            <div class="profile-job">Web Designer</div>
+                        </div>
+                        <i class="bx bx-log-out"></i>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <section class="home-section">
+            <div class="home-content">
+                <i class="bx bx-menu"></i>
+                <span class="text">Dropdown Sidebar</span>
+            </div>
+        </section>
+        <script src="app.js"></script>
+    </body>
 </html>
