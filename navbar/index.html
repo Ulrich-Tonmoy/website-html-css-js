@@ -1,73 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+        <title>Navbar</title>
+    </head>
+    <body>
+        <nav>
+            <div class="navbar">
+                <i class="bx bx-menu"></i>
+                <div class="logo"><a href="#">UlrichTonmoy</a></div>
+                <div class="nav-links">
+                    <div class="sidebar-logo">
+                        <span class="logo-name">UlrichTonmoy</span>
+                        <i class="bx bx-x"></i>
+                    </div>
+                    <ul class="links">
+                        <li><a href="#">Home</a></li>
+                        <li>
+                            <a href="#">Html and Css</a>
+                            <i
+                                class="bx bxs-chevron-down arrow htmlcss-arrow"
+                            ></i>
+                            <ul class="htmlcss-sub-menu sub-menu">
+                                <li><a href="#">Web Design</a></li>
+                                <li><a href="#">Login Form</a></li>
+                                <li><a href="#">Card Design</a></li>
+                                <li class="more">
+                                    <a href="#">More</a>
+                                    <i
+                                        class="
+                                            bx
+                                            bxs-chevron-right
+                                            arrow
+                                            more-arrow
+                                        "
+                                    ></i>
+                                    <ul class="more-sub-menu sub-menu">
+                                        <li>
+                                            <a href="#">Dynamic Calculator</a>
+                                        </li>
+                                        <li><a href="#">Form Validation</a></li>
+                                        <li><a href="#">Calender</a></li>
+                                        <li><a href="#">Digital Clock</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">JavaScript</a>
+                            <i class="bx bxs-chevron-down arrow js-arrow"></i>
+                            <ul class="js-sub-menu sub-menu">
+                                <li><a href="#">Dynamic Calculator</a></li>
+                                <li><a href="#">Form Validation</a></li>
+                                <li><a href="#">Calender</a></li>
+                                <li><a href="#">Digital Clock</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        js
+                    </ul>
+                </div>
+                <div class="search-box">
+                    <i class="bx bx-search"></i>
+                    <div class="input-box">
+                        <input type="text" placeholder="Search..." />
+                    </div>
+                </div>
+            </div>
+        </nav>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Navbar</title>
-  <!-- font-awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-
-  <!-- styles -->
-  <link rel="stylesheet" href="styles.css" />
-</head>
-
-<body>
-  <nav>
-    <div class="nav-center">
-      <div class="nav-header">
-        <img src="logo.svg" class="logo" alt="logo" />
-        <button class="nav-toggle">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-      <!-- links -->
-      <ul class="links">
-        <li>
-          <a href="#">home</a>
-        </li>
-        <li>
-          <a href="#">about</a>
-        </li>
-        <li>
-          <a href="#">projects</a>
-        </li>
-        <li>
-          <a href="#">contact</a>
-        </li>
-      </ul>
-      <!-- social media -->
-      <ul class="social-icons">
-        <li>
-          <a href="https://www.facebook.com">
-            <i class="fab fa-facebook"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.behance.net">
-            <i class="fab fa-behance"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.sketch.com">
-            <i class="fab fa-sketch"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <!-- javascript -->
-  <script src="app.js"></script>
-</body>
-
+        <script src="app.js"></script>
+    </body>
 </html>
