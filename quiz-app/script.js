@@ -98,6 +98,24 @@ submitBtn.addEventListener("click", () => {
         else {
             quiz.innerHTML = `<h2 class="quiz">You answer correctly ${score}/${quizData.length}.</h2>
             <button onClick="location.reload()">Retake</button>`;
+            setInterval(createHeart, 300);
         }
     }
 });
+
+// heart rain
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+
+    heart.innerText = "💜";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}
