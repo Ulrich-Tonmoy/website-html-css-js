@@ -1,0 +1,148 @@
+:root {
+  --clr-orange: 7 100% 63%;
+  --clr-blue: 239 100% 50%;
+
+  --spacer: 2rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  padding: var(--spacer);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  margin-bottom: 1em;
+  font-size: clamp(2rem, 5vw + 1rem, 4rem);
+  line-height: 1.1;
+  color: hsl(var(--clr-orange));
+  text-shadow: 0.05em 0.05em 0 hsl(0 0% 0% / 0.7);
+}
+
+.cards {
+  display: grid;
+  gap: var(--spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  place-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacer);
+  max-width: 35ch;
+  border-radius: 0.25em;
+  color: white;
+  box-shadow: 0 0 3rem hsl(0 0 0 / 0.2);
+}
+
+.card > * + * {
+  margin-top: calc(var(--spacer) / 2);
+}
+
+.card__title {
+  line-height: 1;
+  margin-bottom: max(3rem, 10vmin);
+}
+
+.card p {
+  margin-top: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  border-radius: 0.25em;
+  background: hsl(var(--clr-orange));
+  background-size: cover;
+
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.increased-legibility {
+  background-image: url(https://images.unsplash.com/photo-1627503218607-0626b62bc1a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTYyOTgyOTg3Nw&ixlib=rb-1.2.1&q=80&w=400);
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.increased-legibility::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(0deg, rgb(0 0 0 / 0.7), rgb(0 0 0 / 0));
+}
+
+.card-funky-image {
+  overflow: hidden;
+  position: relative;
+}
+
+.card-funky-image img {
+  position: absolute;
+  z-index: -3;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-funky-image::before,
+.card-funky-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+.card-funky-image::before {
+  z-index: -1;
+  background: hsl(var(--clr-orange));
+  mix-blend-mode: multiply;
+}
+.card-funky-image::after {
+  z-index: -2;
+  background: hsl(var(--clr-blue));
+  mix-blend-mode: screen;
+}
+
+.gradient-shadow {
+  background: linear-gradient(
+    45deg,
+    hsl(var(--clr-orange)),
+    hsl(var(--clr-blue))
+  );
+  box-shadow: 0;
+  position: relative;
+  isolation: isolate;
+}
+
+.gradient-shadow::before,
+.gradient-shadow::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: inherit;
+}
+
+.gradient-shadow::before {
+  filter: blur(0.75em);
+}
+
+.gradient-shadow::after {
+  opacity: 0.5;
+  filter: blur(2em);
+}
