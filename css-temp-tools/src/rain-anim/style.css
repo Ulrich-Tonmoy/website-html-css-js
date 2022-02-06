@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+}
+
+i {
+    position: absolute;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    animation: rain 5s linear infinite;
+}
+
+i:nth-child(3n + 1) {
+    background: linear-gradient(transparent, #0ff);
+}
+i:nth-child(3n + 2) {
+    background: linear-gradient(transparent, #0f0);
+}
+i:nth-child(3n + 3) {
+    background: linear-gradient(transparent, #f00);
+}
+
+@keyframes rain {
+    0% {
+        transform: translateY(-200px);
+    }
+    100% {
+        transform: translateY(calc(100vh + 200px));
+    }
+}
