@@ -3,7 +3,10 @@ const textEl = document.querySelector("[data-text]");
 const lang = "eng";
 
 async function setup() {
-    const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+    const stream = await navigator.mediaDevices.getUserMedia({
+        video: true,
+        facingMode: "environment",
+    });
     video.srcObject = stream;
 
     video.addEventListener("playing", async () => {
