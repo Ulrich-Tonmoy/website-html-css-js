@@ -5,7 +5,7 @@ const lang = "eng";
 async function setup() {
     const stream = await navigator.mediaDevices.getUserMedia({
         video: true,
-        facingMode: "environment",
+        facingMode: { exact: "environment" },
     });
     video.srcObject = stream;
 
