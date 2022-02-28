@@ -16,8 +16,7 @@ async function setup() {
         canvas.width = video.width;
         canvas.height = video.height;
 
-        document.addEventListener("keypress", async (e) => {
-            if (e.code !== "Space") return;
+        document.addEventListener("click", async (e) => {
             canvas.getContext("2d").drawImage(video, 0, 0, video.width, video.height);
             const {
                 data: { text },
