@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222327;
+}
+
+.list {
+    display: flex;
+    gap: 6px;
+}
+
+.list .user {
+    position: relative;
+    background: #fff;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.list .user .imgBx {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.list .user .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.list .user .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.list .user .details h3 {
+    font-weight: 1.1em;
+}
+
+.list .user .details p {
+    font-weight: 500;
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.nav {
+    position: relative;
+    width: 40px;
+    height: 70px;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav.active {
+    width: 200px;
+}
+
+.nav span {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #222327;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border: 3px solid #222327;
+}
+
+.nav span:nth-child(1) {
+    transform: translateY(-12px);
+}
+
+.nav span:nth-child(3) {
+    transform: translateY(12px);
+}
+
+.nav.active span {
+    width: 50px;
+    height: 50px;
+    transition: 0.5s;
+}
+
+.nav.active span:nth-child(1) {
+    transform: translateY(0) translateX(-60px);
+}
+
+.nav.active span:nth-child(3) {
+    transform: translateY(0) translateX(60px);
+}
+
+.nav span i {
+    display: none;
+    /* font-size: 0em; */
+    transition: 0.5s;
+}
+
+.nav.active span i {
+    color: #fff;
+    display: flex;
+    font-size: 1.25em;
+}
+
+.nav.active span:hover {
+    background: #29fd53;
+}
+
+.nav.active span:hover i {
+    color: #222327;
+}
