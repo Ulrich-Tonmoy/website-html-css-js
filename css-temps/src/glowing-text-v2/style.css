@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h2 {
+    display: flex;
+    color: transparent;
+    font-size: 5vw;
+    color: #0e3742;
+    -webkit-box-reflect: below -42px linear-gradient(transparent, #0004);
+}
+
+h2 span {
+    animation: glow 5s linear infinite;
+}
+h2 span:nth-child(even) {
+    animation-delay: 0.4s;
+}
+@keyframes glow {
+    0%,
+    18%,
+    20%,
+    50.1%,
+    60%,
+    65.1%,
+    80%,
+    90.1%,
+    92% {
+        color: #0e3742;
+        text-shadow: none;
+    }
+    18.1%,
+    20.1%,
+    30%,
+    50%,
+    60.1%,
+    65%,
+    80.1%,
+    90%,
+    92.1%,
+    100% {
+        color: #fff;
+        text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4, 0 0 80px #03bcf4,
+            0 0 160px #03bcf4, 0 0 400px #03bcf4;
+    }
+}
