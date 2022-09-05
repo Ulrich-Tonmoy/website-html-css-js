@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+.circle {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+.circle span {
+    position: absolute;
+    inset: 0;
+    transform: rotate(calc(45deg * var(--i)));
+}
+.circle span:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100px) scale(0.75);
+    width: 250px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background: url(images/off.png);
+    animation: animate 2s steps(1) infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes animate {
+    0%,
+    100% {
+        background: url(images/off.png);
+    }
+    50% {
+        background: url(images/on.png);
+    }
+}
