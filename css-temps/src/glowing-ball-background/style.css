@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0c192c;
+}
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.bubbles {
+    position: relative;
+    display: flex;
+}
+.bubbles span {
+    position: relative;
+    min-width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    box-shadow: 0 0 0 10px #4fc3dc44, 0 0 40px #4fc3dc, 0 0 70px #4fc3dc, 0 0 100px #4fc3dc,
+        0 0 130px #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(75s / var(--i));
+}
+.bubbles span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544, 0 0 40px #ff2d75, 0 0 70px #ff2d75, 0 0 100px #ff2d75,
+        0 0 130px #ff2d75;
+}
+.bubbles span:nth-child(4),
+.bubbles span:nth-child(6),
+.bubbles span:nth-child(9) {
+    background: #2dff5a;
+    box-shadow: 0 0 0 10px #2dff5a44, 0 0 40px #2dff5a, 0 0 70px #2dff5a, 0 0 100px #2dff5a,
+        0 0 130px #2dff5a;
+}
+.bubbles span:nth-child(5),
+.bubbles span:nth-child(10),
+.bubbles span:nth-child(15) {
+    background: #f1ff2d;
+    box-shadow: 0 0 0 10px #f1ff2d44, 0 0 40px #f1ff2d, 0 0 70px #f1ff2d, 0 0 100px #f1ff2d,
+        0 0 130px #f1ff2d;
+}
+.bubbles span:nth-child(14),
+.bubbles span:nth-child(19),
+.bubbles span:nth-child(21) {
+    background: #2d99ff;
+    box-shadow: 0 0 0 10px #2d99ff44, 0 0 40px #2d99ff, 0 0 70px #2d99ff, 0 0 100px #2d99ff,
+        0 0 130px #2d99ff;
+}
+.bubbles span:nth-child(16),
+.bubbles span:nth-child(24),
+.bubbles span:nth-child(28) {
+    background: #922dff;
+    box-shadow: 0 0 0 10px #922dff44, 0 0 40px #922dff, 0 0 70px #922dff, 0 0 100px #922dff,
+        0 0 130px #922dff;
+}
+.bubbles span:nth-child(20),
+.bubbles span:nth-child(30),
+.bubbles span:nth-child(34) {
+    background: #2d30ff;
+    box-shadow: 0 0 0 10px #2d30ff44, 0 0 40px #2d30ff, 0 0 70px #2d30ff, 0 0 100px #2d30ff,
+        0 0 130px #2d30ff;
+}
+.bubbles span:nth-child(8),
+.bubbles span:nth-child(34),
+.bubbles span:nth-child(31) {
+    background: #2dffd5;
+    box-shadow: 0 0 0 10px #2dffd544, 0 0 40px #2dffd5, 0 0 70px #2dffd5, 0 0 100px #2dffd5,
+        0 0 130px #2dffd5;
+}
+.bubbles span:nth-child(29),
+.bubbles span:nth-child(12),
+.bubbles span:nth-child(36) {
+    background: #99ff2d;
+    box-shadow: 0 0 0 10px #99ff2d44, 0 0 40px #99ff2d, 0 0 70px #99ff2d, 0 0 100px #99ff2d,
+        0 0 130px #99ff2d;
+}
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10vh) scale(1);
+    }
+}
