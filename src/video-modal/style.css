@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body
+{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+  cursor: pointer;
+}
+.btn .play 
+{
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #f42e79;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  box-shadow: 0 15px 25px #f42e7966;
+}
+.btn.active .play
+{
+  box-shadow: 0 0 0 150vh #f42e79;
+}
+.play::before 
+{
+  content: '';
+  position: absolute;
+  border: 25px solid #fff;
+  border-top: 15px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 15px solid transparent;
+  transform: translateX(5px);
+}
+.btn p 
+{
+  font-weight: 500;
+  font-size: 1em;
+  color: #888;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.clip
+{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(0);
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+.clip.active
+{
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.5s;
+  transform: translate(-50%,-50%) scale(1);
+}
+.clip video
+{
+  max-width: 900px;
+  outline: none;
+  border: 10px solid #fff;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+.clip .close
+{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1em;
+  color: #fff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+@media (max-width: 991px)
+{
+  .clip video
+  {
+    max-width: 90%;
+  }
+}
