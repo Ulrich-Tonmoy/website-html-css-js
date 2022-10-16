@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Loading</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="loader">
+            <div class="text">
+                <p>Neumorphism Gradient Loading Animation Effects -</p>
+            </div>
+            <span>
+                <i></i>
+            </span>
+        </div>
+        <script>
+            const text = document.querySelector(".text p");
+            text.innerHTML = text.innerText
+                .split("")
+                .map((char, i) => `<b style="transform:rotate(${i * 7.35}deg)">${char}</b>`)
+                .join("");
+        </script>
+    </body>
+</html>
