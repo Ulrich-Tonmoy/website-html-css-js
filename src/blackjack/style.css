@@ -1,0 +1,46 @@
+body {
+    background-image: url('images/bg.jpg');
+    color: white;
+}
+
+.container {
+    /* border: 1px solid black; */
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.flex-blackjack-row-1,
+.flex-blackjack-row-2,
+.flex-blackjack-row-3 {
+    background-image: url('images/board.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.flex-blackjack-row-1 div {
+    border: 1px solid black;
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+    height: 56vh;
+}
+
+.flex-blackjack-row-1 img {
+    width: 18%;
+    padding: 10px;
+}
+
+table,
+th,
+td {
+    padding: 5px;
+    border: 1px solid black;
+}
