@@ -1,0 +1,255 @@
+.wobbling-1 {
+    width: 120px;
+    height: 20px;
+    background: linear-gradient(#000 0 0) left/20px 20px no-repeat #ddd;
+    animation: w1 1s infinite linear;
+}
+@keyframes w1 {
+    50% {
+        background-position: right;
+    }
+}
+
+.wobbling-2 {
+    width: 120px;
+    height: 20px;
+    border-radius: 20px;
+    background: radial-gradient(farthest-side, orange 94%, #0000) left/20px 20px no-repeat lightblue;
+    animation: w2 1s infinite linear;
+}
+@keyframes w2 {
+    50% {
+        background-position: right;
+    }
+}
+
+.wobbling-3 {
+    width: 120px;
+    height: 22px;
+    border-radius: 40px;
+    color: #514b82;
+    border: 2px solid;
+    position: relative;
+}
+.wobbling-3::before {
+    content: "";
+    position: absolute;
+    margin: 2px;
+    width: 25%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    background: currentColor;
+    animation: w3 1s infinite linear;
+}
+@keyframes w3 {
+    50% {
+        left: 100%;
+        transform: translateX(calc(-100% - 4px));
+    }
+}
+
+.wobbling-4 {
+    width: 20px;
+    height: 20px;
+    background: #25b09b;
+    box-shadow: 0 0 60px 15px #25b09b;
+    transform: translate(-80px);
+    clip-path: inset(0);
+    animation: w4-1 0.5s ease-in-out infinite alternate, w4-2 1s ease-in-out infinite;
+}
+
+@keyframes w4-1 {
+    100% {
+        transform: translateX(80px);
+    }
+}
+
+@keyframes w4-2 {
+    33% {
+        clip-path: inset(0 0 0 -100px);
+    }
+    50% {
+        clip-path: inset(0 0 0 0);
+    }
+    83% {
+        clip-path: inset(0 -100px 0 0);
+    }
+}
+
+.wobbling-5 {
+    width: 120px;
+    height: 20px;
+    clip-path: polygon(
+        10px 0,
+        calc(100% - 10px) 0,
+        100% 50%,
+        calc(100% - 10px) 100%,
+        10px 100%,
+        0 50%
+    );
+    background: conic-gradient(from 135deg at top, #f03355 90deg, #0000 0) top left,
+        conic-gradient(from -45deg at bottom, #f03355 90deg, #0000 0) bottom left, #ccc;
+    background-size: 20px 50%;
+    background-repeat: no-repeat;
+    animation: w5 1s infinite linear;
+}
+@keyframes w5 {
+    50% {
+        background-position: top right, bottom right;
+    }
+}
+
+.wobbling-6 {
+    width: 120px;
+    height: 21px;
+    background: linear-gradient(#000 0 0) left/10px 100% no-repeat #ddd;
+    animation: w6 1s infinite cubic-bezier(0, 0.2, 1, 1);
+    position: relative;
+}
+.wobbling-6:before,
+.wobbling-6:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 7px;
+    background: linear-gradient(#000 0 0) left/10px 100% no-repeat #ddd;
+    animation: inherit;
+}
+.wobbling-6:before {
+    top: 0;
+    animation-timing-function: cubic-bezier(0, 0, 1, 1);
+}
+.wobbling-6:after {
+    bottom: 0;
+    animation-timing-function: cubic-bezier(0, 0.4, 1, 1);
+}
+@keyframes w6 {
+    50% {
+        background-position: right;
+    }
+}
+
+.wobbling-7 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(at 30% 30%, #0000, #000a) red;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    animation: w7-1 0.6s, w7-2 0.3s;
+    animation-timing-function: cubic-bezier(0.5, -200, 0.5, 200);
+    animation-iteration-count: infinite;
+}
+@keyframes w7-1 {
+    100% {
+        left: 1px;
+    }
+}
+@keyframes w7-2 {
+    100% {
+        top: 0.3px;
+    }
+}
+
+.wobbling-8 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: relative;
+    transform-origin: 50% -200%;
+    background: radial-gradient(at 30% 30%, #0000, #000a) red;
+    animation: w8 1s cubic-bezier(0.5, -200, 0.5, 200) infinite;
+}
+.wobbling-8:before {
+    content: "";
+    position: absolute;
+    inset: -200% 8px 100%;
+    background: #ddd;
+}
+@keyframes w8 {
+    100% {
+        transform: rotate(1deg);
+    }
+}
+
+.wobbling-9 {
+    width: 80px;
+    height: 20px;
+    color: #514b82;
+    background: radial-gradient(farthest-side, currentColor 98%, #0000) left / 20px 20px,
+        radial-gradient(farthest-side, currentColor 98%, #0000) right / 20px 20px,
+        radial-gradient(farthest-side, #000 98%, #0000) center/5px 5px,
+        linear-gradient(currentColor 0 0) center/100% 2px;
+    background-repeat: no-repeat;
+    animation: w8 1s cubic-bezier(0.5, -150, 0.5, 150) infinite;
+}
+
+@keyframes w9 {
+    100% {
+        transform: rotate(1deg);
+    }
+}
+
+.wobbling-10 {
+    width: calc(100px - 14px);
+    height: 50px;
+    border-radius: 50px;
+    background: radial-gradient(
+                farthest-side,
+                #0000 calc(100% - 15px),
+                #ccc calc(100% - 14px) 99%,
+                #0000
+            )
+            left,
+        radial-gradient(farthest-side, #0000 calc(100% - 15px), #ccc calc(100% - 14px) 99%, #0000)
+            right;
+    background-size: calc(50% + 7px) 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    animation: w10-0 1s infinite linear;
+}
+.wobbling-10:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #f03355;
+    transform-origin: -14px 50%;
+    animation: w10-1 0.5s infinite linear;
+}
+
+@keyframes w10-0 {
+    0%,
+    49.99% {
+        transform: scaleX(1);
+    }
+    50%,
+    100% {
+        transform: scaleX(-1);
+    }
+}
+
+@keyframes w10-1 {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
