@@ -1,0 +1,440 @@
+.shapes-1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f03355;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    animation: sh1 2s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes sh1 {
+    33% {
+        border-radius: 0;
+        background: #514b82;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    66% {
+        border-radius: 0;
+        background: #ffa516;
+        clip-path: polygon(50% 0, 50% 0, 100% 100%, 0 100%);
+    }
+}
+
+.shapes-2 {
+    width: 40px;
+    height: 40px;
+    background: #25b09b;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    animation: sh2 2s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes sh2 {
+    25% {
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+    }
+    50% {
+        clip-path: polygon(0 0, 100% 100%, 0 100%);
+    }
+    75% {
+        clip-path: polygon(100% 0, 100% 100%, 0 100%);
+    }
+    100% {
+        clip-path: polygon(100% 0, 100% 100%, 0 0);
+    }
+}
+
+.shapes-3 {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    transform: rotate(45deg);
+    animation: sh3-0 1.5s infinite linear;
+}
+.shapes-3:before,
+.shapes-3:after {
+    content: "";
+    width: 50%;
+    background: #514b82;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    animation: inherit;
+    animation-name: sh3-1;
+}
+.shapes-3:after {
+    clip-path: polygon(0 0, 100% 50%, 0% 100%);
+    animation-name: sh3-2;
+}
+@keyframes sh3-0 {
+    25% {
+        width: 50px;
+        height: 50px;
+        transform: rotate(0);
+    }
+    50% {
+        width: 50px;
+        height: 50px;
+    }
+    75% {
+        width: 70.7px;
+        height: 35.35px;
+    }
+    100% {
+        width: 70.7px;
+        height: 35.35px;
+        transform: rotate(0);
+    }
+}
+@keyframes sh3-1 {
+    0%,
+    25% {
+        clip-path: polygon(0 50%, 100% 0, 100% 100%);
+        transform: translate(0.3px);
+    }
+    50% {
+        clip-path: polygon(0 50%, 100% 0, 100% 100%);
+        transform: translate(-5px);
+    }
+    75% {
+        clip-path: polygon(0 100%, 0 0, 100% 100%);
+        transform: translate(-5px);
+    }
+    100% {
+        clip-path: polygon(0 100%, 0 0, 100% 100%);
+        transform: translate(17.7px);
+    }
+}
+@keyframes sh3-2 {
+    0%,
+    25% {
+        clip-path: polygon(0 0, 100% 50%, 0 100%);
+        transform: translate(-0.3px);
+    }
+    50% {
+        clip-path: polygon(0 0, 100% 50%, 0 100%);
+        transform: translate(5px);
+    }
+    75% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+        transform: translate(5px);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%);
+        transform: translate(-17.7px);
+    }
+}
+
+.shapes-4 {
+    width: 40px;
+    height: 40px;
+    color: #f03355;
+    background: conic-gradient(
+            from -45deg at top 20px left 50%,
+            #0000,
+            currentColor 1deg 90deg,
+            #0000 91deg
+        ),
+        conic-gradient(
+            from 45deg at right 20px top 50%,
+            #0000,
+            currentColor 1deg 90deg,
+            #0000 91deg
+        ),
+        conic-gradient(
+            from 135deg at bottom 20px left 50%,
+            #0000,
+            currentColor 1deg 90deg,
+            #0000 91deg
+        ),
+        conic-gradient(
+            from -135deg at left 20px top 50%,
+            #0000,
+            currentColor 1deg 90deg,
+            #0000 91deg
+        );
+    animation: sh4 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes sh4 {
+    50% {
+        width: 60px;
+        height: 60px;
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.shapes-5 {
+    width: 40px;
+    height: 40px;
+    color: orange;
+    background: linear-gradient(currentColor 0 0), linear-gradient(currentColor 0 0),
+        linear-gradient(currentColor 0 0), linear-gradient(currentColor 0 0);
+    background-size: 21px 21px;
+    background-repeat: no-repeat;
+    animation: sh5 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes sh5 {
+    0% {
+        background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    }
+    33% {
+        background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+        width: 60px;
+        height: 60px;
+    }
+    66% {
+        background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+        width: 60px;
+        height: 60px;
+    }
+    100% {
+        background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+    }
+}
+
+.shapes-6 {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    animation: sh6-0 1.5s infinite linear;
+}
+.shapes-6:before,
+.shapes-6:after {
+    content: "";
+    grid-area: 1/1;
+    background: #514b82;
+    animation: sh6-1 1.5s infinite linear, sh6-2 1.5s infinite linear;
+}
+.shapes-6:after {
+    --s: -1;
+    animation-direction: reverse;
+}
+
+@keyframes sh6-0 {
+    0%,
+    9%,
+    91%,
+    100% {
+        background: #514b82;
+    }
+    10%,
+    90% {
+        background: #0000;
+    }
+}
+@keyframes sh6-1 {
+    0%,
+    33% {
+        clip-path: polygon(0 0, 50% 100%, 100% 0, 100% 100%, 0 100%);
+    }
+    66%,
+    100% {
+        clip-path: polygon(50% 0, 50% 100%, 50% 0, 100% 100%, 0 100%);
+    }
+}
+@keyframes sh6-2 {
+    0%,
+    10%,
+    90%,
+    100% {
+        transform: scale(var(--s, 1)) translateY(0);
+    }
+    33%,
+    66% {
+        transform: scale(var(--s, 1)) translateY(50%);
+    }
+}
+
+.shapes-7 {
+    width: 40px;
+    height: 40px;
+    color: #f03355;
+    position: relative;
+    background: conic-gradient(from 134deg at top, currentColor 92deg, #0000 0) top,
+        conic-gradient(from -46deg at bottom, currentColor 92deg, #0000 0) bottom;
+    background-size: 100% 50%;
+    background-repeat: no-repeat;
+}
+.shapes-7:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: conic-gradient(
+            from -135deg at top 0 left 22px,
+            #0000,
+            currentColor 1deg 90deg,
+            #0000 0
+        ),
+        conic-gradient(from -45deg at right 0 top 22px, #0000, currentColor 1deg 90deg, #0000 0),
+        conic-gradient(from 45deg at bottom 0 right 22px, #0000, currentColor 1deg 90deg, #0000 0),
+        conic-gradient(from 135deg at left 0 bottom 20px, #0000, currentColor 1deg 90deg, #0000 0);
+    animation: sh7 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+@keyframes sh7 {
+    33% {
+        inset: -10px;
+        transform: rotate(0deg);
+    }
+    66% {
+        inset: -10px;
+        transform: rotate(90deg);
+    }
+    100% {
+        inset: 0;
+        transform: rotate(90deg);
+    }
+}
+
+.shapes-8 {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    animation: sh8-0 1.5s infinite linear;
+}
+.shapes-8:before,
+.shapes-8:after {
+    content: "";
+    grid-area: 1/1;
+    background: #25b09b;
+    clip-path: polygon(0 0%, 100% 0, 100% 100%);
+    animation: inherit;
+    animation-name: sh8-1;
+}
+.shapes-8:after {
+    --s: -1;
+}
+@keyframes sh8-0 {
+    66% {
+        transform: skewX(0deg);
+    }
+    80%,
+    100% {
+        transform: skewX(-45deg);
+    }
+}
+@keyframes sh8-1 {
+    0% {
+        transform: scale(var(--s, 1)) translate(-0.5px, 0);
+    }
+    33% {
+        transform: scale(var(--s, 1)) translate(calc(1px - 50%), calc(1px - 50%));
+    }
+    66% {
+        transform: scale(var(--s, 1)) translate(calc(1px - 50%), 0%);
+    }
+    100% {
+        transform: scale(var(--s, 1)) translate(calc(0.5px - 50%), 0%);
+    }
+}
+
+.shapes-9 {
+    width: 40px;
+    height: 20px;
+    background: orange;
+    position: relative;
+    animation: sh9-0 1.5s infinite linear;
+}
+.shapes-9:before,
+.shapes-9:after {
+    content: "";
+    position: absolute;
+    background: inherit;
+    bottom: 100%;
+    width: 50%;
+    height: 100%;
+    animation: inherit;
+    animation-name: sh9-1;
+}
+.shapes-9:before {
+    left: 0;
+    transform-origin: bottom left;
+    --s: -1;
+}
+.shapes-9:after {
+    right: 0;
+    transform-origin: bottom right;
+}
+@keyframes sh9-0 {
+    0%,
+    10% {
+        transform: translateY(0%) scaleY(1);
+    }
+    49.99% {
+        transform: translateY(-50%) scaleY(1);
+    }
+    50% {
+        transform: translateY(-50%) scaleY(-1);
+    }
+    90%,
+    100% {
+        transform: translateY(-100%) scaleY(-1);
+    }
+}
+@keyframes sh9-1 {
+    10%,
+    90% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(calc(var(--s, 1) * 180deg));
+    }
+}
+
+.shapes-10 {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    animation: sh10-0 1.5s infinite linear;
+}
+.shapes-10:before,
+.shapes-10:after {
+    content: "";
+    width: 50%;
+    background: #514b82;
+    clip-path: polygon(0 0, 100% 50%, 0% 100%);
+    animation: inherit;
+    animation-name: sh10-1;
+    transform-origin: bottom left;
+}
+.shapes-10:before {
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    transform-origin: bottom right;
+    --s: -1;
+}
+
+@keyframes sh10-0 {
+    0%,
+    34.99% {
+        transform: scaley(1);
+    }
+    35%,
+    70% {
+        transform: scaley(-1);
+    }
+    90%,
+    100% {
+        transform: scaley(-1) rotate(180deg);
+    }
+}
+
+@keyframes sh10-1 {
+    0%,
+    10%,
+    70%,
+    100% {
+        transform: translateY(-100%) rotate(calc(var(--s, 1) * 135deg));
+    }
+    35% {
+        transform: translateY(0%) rotate(0deg);
+    }
+}
+
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
