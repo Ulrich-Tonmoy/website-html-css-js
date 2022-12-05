@@ -1,0 +1,295 @@
+.dots-1 {
+    width: 35px;
+    aspect-ratio: 1;
+    --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+    background: var(--_g) 0 0, var(--_g) 0 100%, var(--_g) 100% 100%;
+    background-size: 40% 40%;
+    animation: d1 1s infinite linear;
+}
+@keyframes d1 {
+    25% {
+        background-position: 100% 0, 0 100%, 100% 100%;
+    }
+    50% {
+        background-position: 100% 0, 0 0, 100% 100%;
+    }
+    75% {
+        background-position: 100% 0, 0 0, 0 100%;
+    }
+    100% {
+        background-position: 100% 100%, 0 0, 0 100%;
+    }
+}
+
+.dots-2 {
+    width: 60px;
+    aspect-ratio: 2;
+    --_g: no-repeat radial-gradient(farthest-side, #000 90%, #0000);
+    background: var(--_g) 0 50%, var(--_g) 50% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+    background-size: 25% 50%;
+    animation: d2 1s infinite linear;
+}
+@keyframes d2 {
+    33% {
+        background-position: 0 0, 50% 100%, 50% 100%, 100% 0;
+    }
+    66% {
+        background-position: 50% 0, 0 100%, 100% 100%, 50% 0;
+    }
+    100% {
+        background-position: 50% 50%, 0 50%, 100% 50%, 50% 50%;
+    }
+}
+
+.dots-3 {
+    --s: 64px;
+    width: var(--s);
+    aspect-ratio: 2;
+    --_g: currentColor 90%, #0000;
+    background: radial-gradient(farthest-side at bottom, var(--_g)) 0 calc(50% - var(--s) / 16),
+        radial-gradient(farthest-side at top, var(--_g)) 0 calc(50% + var(--s) / 16),
+        radial-gradient(farthest-side at bottom, var(--_g)) 50% calc(50% - var(--s) / 16),
+        radial-gradient(farthest-side at top, var(--_g)) 50% calc(50% + var(--s) / 16),
+        radial-gradient(farthest-side at bottom, var(--_g)) 100% calc(50% - var(--s) / 16),
+        radial-gradient(farthest-side at top, var(--_g)) 100% calc(50% + var(--s) / 16);
+    background-size: 25% 25%;
+    background-repeat: no-repeat;
+    animation: d3 1s infinite linear;
+}
+@keyframes d3 {
+    16.67% {
+        background-position: 0 0, 0 100%, 50% calc(50% - var(--s) / 8),
+            50% calc(50% + var(--s) / 16), 100% calc(50% - var(--s) / 16),
+            100% calc(50% + var(--s) / 16);
+    }
+    33.33% {
+        background-position: 0 0, 0 100%, 50% 0, 50% 100%, 100% calc(50% - var(--s) / 16),
+            100% calc(50% + var(--s) / 16);
+    }
+    50% {
+        background-position: 0 0, 0 100%, 50% 0, 50% 100%, 100% 0, 100% 100%;
+    }
+    66.67% {
+        background-position: 0 calc(50% - var(--s) / 16), 0 calc(50% + var(--s) / 16), 50% 0,
+            50% 100%, 100% 0, 100% 100%;
+    }
+    83.33% {
+        background-position: 0 calc(50% - var(--s) / 16), 0 calc(50% + var(--s) / 16),
+            50% calc(50% - var(--s) / 16), 50% calc(50% + var(--s) / 16), 100% 0, 100% 100%;
+    }
+}
+
+.dots-4 {
+    --s: 64px;
+    width: var(--s);
+    aspect-ratio: 2;
+    --_g: #000 90%, #0000;
+    background: radial-gradient(farthest-side, var(--_g)) 0 50%/25% 50%,
+        radial-gradient(farthest-side at bottom, var(--_g)) 50% calc(50% - var(--s) / 16) / 25% 25%,
+        radial-gradient(farthest-side at top, var(--_g)) 50% calc(50% + var(--s) / 16) / 25% 25%,
+        radial-gradient(farthest-side at bottom, var(--_g)) 100% calc(50% - var(--s) / 16) / 25% 25%,
+        radial-gradient(farthest-side at top, var(--_g)) 100% calc(50% + var(--s) / 16) / 25% 25%;
+    background-repeat: no-repeat;
+    animation: d4 1s infinite;
+}
+@keyframes d4 {
+    25% {
+        background-position: 0 50%, 50% 0, 50% 100%, 100% 0, 100% 100%;
+    }
+    50% {
+        background-position: 100% 50%, 0 0, 0 100%, 50% 0, 50% 100%;
+    }
+    75%,
+    100% {
+        background-position: 100% 50%, 0 calc(50% - var(--s) / 16), 0 calc(50% + var(--s) / 16),
+            50% calc(50% - var(--s) / 16), 50% calc(50% + var(--s) / 16);
+    }
+}
+
+.dots-5 {
+    width: 60px;
+    aspect-ratio: 4;
+    background: radial-gradient(closest-side at calc(100% / 6) 50%, #000 90%, #0000) 0/75% 100%;
+    position: relative;
+    animation: d5-0 1s infinite linear;
+}
+.dots-5::before {
+    content: "";
+    position: absolute;
+    background: inherit;
+    clip-path: inset(0 0 0 50%);
+    inset: 0;
+    animation: d5-1 0.5s infinite linear;
+}
+
+@keyframes d5-0 {
+    0%,
+    49.99% {
+        transform: scale(1);
+    }
+    50%,
+    100% {
+        transform: scale(-1);
+    }
+}
+
+@keyframes d5-1 {
+    0% {
+        transform: translateX(-37.5%) rotate(0turn);
+    }
+    80%,
+    100% {
+        transform: translateX(-37.5%) rotate(1turn);
+    }
+}
+
+.dots-6 {
+    width: 40px;
+    aspect-ratio: 1.154;
+    --_g: no-repeat radial-gradient(farthest-side, #000 90%, #0000);
+    background: var(--_g) 50% 0, var(--_g) 0 100%, var(--_g) 100% 100%;
+    background-size: 35% calc(35% * 1.154);
+    animation: d6 1s infinite;
+}
+
+@keyframes d6 {
+    50%,
+    100% {
+        background-position: 100% 100%, 50% 0, 0 100%;
+    }
+}
+
+.dots-7 {
+    width: 60px;
+    aspect-ratio: 1;
+    --_g: no-repeat radial-gradient(farthest-side, #000 90%, #0000);
+    background: var(--_g), var(--_g), var(--_g);
+    background-size: 25% 25%;
+    animation: d7 1s infinite;
+}
+
+@keyframes d7 {
+    0% {
+        background-position: 0% -100%, 50% -100%, 100% -100%;
+    }
+    16.67% {
+        background-position: 0% 50%, 50% -100%, 100% -100%;
+    }
+    33.33% {
+        background-position: 0% 50%, 50% 50%, 100% -100%;
+    }
+    45%,
+    55% {
+        background-position: 0% 50%, 50% 50%, 100% 50%;
+    }
+    66.67% {
+        background-position: 0% 200%, 50% 50%, 100% 50%;
+    }
+    83.33% {
+        background-position: 0% 200%, 50% 200%, 100% 50%;
+    }
+    100% {
+        background-position: 0% 200%, 50% 200%, 100% 200%;
+    }
+}
+
+.dots-8 {
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: currentColor;
+    box-shadow: -20px 0px, 20px 0px;
+    animation: d8 1s infinite;
+}
+
+@keyframes d8 {
+    25% {
+        box-shadow: -20px -20px, 20px 20px;
+    }
+    50% {
+        box-shadow: 0px -20px, 0px 20px;
+    }
+    75% {
+        box-shadow: 20px -20px, -20px 20px;
+    }
+    100% {
+        box-shadow: 20px 0px, -20px 0px;
+    }
+}
+
+.dots-9 {
+    width: 15px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    clip-path: inset(-45px);
+    box-shadow: -60px 15px, -60px 15px, -60px 15px;
+    transform: translateY(-15px);
+    animation: d9 1s infinite linear;
+}
+
+@keyframes d9 {
+    16.67% {
+        box-shadow: -60px 15px, -60px 15px, 19px 15px;
+    }
+    33.33% {
+        box-shadow: -60px 15px, 0px 15px, 19px 15px;
+    }
+    40%,
+    60% {
+        box-shadow: -19px 15px, 0px 15px, 19px 15px;
+    }
+    66.67% {
+        box-shadow: -19px 15px, 0px 15px, 60px 15px;
+    }
+    83.33% {
+        box-shadow: -19px 15px, 60px 15px, 60px 15px;
+    }
+    100% {
+        box-shadow: 60px 15px, 60px 15px, 60px 15px;
+    }
+}
+
+.dots-10 {
+    height: 15px;
+    aspect-ratio: 6;
+    display: flex;
+}
+.dots-10:before,
+.dots-10:after {
+    content: "";
+    flex: 1;
+    padding-left: calc(100% / 6);
+    background: radial-gradient(closest-side at calc(100% / 3) 50%, #000 90%, #0000) 0/75% 100%
+        content-box;
+    animation: d10 2s infinite;
+}
+.dots-10:after {
+    --_s: -1;
+}
+@keyframes d10 {
+    0% {
+        transform: scale(var(--_s, 1)) translate(0) rotate(0);
+    }
+    25% {
+        transform: scale(var(--_s, 1)) translate(-25%) rotate(0);
+    }
+    50% {
+        transform: scale(var(--_s, 1)) translate(-25%) rotate(1turn);
+    }
+    75%,
+    100% {
+        transform: scale(var(--_s, 1)) translate(0) rotate(1turn);
+    }
+}
+
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
