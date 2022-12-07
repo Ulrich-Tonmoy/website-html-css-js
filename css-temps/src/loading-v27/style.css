@@ -1,0 +1,285 @@
+hypnotic-1 {
+    width: 50px;
+    height: 50px;
+    border: 2px solid;
+    display: grid;
+    animation: h1 4s infinite linear;
+}
+.hypnotic-1::before,
+.hypnotic-1::after {
+    content: "";
+    grid-area: 1/1;
+    margin: auto;
+    width: 70.7%;
+    height: 70.7%;
+    border: 2px solid;
+    animation: inherit;
+}
+.hypnotic-1::after {
+    width: 50%;
+    height: 50%;
+    border: 2px solid;
+    animation-duration: 2s;
+}
+@keyframes h1 {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.hypnotic-2 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid;
+    position: relative;
+    transform-origin: left;
+    animation: h2 1s infinite linear;
+}
+.hypnotic-2::before,
+.hypnotic-2::after {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+    border: 2px solid;
+    transform-origin: 50% calc(100% - 4px);
+    animation: inherit;
+}
+.hypnotic-2::after {
+    inset: auto 0 calc(100% + 2px);
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+    transform-origin: 50% calc(200% - 2px);
+}
+@keyframes h2 {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.hypnotic-3 {
+    width: 50px;
+    height: 50px;
+    border: 2px solid;
+    background: conic-gradient(
+            from -90deg at calc(100% - 2px) calc(100% - 2px),
+            #0000 0 90deg,
+            currentColor 0
+        ),
+        conic-gradient(
+            from -90deg at calc(100% - 2px) calc(100% - 2px),
+            #0000 0 90deg,
+            currentColor 0
+        );
+    background-size: 16px 16px;
+    background-position: 0 0;
+    animation: h3 1s infinite;
+}
+
+@keyframes h3 {
+    100% {
+        background-position: -16px -16px, 16px 16px;
+    }
+}
+
+.hypnotic-4 {
+    width: 50px;
+    height: 50px;
+    border: 2px solid;
+    background: radial-gradient(
+            farthest-side,
+            #0000 calc(100% - 3px),
+            currentColor calc(100% - 2px) 98%,
+            #0000
+        ),
+        radial-gradient(
+            farthest-side,
+            #0000 calc(100% - 3px),
+            currentColor calc(100% - 2px) 98%,
+            #0000
+        );
+    background-size: 23px 23px;
+    background-position: 0 0, 12px 12px;
+    animation: h4 1s infinite;
+}
+
+@keyframes h4 {
+    100% {
+        background-position: -23px 0px, 12px 35px;
+    }
+}
+
+.hypnotic-5 {
+    width: 50px;
+    height: calc(50px * 0.866);
+    display: grid;
+    background: linear-gradient(
+                to bottom left,
+                #0000 calc(50% - 1px),
+                currentColor 0 calc(50% + 1px),
+                #0000 0
+            )
+            right/50% 100%,
+        linear-gradient(
+                to bottom right,
+                #0000 calc(50% - 1px),
+                currentColor 0 calc(50% + 1px),
+                #0000 0
+            )
+            left / 50% 100%,
+        linear-gradient(currentColor 0 0) bottom/100% 2px;
+    background-repeat: no-repeat;
+    transform-origin: 50% 66%;
+    animation: h5 4s infinite linear;
+}
+
+.hypnotic-5::before,
+.hypnotic-5::after {
+    content: "";
+    grid-area: 1/1;
+    background: inherit;
+    transform-origin: inherit;
+    animation: inherit;
+}
+.hypnotic-5::after {
+    animation-duration: 2s;
+}
+
+@keyframes h5 {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.hypnotic-6 {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    background: linear-gradient(90deg, currentColor 2px, #0000 0 calc(100% - 2px), currentColor 0)
+            center/100% 14px,
+        linear-gradient(0deg, currentColor 2px, #0000 0 calc(100% - 2px), currentColor 0)
+            center/14px 100%,
+        linear-gradient(currentColor 0 0) center/100% 2px,
+        linear-gradient(currentColor 0 0) center/2px 100%;
+    background-repeat: no-repeat;
+    animation: h6 4s infinite linear;
+}
+
+.hypnotic-6::before,
+.hypnotic-6::after {
+    content: "";
+    grid-area: 1/1;
+    background: inherit;
+    transform-origin: inherit;
+    animation: inherit;
+}
+.hypnotic-6::after {
+    animation-duration: 2s;
+}
+
+@keyframes h6 {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.hypnotic-7 {
+    width: 50px;
+    height: 50px;
+    border: 2px solid;
+    background: repeating-conic-gradient(#0000 0 90deg, currentColor 0 180deg),
+        repeating-conic-gradient(currentColor 0 90deg, #0000 0 180deg);
+    background-size: 16px 16px;
+    background-position: 0 0;
+    animation: h7 2s infinite;
+}
+
+@keyframes h7 {
+    100% {
+        background-position: 0px 32px, 16px 0px;
+    }
+}
+
+.hypnotic-8 {
+    width: 50px;
+    height: 50px;
+    border: 2px solid;
+    background: radial-gradient(farthest-side, currentColor 90%, #0000),
+        radial-gradient(farthest-side, #0000 90%, currentColor);
+    background-size: 16px 16px;
+    background-position: 0 0;
+    animation: h8 2s infinite;
+}
+
+@keyframes h8 {
+    100% {
+        background-position: 0px 32px, -16px 0;
+    }
+}
+
+.hypnotic-9 {
+    width: 50px;
+    height: 50px;
+    position: relative;
+    border-radius: 50%;
+    background: repeating-conic-gradient(#0000, currentColor 1deg 18deg, #0000 20deg 36deg);
+    animation: h9 4s infinite linear;
+}
+
+.hypnotic-9::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 0;
+    background: inherit;
+    animation: inherit;
+}
+
+@keyframes h9 {
+    100% {
+        transform: rotate(0.5turn);
+    }
+}
+
+.hypnotic-10 {
+    width: 50px;
+    height: 50px;
+    display: grid;
+}
+
+.hypnotic-10::before,
+.hypnotic-10::after {
+    content: "";
+    grid-area: 1/1;
+    border-radius: 50%;
+    background: repeating-conic-gradient(#0000, currentColor 1deg 18deg, #0000 20deg 36deg);
+    -webkit-mask: repeating-radial-gradient(farthest-side, #000 0 10%, #0000 0 20%);
+    animation: h10 4s infinite linear;
+}
+
+.hypnotic-10::after {
+    -webkit-mask: repeating-radial-gradient(farthest-side, #0000 0 10%, #000 0 20%);
+    animation-direction: reverse;
+}
+
+@keyframes h10 {
+    100% {
+        transform: rotate(0.5turn);
+    }
+}
+
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
