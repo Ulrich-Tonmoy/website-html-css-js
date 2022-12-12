@@ -1,0 +1,281 @@
+.progress-1 {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    animation: p1 2s infinite;
+}
+@keyframes p1 {
+    0% {
+        background: conic-gradient(#f03355 0, #0000 0);
+    }
+    12.5% {
+        background: conic-gradient(#f03355 45deg, #0000 46deg);
+    }
+    25% {
+        background: conic-gradient(#f03355 90deg, #0000 91deg);
+    }
+    37.5% {
+        background: conic-gradient(#f03355 135deg, #0000 136deg);
+    }
+    50% {
+        background: conic-gradient(#f03355 180deg, #0000 181deg);
+    }
+    62.5% {
+        background: conic-gradient(#f03355 225deg, #0000 226deg);
+    }
+    75% {
+        background: conic-gradient(#f03355 270deg, #0000 271deg);
+    }
+    87.5% {
+        background: conic-gradient(#f03355 315deg, #0000 316deg);
+    }
+    100% {
+        background: conic-gradient(#f03355 360deg, #0000 360deg);
+    }
+}
+
+.progress-2 {
+    width: 120px;
+    height: 20px;
+    background: linear-gradient(#000 50%, #0000 0), linear-gradient(#0000 50%, #000 0),
+        linear-gradient(#000 50%, #0000 0), linear-gradient(#0000 50%, #000 0),
+        linear-gradient(#000 50%, #0000 0), linear-gradient(#0000 50%, #000 0) #ddd;
+    background-size: calc(100% / 6 + 1px) 200%;
+    background-repeat: no-repeat;
+    animation: p2 2s infinite;
+}
+@keyframes p2 {
+    0% {
+        background-position: calc(0 * 100% / 5) 100%, calc(1 * 100% / 5) 0%, calc(2 * 100% / 5) 100%,
+            calc(3 * 100% / 5) 0%, calc(4 * 100% / 5) 100%, calc(5 * 100% / 5) 0%;
+    }
+    16.67% {
+        background-position: calc(0 * 100% / 5) 0%, calc(1 * 100% / 5) 0%, calc(2 * 100% / 5) 100%,
+            calc(3 * 100% / 5) 0%, calc(4 * 100% / 5) 100%, calc(5 * 100% / 5) 0%;
+    }
+    33.33% {
+        background-position: calc(0 * 100% / 5) 0%, calc(1 * 100% / 5) 100%, calc(2 * 100% / 5) 100%,
+            calc(3 * 100% / 5) 0%, calc(4 * 100% / 5) 100%, calc(5 * 100% / 5) 0%;
+    }
+    50% {
+        background-position: calc(0 * 100% / 5) 0%, calc(1 * 100% / 5) 100%, calc(2 * 100% / 5) 0%,
+            calc(3 * 100% / 5) 0%, calc(4 * 100% / 5) 100%, calc(5 * 100% / 5) 0%;
+    }
+    66.67% {
+        background-position: calc(0 * 100% / 5) 0%, calc(1 * 100% / 5) 100%, calc(2 * 100% / 5) 0%,
+            calc(3 * 100% / 5) 100%, calc(4 * 100% / 5) 100%, calc(5 * 100% / 5) 0%;
+    }
+    83.33% {
+        background-position: calc(0 * 100% / 5) 0%, calc(1 * 100% / 5) 100%, calc(2 * 100% / 5) 0%,
+            calc(3 * 100% / 5) 100%, calc(4 * 100% / 5) 0%, calc(5 * 100% / 5) 0%;
+    }
+    100% {
+        background-position: calc(0 * 100% / 5) 0%, calc(1 * 100% / 5) 100%, calc(2 * 100% / 5) 0%,
+            calc(3 * 100% / 5) 100%, calc(4 * 100% / 5) 0%, calc(5 * 100% / 5) 100%;
+    }
+}
+
+.progress-3 {
+    width: 124px;
+    height: 24px;
+    -webkit-mask: conic-gradient(from 135deg at top, #0000, #000 0.5deg 90deg, #0000 90.5deg) 0 0,
+        conic-gradient(from -45deg at bottom, #0000, #000 0.5deg 90deg, #0000 90.5deg) 0 100%;
+    -webkit-mask-size: 25% 50%;
+    -webkit-mask-repeat: repeat-x;
+    background: linear-gradient(#25b09b 0 0) left/0% 100% no-repeat #ddd;
+    animation: p3 2s infinite linear;
+}
+@keyframes p3 {
+    100% {
+        background-size: 100% 100%;
+    }
+}
+
+.progress-4 {
+    width: 60px;
+    height: 50px;
+    -webkit-mask: linear-gradient(90deg, #000 70%, #0000 0) calc(0 * 100% / 4) 100% / calc(100% / 5)
+            calc(1 * 100% / 5),
+        linear-gradient(90deg, #000 70%, #0000 0) calc(1 * 100% / 4) 100% / calc(100% / 5)
+            calc(2 * 100% / 5),
+        linear-gradient(90deg, #000 70%, #0000 0) calc(2 * 100% / 4) 100% / calc(100% / 5)
+            calc(3 * 100% / 5),
+        linear-gradient(90deg, #000 70%, #0000 0) calc(3 * 100% / 4) 100% / calc(100% / 5)
+            calc(4 * 100% / 5),
+        linear-gradient(90deg, #000 70%, #0000 0) calc(4 * 100% / 4) 100% / calc(100% / 5)
+            calc(5 * 100% / 5);
+    -webkit-mask-repeat: no-repeat;
+    background: linear-gradient(#514b82 0 0) left/0% 100% no-repeat #ddd;
+    animation: p4 2s infinite steps(6);
+}
+@keyframes p4 {
+    100% {
+        background-size: 120% 100%;
+    }
+}
+
+.progress-5 {
+    width: 80px;
+    height: calc(80px * 0.866);
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    color: #f03355;
+    background: linear-gradient(currentColor 0 0), linear-gradient(currentColor 0 0),
+        linear-gradient(currentColor 0 0), linear-gradient(currentColor 0 0),
+        linear-gradient(currentColor 0 0);
+    background-size: 100% calc(100% / 5 + 1px);
+    background-repeat: no-repeat;
+    animation: p5 2s infinite;
+}
+@keyframes p5 {
+    0% {
+        background-position: 0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4),
+            0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4);
+    }
+    20% {
+        background-position: 0 calc(4 * 100% / 4), 0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4),
+            0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4);
+    }
+    40% {
+        background-position: 0 calc(4 * 100% / 4), 0 calc(3 * 100% / 4), 0 calc(-2 * 100% / 4),
+            0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4);
+    }
+    60% {
+        background-position: 0 calc(4 * 100% / 4), 0 calc(3 * 100% / 4), 0 calc(2 * 100% / 4),
+            0 calc(-2 * 100% / 4), 0 calc(-2 * 100% / 4);
+    }
+    80% {
+        background-position: 0 calc(4 * 100% / 4), 0 calc(3 * 100% / 4), 0 calc(2 * 100% / 4),
+            0 calc(1 * 100% / 4), 0 calc(-2 * 100% / 4);
+    }
+    100% {
+        background-position: 0 calc(4 * 100% / 4), 0 calc(3 * 100% / 4), 0 calc(2 * 100% / 4),
+            0 calc(1 * 100% / 4), 0 calc(0 * 100% / 4);
+    }
+}
+
+.progress-6 {
+    height: 4px;
+    width: 130px;
+    background: linear-gradient(#6100ee 0 0), linear-gradient(#6100ee 0 0), #d7b8fc;
+    background-size: 60% 100%;
+    background-repeat: no-repeat;
+    animation: p6 3s infinite;
+}
+
+@keyframes p6 {
+    0% {
+        background-position: -150% 0, -150% 0;
+    }
+    66% {
+        background-position: 250% 0, -150% 0;
+    }
+    100% {
+        background-position: 250% 0, 250% 0;
+    }
+}
+
+.progress-7 {
+    width: 120px;
+    height: 20px;
+    -webkit-mask: radial-gradient(circle closest-side, #000 94%, #0000) left/20% 100%;
+    background: linear-gradient(#000 0 0) left/0% 100% no-repeat #ddd;
+    animation: p7 2s infinite steps(6);
+}
+@keyframes p7 {
+    100% {
+        background-size: 120% 100%;
+    }
+}
+
+.progress-8 {
+    width: 60px;
+    height: 60px;
+    border: 15px solid #ddd;
+    border-radius: 50%;
+    position: relative;
+    transform: rotate(45deg);
+}
+.progress-8::before {
+    content: "";
+    position: absolute;
+    inset: -15px;
+    border-radius: 50%;
+    border: 15px solid #514b82;
+    animation: p8 2s infinite linear;
+}
+
+@keyframes p8 {
+    0% {
+        clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+    }
+    25% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+    }
+    50% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+    }
+    75% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+    }
+    100% {
+        clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+}
+
+.progress-9 {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(#dc1818 0 0) bottom/100% 0% no-repeat #ccc;
+    -webkit-mask: radial-gradient(circle at 60% 65%, #000 62%, #0000 65%) top left,
+        radial-gradient(circle at 40% 65%, #000 62%, #0000 65%) top right,
+        linear-gradient(to bottom left, #000 42%, #0000 43%) bottom left,
+        linear-gradient(to bottom right, #000 42%, #0000 43%) bottom right;
+    -webkit-mask-size: 50% 50%;
+    -webkit-mask-repeat: no-repeat;
+    animation: p9 2s infinite linear;
+}
+
+@keyframes p9 {
+    90%,
+    100% {
+        background-size: 100% 100%;
+    }
+}
+.progress-10 {
+    --s: 40px;
+    height: calc(var(--s) * 0.9);
+    width: calc(var(--s) * 5);
+    --v1: transparent, #000 0.5deg 108deg, #0000 109deg;
+    --v2: transparent, #000 0.5deg 36deg, #0000 37deg;
+    -webkit-mask: conic-gradient(
+            from 54deg at calc(var(--s) * 0.68) calc(var(--s) * 0.57),
+            var(--v1)
+        ),
+        conic-gradient(from 90deg at calc(var(--s) * 0.02) calc(var(--s) * 0.35), var(--v2)),
+        conic-gradient(from 126deg at calc(var(--s) * 0.5) calc(var(--s) * 0.7), var(--v1)),
+        conic-gradient(from 162deg at calc(var(--s) * 0.5) 0, var(--v2));
+    -webkit-mask-size: var(--s) var(--s);
+    -webkit-mask-composite: xor, destination-over;
+    mask-composite: exclude, add;
+    -webkit-mask-repeat: repeat-x;
+    background: linear-gradient(#ffb940 0 0) left/0% 100% #ddd no-repeat;
+    animation: p10 2s infinite linear;
+}
+@keyframes p10 {
+    90%,
+    100% {
+        background-size: 100% 100%;
+    }
+}
+
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
