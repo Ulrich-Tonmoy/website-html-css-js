@@ -1,0 +1,405 @@
+.hungry-1 {
+    width: 35px;
+    height: 80px;
+    position: relative;
+}
+.hungry-1:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 3px 5px;
+    border-top: 1px solid #bbb6aa;
+    border-bottom: 4px solid #bbb6aa;
+    background: linear-gradient(#612329 0 0) bottom no-repeat content-box, #e4e0d7;
+    mix-blend-mode: darken;
+    animation: hu1 1.5s infinite linear;
+}
+.hungry-1:before {
+    content: "";
+    position: absolute;
+    inset: -18px calc(50% - 2px) 8px;
+    background: #eb6b3e;
+    transform-origin: bottom;
+    transform: rotate(8deg);
+}
+
+@keyframes hu1 {
+    0% {
+        background-size: 100% 100%;
+    }
+    100% {
+        background-size: 100% 5%;
+    }
+}
+
+.hungry-2 {
+    width: 35px;
+    height: 80px;
+    position: relative;
+}
+.hungry-2:after {
+    content: "";
+    position: absolute;
+    inset: 0 0 20px;
+    border-radius: 15px 15px 10px 10px;
+    padding: 1px;
+    background: repeating-linear-gradient(-45deg, #91d2e2 0 8px, #1296a7 0 12px) content-box;
+    --c: radial-gradient(farthest-side, #000 94%, #0000);
+    -webkit-mask: linear-gradient(#0000 0 0), var(--c) -10px -10px, var(--c) 15px -14px,
+        var(--c) 9px -6px, var(--c) -12px 9px, var(--c) 14px 9px, var(--c) 23px 27px,
+        var(--c) -8px 35px, var(--c) 50% 50%, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0), var(--c) -10px -10px, var(--c) 15px -14px, var(--c) 9px -6px,
+        var(--c) -12px 9px, var(--c) 14px 9px, var(--c) 23px 27px, var(--c) -8px 35px,
+        var(--c) 50% 50%, linear-gradient(#0000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude, add, add, add, add, add, add, add, add;
+    -webkit-mask-repeat: no-repeat;
+    animation: hu2 3s infinite;
+}
+
+.hungry-2:before {
+    content: "";
+    position: absolute;
+    inset: 50% calc(50% - 4px) 0;
+    background: #e0a267;
+    border-radius: 50px;
+}
+
+@keyframes hu2 {
+    0% {
+        -webkit-mask-size: auto, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    10% {
+        -webkit-mask-size: auto, 25px 25px, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    20% {
+        -webkit-mask-size: auto, 25px 25px, 25px 25px, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    30% {
+        -webkit-mask-size: auto, 25px 25px, 25px 25px, 30px 30px, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    40% {
+        -webkit-mask-size: auto, 25px 25px, 25px 25px, 30px 30px, 30px 30px, 0 0, 0 0, 0 0, 0 0;
+    }
+    50% {
+        -webkit-mask-size: auto, 25px 25px, 25px 25px, 30px 30px, 30px 30px, 25px 25px, 0 0, 0 0,
+            0 0;
+    }
+    60% {
+        -webkit-mask-size: auto, 25px 25px, 25px 25px, 30px 30px, 30px 30px, 25px 25px, 25px 25px,
+            0 0, 0 0;
+    }
+    70% {
+        -webkit-mask-size: auto, 25px 25px, 25px 25px, 30px 30px, 30px 30px, 25px 25px, 25px 25px,
+            25px 25px, 0 0;
+    }
+    80%,
+    100% {
+        -webkit-mask-size: auto, 25px 25px, 25px 25px, 30px 30px, 30px 30px, 25px 25px, 25px 25px,
+            25px 25px, 200% 200%;
+    }
+}
+
+.hungry-3 {
+    width: 35px;
+    height: 80px;
+    position: relative;
+}
+.hungry-3:after {
+    content: "";
+    position: absolute;
+    inset: 0 0 20px;
+    border-radius: 50px 50px 10px 10px;
+    padding: 1px;
+    background: linear-gradient(#ff4d80 33%, #ffa104 0 66%, #01ddc7 0) content-box;
+    --c: radial-gradient(farthest-side, #000 94%, #0000);
+    -webkit-mask: linear-gradient(#0000 0 0), var(--c) -10px -10px, var(--c) 15px -14px,
+        var(--c) 9px -6px, var(--c) -12px 9px, var(--c) 14px 9px, var(--c) 23px 27px,
+        var(--c) -8px 35px, var(--c) 50% 50%, linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0), var(--c) -10px -10px, var(--c) 15px -14px, var(--c) 9px -6px,
+        var(--c) -12px 9px, var(--c) 14px 9px, var(--c) 23px 27px, var(--c) -8px 35px,
+        var(--c) 50% 50%, linear-gradient(#0000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude, add, add, add, add, add, add, add, add;
+    -webkit-mask-repeat: no-repeat;
+    animation: hu3 3s infinite;
+}
+
+.hungry-3:before {
+    content: "";
+    position: absolute;
+    inset: 50% calc(50% - 4px) 0;
+    background: #e0a267;
+    border-radius: 50px;
+}
+
+@keyframes hu3 {
+    0% {
+        -webkit-mask-size: auto, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    10% {
+        -webkit-mask-size: auto, 25px 25px, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    20% {
+        -webkit-mask-size: auto, 25px 25px, 25px 25px, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    30% {
+        -webkit-mask-size: auto, 25px 25px, 25px 25px, 30px 30px, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    40% {
+        -webkit-mask-size: auto, 25px 25px, 25px 25px, 30px 30px, 30px 30px, 0 0, 0 0, 0 0, 0 0;
+    }
+    50% {
+        -webkit-mask-size: auto, 25px 25px, 25px 25px, 30px 30px, 30px 30px, 25px 25px, 0 0, 0 0,
+            0 0;
+    }
+    60% {
+        -webkit-mask-size: auto, 25px 25px, 25px 25px, 30px 30px, 30px 30px, 25px 25px, 25px 25px,
+            0 0, 0 0;
+    }
+    70% {
+        -webkit-mask-size: auto, 25px 25px, 25px 25px, 30px 30px, 30px 30px, 25px 25px, 25px 25px,
+            25px 25px, 0 0;
+    }
+    80%,
+    100% {
+        -webkit-mask-size: auto, 25px 25px, 25px 25px, 30px 30px, 30px 30px, 25px 25px, 25px 25px,
+            25px 25px, 200% 200%;
+    }
+}
+
+.hungry-4 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 8px solid #d1914b;
+    --c: radial-gradient(farthest-side, #d64123 94%, #0000);
+    --b: radial-gradient(farthest-side, #000 94%, #0000);
+    background: var(--c) 11px 15px, var(--b) 6px 15px, var(--c) 35px 23px, var(--b) 29px 15px,
+        var(--c) 11px 46px, var(--b) 11px 34px, var(--c) 36px 0px, var(--b) 50px 31px,
+        var(--c) 47px 43px, var(--b) 31px 48px, #f6d353;
+    background-size: 15px 15px, 6px 6px;
+    background-repeat: no-repeat;
+    animation: hu4 3s infinite;
+}
+@keyframes hu4 {
+    0% {
+        -webkit-mask: conic-gradient(#0000 0, #000 0);
+    }
+    16.67% {
+        -webkit-mask: conic-gradient(#0000 60deg, #000 0);
+    }
+    33.33% {
+        -webkit-mask: conic-gradient(#0000 120deg, #000 0);
+    }
+    50% {
+        -webkit-mask: conic-gradient(#0000 180deg, #000 0);
+    }
+    66.67% {
+        -webkit-mask: conic-gradient(#0000 240deg, #000 0);
+    }
+    83.33% {
+        -webkit-mask: conic-gradient(#0000 300deg, #000 0);
+    }
+    100% {
+        -webkit-mask: conic-gradient(#0000 360deg, #000 0);
+    }
+}
+
+.hungry-5 {
+    width: 80px;
+    height: 75px;
+    --c: radial-gradient(farthest-side, #f7b261 85%, #b97850, #0000);
+    --b: radial-gradient(farthest-side, #734b46 94%, #0000);
+    --s: 8px 8px, 8px 8px, 8px 8px, 40px 40px;
+    --e: 0 0, 0 0, 0 0, 0 0;
+    background: var(--b) 55% 47%, var(--b) 60% 66%, var(--b) 37% 43%, var(--c) 50% 50%,
+        var(--b) 15px 4px, var(--b) 4px 14px, var(--b) 27px 18px, var(--c) 0 0,
+        var(--b) calc(100% - 15px) 4px, var(--b) calc(100% - 4px) 14px,
+        var(--b) calc(100% - 27px) 18px, var(--c) 100% 0/40px 40px, var(--b) 24px 47px,
+        var(--b) 50% 43px, var(--b) 60% 58px, var(--c) 50% 100%;
+    background-repeat: no-repeat;
+    animation: hu5 3s infinite;
+}
+
+@keyframes hu5 {
+    0%,
+    20% {
+        background-size: var(--s), var(--s), var(--s), var(--s);
+    }
+    20.01%,
+    40% {
+        background-size: var(--e), var(--s), var(--s), var(--s);
+    }
+    40.01%,
+    60% {
+        background-size: var(--e), var(--e), var(--s), var(--s);
+    }
+    60.01%,
+    80% {
+        background-size: var(--e), var(--e), var(--e), var(--s);
+    }
+    80.01%,
+    100% {
+        background-size: var(--e), var(--e), var(--e), var(--e);
+    }
+}
+
+.hungry-6 {
+    width: 35px;
+    height: 80px;
+    position: relative;
+}
+.hungry-6:before {
+    content: "";
+    position: absolute;
+    inset: 0 0 20px;
+    padding: 1px;
+    background: conic-gradient(
+            from -90deg at calc(100% - 3px) 3px,
+            #7e3c26 135deg,
+            #341612 0 270deg,
+            #0000 0
+        ),
+        conic-gradient(from 0deg at 3px calc(100% - 3px), #0000 90deg, #341612 0 225deg, #7e3c26 0),
+        #54281f;
+    background-size: 17px 17px;
+    background-clip: content-box;
+    --c: linear-gradient(#000 0 0);
+    -webkit-mask: var(--c) 0 0, var(--c) 17px 0, var(--c) 0 17px, var(--c) 17px 17px,
+        var(--c) 0 34px, var(--c) 17px 34px, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-repeat: no-repeat;
+    animation: hu6 3s infinite;
+}
+
+.hungry-6:after {
+    content: "";
+    position: absolute;
+    inset: 60% 0 0;
+    background: #b21b01;
+    border-top: 5px solid #c9c7c5;
+}
+
+@keyframes hu6 {
+    0%,
+    14% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, auto;
+    }
+    15%,
+    29% {
+        -webkit-mask-size: 17px 17px, 0 0, 0 0, 0 0, 0 0, 0 0, auto;
+    }
+    30%,
+    44% {
+        -webkit-mask-size: 17px 17px, 17px 17px, 0 0, 0 0, 0 0, 0 0, auto;
+    }
+    45%,
+    59% {
+        -webkit-mask-size: 17px 17px, 17px 17px, 17px 17px, 0 0, 0 0, 0 0, auto;
+    }
+    60%,
+    74% {
+        -webkit-mask-size: 17px 17px, 17px 17px, 17px 17px, 17px 17px, 0 0, 0 0, auto;
+    }
+    75%,
+    89% {
+        -webkit-mask-size: 17px 17px, 17px 17px, 17px 17px, 17px 17px, 17px 17px, 0 0, auto;
+    }
+    90%,
+    100% {
+        -webkit-mask-size: 17px 17px, 17px 17px, 17px 17px, 17px 17px, 17px 17px, 17px 17px, auto;
+    }
+}
+
+.hungry-7 {
+    height: 35px;
+    width: 80px;
+    margin-left: 0px;
+    background: radial-gradient(farthest-side, #ffd1d1 94%, #0000) 4px 22px/5px 5px,
+        radial-gradient(farthest-side, #ffd1d1 94%, #0000) 12px 18px/5px 5px,
+        radial-gradient(farthest-side, #ffd1d1 94%, #0000) 3px 6px/8px 8px,
+        radial-gradient(farthest-side, #eb8594 90%, #0000 94%) left/20px 100%, #bd3342;
+    background-repeat: no-repeat;
+    border-radius: 0 50px 50px 0;
+    border-top-left-radius: 30px 40px;
+    border-bottom-left-radius: 30px 40px;
+    animation: hu7 3s infinite steps(10);
+    position: relative;
+}
+@keyframes hu7 {
+    100% {
+        width: 20px;
+        margin-left: 60px;
+    }
+}
+
+.hungry-7::before {
+    content: " ";
+    position: absolute;
+    inset: calc(50% - 8px) -10px calc(50% - 8px) auto;
+    width: 15px;
+    background: #bd3342;
+    clip-path: polygon(0 50%, 100% 0, 70% 50%, 100% 100%);
+}
+
+.hungry-8 {
+    width: 80px;
+    height: 40px;
+    border-radius: 0 0 100px 100px;
+    border: 5px solid #538a2d;
+    border-top: 0;
+    background: radial-gradient(
+            farthest-side at top,
+            #0000 calc(100% - 5px),
+            #e7ef9d calc(100% - 4px)
+        ),
+        radial-gradient(2px 3px, #5c4037 89%, #0000) 0 0/17px 12px, #ff1643;
+    --c: radial-gradient(farthest-side, #000 94%, #0000);
+    -webkit-mask: linear-gradient(#0000 0 0), var(--c) 12px -8px, var(--c) 29px -8px,
+        var(--c) 45px -6px, var(--c) 22px -2px, var(--c) 34px 6px, var(--c) 21px 6px,
+        linear-gradient(#000 0 0);
+    mask: linear-gradient(#000 0 0), var(--c) 12px -8px, var(--c) 29px -8px, var(--c) 45px -6px,
+        var(--c) 22px -2px, var(--c) 34px 6px, var(--c) 21px 6px, linear-gradient(#0000 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude, add, add, add, add, add, add;
+    -webkit-mask-repeat: no-repeat;
+    animation: hu8 3s infinite;
+}
+@keyframes hu8 {
+    0% {
+        -webkit-mask-size: auto, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    15% {
+        -webkit-mask-size: auto, 20px 20px, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    30% {
+        -webkit-mask-size: auto, 20px 20px, 20px 20px, 0 0, 0 0, 0 0, 0 0;
+    }
+    45% {
+        -webkit-mask-size: auto, 20px 20px, 20px 20px, 20px 20px, 0 0, 0 0, 0 0;
+    }
+    60% {
+        -webkit-mask-size: auto, 20px 20px, 20px 20px, 20px 20px, 20px 20px, 0 0, 0 0;
+    }
+    75% {
+        -webkit-mask-size: auto, 20px 20px, 20px 20px, 20px 20px, 20px 20px, 20px 20px, 0 0;
+    }
+    90%,
+    100% {
+        -webkit-mask-size: auto, 20px 20px, 20px 20px, 20px 20px, 20px 20px, 20px 20px, 20px 20px;
+    }
+}
+
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
