@@ -1,0 +1,498 @@
+.classic-1 {
+    --w: 10ch;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    line-height: 2em;
+    letter-spacing: var(--w);
+    width: var(--w);
+    overflow: hidden;
+    white-space: nowrap;
+    color: #0000;
+    text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000, calc(-2 * var(--w)) 0 #000,
+        calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000, calc(-5 * var(--w)) 0 #000,
+        calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000,
+        calc(-9 * var(--w)) 0 #000;
+    animation: c1 1s infinite cubic-bezier(0.5, -150, 0.5, 150);
+}
+.classic-1:before {
+    content: "Loading...";
+}
+
+@keyframes c1 {
+    15%,
+    100% {
+        text-shadow: calc(0 * var(--w) + 0.1px) 0 #000, calc(-1 * var(--w)) 0.01em #000,
+            calc(-2 * var(--w) - 0.2px) 0 #000, calc(-3 * var(--w) + 0.1px) 0.01em #000,
+            calc(-4 * var(--w)) -0.01em #000, calc(-5 * var(--w) - 0.1px) 0 #000,
+            calc(-6 * var(--w) - 0.2px) 0.015em #000, calc(-7 * var(--w) - 0.1px) 0.02em #000,
+            calc(-8 * var(--w)) -0.01em #000, calc(-9 * var(--w) + 0.2px) -0.01em #000;
+    }
+}
+
+.classic-2 {
+    font-weight: bold;
+    font-family: monospace;
+    text-shadow: 0 0 0 rgb(255 0 0), 0 0 0 rgb(0 255 0), 0 0 0 rgb(0 0 255);
+    font-size: 30px;
+    animation: c2 1s infinite cubic-bezier(0.5, -2000, 0.5, 2000);
+}
+.classic-2:before {
+    content: "Loading...";
+}
+
+@keyframes c2 {
+    25%,
+    100% {
+        text-shadow: 0.03px -0.01px 0.01px rgb(255 0 0), 0.02px 0.02px 0 rgb(0 255 0),
+            -0.02px 0.02px 0 rgb(0 0 255);
+    }
+}
+
+.classic-3 {
+    --w: 10ch;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    letter-spacing: var(--w);
+    width: var(--w);
+    overflow: hidden;
+    white-space: nowrap;
+    color: #0000;
+    animation: c3 1s infinite alternate;
+}
+.classic-3:before {
+    content: "Loading...";
+}
+
+@keyframes c3 {
+    0%,
+    15%,
+    75%,
+    100% {
+        text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+    }
+    20% {
+        text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 9px #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+    }
+    25% {
+        text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 7px #000,
+            calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+    }
+    30% {
+        text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) 0 9px #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+    }
+    35% {
+        text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 7px #000;
+    }
+    40% {
+        text-shadow: calc(0 * var(--w)) 0 5px #000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+    }
+    45% {
+        text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) 0 7px #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+    }
+    50% {
+        text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 5px #000,
+            calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+    }
+    55% {
+        text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 8px #000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+    }
+    60% {
+        text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) 0 5px #000, calc(-9 * var(--w)) 0 #000;
+    }
+    65% {
+        text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 7px #000,
+            calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+    }
+    70% {
+        text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) 0 9px #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+    }
+}
+
+.classic-4 {
+    font-weight: bold;
+    font-family: monospace;
+    white-space: pre;
+    font-size: 30px;
+}
+.classic-4:before {
+    content: "Loading...";
+    animation: c4 1s infinite alternate;
+}
+
+@keyframes c4 {
+    0%,
+    15%,
+    75%,
+    100% {
+        content: "Loading...";
+    }
+    20% {
+        content: "Loading...";
+    }
+    25% {
+        content: "Lo ding...";
+    }
+    30% {
+        content: "Load ng...";
+    }
+    35% {
+        content: " oading...";
+    }
+    40% {
+        content: "L ading...";
+    }
+    45% {
+        content: "Loadin ...";
+    }
+    50% {
+        content: "Loa ing...";
+    }
+    55% {
+        content: "Loading  .";
+    }
+    60% {
+        content: " oa ing...";
+    }
+    65% {
+        content: "L ading...";
+    }
+    70% {
+        content: "Load n ...";
+    }
+}
+
+.classic-5 {
+    font-weight: bold;
+    font-family: monospace;
+    display: grid;
+    font-size: 30px;
+}
+.classic-5:before,
+.classic-5:after {
+    content: "Loading...";
+    grid-area: 1/1;
+    -webkit-mask-size: 100% 5px, 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+    animation: c5-1 1s infinite;
+}
+.classic-5:before {
+    -webkit-mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+}
+.classic-5:after {
+    -webkit-mask-image: linear-gradient(#000 0 0);
+    animation: c5-1 1s infinite, c5-2 0.2s infinite cubic-bezier(0.5, 200, 0.5, -200);
+}
+
+@keyframes c5-1 {
+    0% {
+        -webkit-mask-position: 0 20px, 0 0;
+    }
+    20% {
+        -webkit-mask-position: 0 8px, 0 0;
+    }
+    40% {
+        -webkit-mask-position: 0 100%, 0 0;
+    }
+    60% {
+        -webkit-mask-position: 0 3px, 0 0;
+    }
+    80% {
+        -webkit-mask-position: 0 15px, 0 0;
+    }
+    100% {
+        -webkit-mask-position: 0 0, 0 0;
+    }
+}
+@keyframes c5-2 {
+    100% {
+        transform: translate(0.1px);
+    }
+}
+
+.classic-6 {
+    font-weight: bold;
+    font-family: monospace;
+    display: grid;
+    font-size: 30px;
+}
+.classic-6:before,
+.classic-6:after {
+    content: "Loading...";
+    grid-area: 1/1;
+    -webkit-mask-size: 1.5ch 100%, 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: c6-1 1s infinite;
+}
+.classic-6:before {
+    -webkit-mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+}
+.classic-6:after {
+    -webkit-mask-image: linear-gradient(#000 0 0);
+    animation: c6-1 1s infinite, c6-2 0.2s infinite cubic-bezier(0.5, 200, 0.5, -200);
+}
+
+@keyframes c6-1 {
+    0% {
+        -webkit-mask-position: 0 0, 0 0;
+    }
+    20% {
+        -webkit-mask-position: 0.5ch 0, 0 0;
+    }
+    40% {
+        -webkit-mask-position: 100% 0, 0 0;
+    }
+    60% {
+        -webkit-mask-position: 4.5ch 0, 0 0;
+    }
+    80% {
+        -webkit-mask-position: 6.5ch 0, 0 0;
+    }
+    100% {
+        -webkit-mask-position: 2.5ch 0, 0 0;
+    }
+}
+@keyframes c6-2 {
+    100% {
+        transform: translateY(0.2px);
+    }
+}
+
+.classic-7 {
+    font-weight: bold;
+    font-family: monospace;
+    display: grid;
+    font-size: 30px;
+}
+.classic-7:before,
+.classic-7:after {
+    content: "Loading...";
+    grid-area: 1/1;
+    -webkit-mask-size: 2ch 100%, 100% 100%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: c7 1s infinite;
+}
+.classic-7:before {
+    -webkit-mask-image: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
+}
+.classic-7:after {
+    -webkit-mask-image: linear-gradient(#000 0 0);
+    transform: scaleY(0.5);
+}
+
+@keyframes c7 {
+    0% {
+        -webkit-mask-position: 1ch 0, 0 0;
+    }
+    12.5% {
+        -webkit-mask-position: 100% 0, 0 0;
+    }
+    25% {
+        -webkit-mask-position: 4ch 0, 0 0;
+    }
+    37.5% {
+        -webkit-mask-position: 8ch 0, 0 0;
+    }
+    50% {
+        -webkit-mask-position: 2ch 0, 0 0;
+    }
+    62.5% {
+        -webkit-mask-position: 100% 0, 0 0;
+    }
+    75% {
+        -webkit-mask-position: 0ch 0, 0 0;
+    }
+    87.5% {
+        -webkit-mask-position: 6ch 0, 0 0;
+    }
+    100% {
+        -webkit-mask-position: 3ch 0, 0 0;
+    }
+}
+
+.classic-8 {
+    font-weight: bold;
+    font-family: monospace;
+    white-space: pre;
+    font-size: 30px;
+    line-height: 1.2em;
+    height: 1.2em;
+    overflow: hidden;
+}
+.classic-8:before {
+    content: "Loading...\AgodnLai...\Aoiaglni...\ALiongad...\Agindola...\Analoidg...";
+    white-space: pre;
+    display: inline-block;
+    animation: c8 1s infinite steps(6);
+}
+
+@keyframes c8 {
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.classic-9 {
+    font-weight: bold;
+    font-family: monospace;
+    white-space: pre;
+    font-size: 30px;
+    line-height: 1.2em;
+    height: 1.2em;
+    overflow: hidden;
+}
+.classic-9:before {
+    content: "Loading...\A⌰oading...\A⌰⍜ading...\A⌰⍜⏃ding...\A⌰⍜⏃⎅ing...\A⌰⍜⏃⎅⟟ng...\A⌰⍜⏃⎅⟟⋏g...\A⌰⍜⏃⎅⟟⋏☌...\A⌰⍜⏃⎅⟟⋏☌⟒..\A⌰⍜⏃⎅⟟⋏☌⟒⏁.\A⌰⍜⏃⎅⟟⋏☌⟒⏁⋔";
+    white-space: pre;
+    display: inline-block;
+    animation: c9 1s infinite steps(11) alternate;
+}
+
+@keyframes c9 {
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.classic-10 {
+    --w: 10ch;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 30px;
+    letter-spacing: var(--w);
+    width: var(--w);
+    overflow: hidden;
+    white-space: nowrap;
+    color: #0000;
+    animation: c10 2s infinite;
+}
+.classic-10:before {
+    content: "Loading...";
+}
+
+@keyframes c10 {
+    0%,
+    100% {
+        text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) 0 #000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+    }
+    9% {
+        text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) -20px #0000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) 0 #000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+    }
+    18% {
+        text-shadow: calc(0 * var(--w)) 0 #000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) -20px #0000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) -20px #0000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+    }
+    27% {
+        text-shadow: calc(0 * var(--w)) -20px #0000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) -20px #0000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) 0 #000, calc(-6 * var(--w)) -20px #0000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+    }
+    36% {
+        text-shadow: calc(0 * var(--w)) -20px #0000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) -20px #0000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) -20px #0000, calc(-6 * var(--w)) -20px #0000,
+            calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) 0 #000, calc(-9 * var(--w)) 0 #000;
+    }
+    45% {
+        text-shadow: calc(0 * var(--w)) -20px #0000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) -20px #0000, calc(-3 * var(--w)) 0 #000, calc(-4 * var(--w)) 0 #000,
+            calc(-5 * var(--w)) -20px #0000, calc(-6 * var(--w)) -20px #0000,
+            calc(-7 * var(--w)) 0 #000, calc(-8 * var(--w)) -20px #0000, calc(-9 * var(--w)) 0 #000;
+    }
+    54% {
+        text-shadow: calc(0 * var(--w)) -20px #0000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) -20px #0000, calc(-3 * var(--w)) 0 #000,
+            calc(-4 * var(--w)) -20px #0000, calc(-5 * var(--w)) -20px #0000,
+            calc(-6 * var(--w)) -20px #0000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) -20px #0000, calc(-9 * var(--w)) 0 #000;
+    }
+    63% {
+        text-shadow: calc(0 * var(--w)) -20px #0000, calc(-1 * var(--w)) 0 #000,
+            calc(-2 * var(--w)) -20px #0000, calc(-3 * var(--w)) 0 #000,
+            calc(-4 * var(--w)) -20px #0000, calc(-5 * var(--w)) -20px #0000,
+            calc(-6 * var(--w)) -20px #0000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) -20px #0000, calc(-9 * var(--w)) -20px #0000;
+    }
+    72% {
+        text-shadow: calc(0 * var(--w)) -20px #0000, calc(-1 * var(--w)) -20px #0000,
+            calc(-2 * var(--w)) -20px #0000, calc(-3 * var(--w)) 0 #000,
+            calc(-4 * var(--w)) -20px #0000, calc(-5 * var(--w)) -20px #0000,
+            calc(-6 * var(--w)) -20px #0000, calc(-7 * var(--w)) 0 #000,
+            calc(-8 * var(--w)) -20px #0000, calc(-9 * var(--w)) -20px #0000;
+    }
+    81% {
+        text-shadow: calc(0 * var(--w)) -20px #0000, calc(-1 * var(--w)) -20px #0000,
+            calc(-2 * var(--w)) -20px #0000, calc(-3 * var(--w)) 0 #000,
+            calc(-4 * var(--w)) -20px #0000, calc(-5 * var(--w)) -20px #0000,
+            calc(-6 * var(--w)) -20px #0000, calc(-7 * var(--w)) -20px #0000,
+            calc(-8 * var(--w)) -20px #0000, calc(-9 * var(--w)) -20px #0000;
+    }
+    90% {
+        text-shadow: calc(0 * var(--w)) -20px #0000, calc(-1 * var(--w)) -20px #0000,
+            calc(-2 * var(--w)) -20px #0000, calc(-3 * var(--w)) -20px #0000,
+            calc(-4 * var(--w)) -20px #0000, calc(-5 * var(--w)) -20px #0000,
+            calc(-6 * var(--w)) -20px #0000, calc(-7 * var(--w)) -20px #0000,
+            calc(-8 * var(--w)) -20px #0000, calc(-9 * var(--w)) -20px #0000;
+    }
+}
+
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
