@@ -1,0 +1,385 @@
+.bars-1 {
+    width: 45px;
+    aspect-ratio: 1;
+    --c: no-repeat repeating-linear-gradient(90deg, #000 0 20%, #0000 0 40%);
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 100% 26%;
+    animation: b1 1.5s infinite;
+}
+
+@keyframes b1 {
+    0% {
+        background-position: -50px calc(0 * 100% / 3), -50px calc(1 * 100% / 3),
+            -50px calc(2 * 100% / 3), -50px calc(3 * 100% / 3);
+    }
+    12.5% {
+        background-position: 0 calc(0 * 100% / 3), -50px calc(1 * 100% / 3),
+            -50px calc(2 * 100% / 3), -50px calc(3 * 100% / 3);
+    }
+    25% {
+        background-position: 0 calc(0 * 100% / 3), 0 calc(1 * 100% / 3), -50px calc(2 * 100% / 3),
+            -50px calc(3 * 100% / 3);
+    }
+    37.5% {
+        background-position: 0 calc(0 * 100% / 3), 0 calc(1 * 100% / 3), 0 calc(2 * 100% / 3),
+            -50px calc(3 * 100% / 3);
+    }
+    45%,
+    55% {
+        background-position: 0 calc(0 * 100% / 3), 0 calc(1 * 100% / 3), 0 calc(2 * 100% / 3),
+            0 calc(3 * 100% / 3);
+    }
+    62.5% {
+        background-position: 50px calc(0 * 100% / 3), 0 calc(1 * 100% / 3), 0 calc(2 * 100% / 3),
+            0 calc(3 * 100% / 3);
+    }
+    75% {
+        background-position: 50px calc(0 * 100% / 3), 50px calc(1 * 100% / 3), 0 calc(2 * 100% / 3),
+            0 calc(3 * 100% / 3);
+    }
+    87.5% {
+        background-position: 50px calc(0 * 100% / 3), 50px calc(1 * 100% / 3),
+            50px calc(2 * 100% / 3), 0 calc(3 * 100% / 3);
+    }
+    100% {
+        background-position: 50px calc(0 * 100% / 3), 50px calc(1 * 100% / 3),
+            50px calc(2 * 100% / 3), 50px calc(3 * 100% / 3);
+    }
+}
+
+.bars-2 {
+    width: 45px;
+    aspect-ratio: 1;
+    --c: no-repeat repeating-linear-gradient(90deg, #000 0 20%, #0000 0 40%);
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 100% 26%;
+    animation: b2 1.5s infinite;
+}
+
+@keyframes b2 {
+    0% {
+        background-position: 0 -20px, 0 -20px, 0 -20px, 0 -20px;
+    }
+    12.5% {
+        background-position: 0 -20px, 0 -20px, 0 -20px, 0 calc(3 * 100% / 3);
+    }
+    25% {
+        background-position: 0 -20px, 0 -20px, 0 calc(2 * 100% / 3), 0 calc(3 * 100% / 3);
+    }
+    37.5% {
+        background-position: 0 -20px, 0 calc(1 * 100% / 3), 0 calc(2 * 100% / 3),
+            0 calc(3 * 100% / 3);
+    }
+    45%,
+    50% {
+        background-position: 0 calc(0 * 100% / 3), 0 calc(1 * 100% / 3), 0 calc(2 * 100% / 3),
+            0 calc(3 * 100% / 3);
+    }
+    62.5% {
+        background-position: 0 calc(0 * 100% / 3), 0 calc(1 * 100% / 3), 0 calc(2 * 100% / 3),
+            0 50px;
+    }
+    75% {
+        background-position: 0 calc(0 * 100% / 3), 0 calc(1 * 100% / 3), 0 50px, 0 50px;
+    }
+    87.5% {
+        background-position: 0 calc(0 * 100% / 3), 0 50px, 0 50px, 0 50px;
+    }
+    100% {
+        background-position: 0 50px, 0 50px, 0 50px, 0 50px;
+    }
+}
+
+.bars-3 {
+    height: 45px;
+    aspect-ratio: 1.6;
+    --c: no-repeat repeating-linear-gradient(90deg, #000 0 20%, #0000 0 40%);
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 62.5% 26%;
+    animation: b3 1s infinite;
+}
+
+@keyframes b3 {
+    0%,
+    10% {
+        background-position: 50% calc(0 * 100% / 3), 50% calc(1 * 100% / 3), 50% calc(2 * 100% / 3),
+            50% calc(3 * 100% / 3);
+    }
+    33% {
+        background-position: 100% calc(0 * 100% / 3), calc(100% - 9px) calc(1 * 100% / 3),
+            9px calc(2 * 100% / 3), 0 calc(3 * 100% / 3);
+    }
+    66% {
+        background-position: 0 calc(0 * 100% / 3), 9px calc(1 * 100% / 3),
+            calc(100% - 9px) calc(2 * 100% / 3), 100% calc(3 * 100% / 3);
+    }
+    90%,
+    100% {
+        background-position: 50% calc(0 * 100% / 3), 50% calc(1 * 100% / 3), 50% calc(2 * 100% / 3),
+            50% calc(3 * 100% / 3);
+    }
+}
+
+.bars-4 {
+    width: 45px;
+    aspect-ratio: 0.8;
+    --c: no-repeat repeating-linear-gradient(90deg, #000 0 20%, #0000 0 40%);
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 100% 21%;
+    animation: b4 0.75s infinite alternate;
+}
+@keyframes b4 {
+    0%,
+    10% {
+        background-position: 0 calc(0 * 100% / 4), 0 calc(1 * 100% / 4), 0 calc(2 * 100% / 4),
+            0 calc(3 * 100% / 4);
+    }
+    25% {
+        background-position: 0 calc(0 * 100% / 4), 0 calc(1 * 100% / 4), 0 calc(2 * 100% / 4),
+            0 calc(4 * 100% / 4);
+    }
+    50% {
+        background-position: 0 calc(0 * 100% / 4), 0 calc(1 * 100% / 4), 0 calc(3 * 100% / 4),
+            0 calc(4 * 100% / 4);
+    }
+    75% {
+        background-position: 0 calc(0 * 100% / 4), 0 calc(2 * 100% / 4), 0 calc(3 * 100% / 4),
+            0 calc(4 * 100% / 4);
+    }
+    90%,
+    100% {
+        background-position: 0 calc(1 * 100% / 4), 0 calc(2 * 100% / 4), 0 calc(3 * 100% / 4),
+            0 calc(4 * 100% / 4);
+    }
+}
+
+.bars-5 {
+    width: 45px;
+    aspect-ratio: 1;
+    --c: no-repeat repeating-linear-gradient(90deg, #000 0 calc(100% / 7), #0000 0 calc(200% / 7));
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 140% 26%;
+    animation: b5 0.75s infinite;
+}
+
+@keyframes b5 {
+    0% {
+        background-position: 0 calc(0 * 100% / 3), 100% calc(1 * 100% / 3), 0 calc(2 * 100% / 3),
+            100% calc(3 * 100% / 3);
+    }
+    25% {
+        background-position: 100% calc(0 * 100% / 3), 100% calc(1 * 100% / 3), 0 calc(2 * 100% / 3),
+            100% calc(3 * 100% / 3);
+    }
+    50% {
+        background-position: 100% calc(0 * 100% / 3), 0 calc(1 * 100% / 3), 0 calc(2 * 100% / 3),
+            100% calc(3 * 100% / 3);
+    }
+    75% {
+        background-position: 100% calc(0 * 100% / 3), 0 calc(1 * 100% / 3), 100% calc(2 * 100% / 3),
+            100% calc(3 * 100% / 3);
+    }
+    100% {
+        background-position: 100% calc(0 * 100% / 3), 0 calc(1 * 100% / 3), 100% calc(2 * 100% / 3),
+            0 calc(3 * 100% / 3);
+    }
+}
+
+.bars-6 {
+    width: 45px;
+    aspect-ratio: 1;
+    --c: no-repeat repeating-linear-gradient(90deg, #000 0 calc(100% / 7), #0000 0 calc(200% / 7));
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 140% 26%;
+    animation: b6 0.75s infinite linear;
+}
+
+@keyframes b6 {
+    0%,
+    5% {
+        background-position: 0 calc(0 * 100% / 3), 0 calc(1 * 100% / 3), 0 calc(2 * 100% / 3),
+            0 calc(3 * 100% / 3);
+    }
+    20% {
+        background-position: 50% calc(0 * 100% / 3), 0 calc(1 * 100% / 3), 0 calc(2 * 100% / 3),
+            0 calc(3 * 100% / 3);
+    }
+    40% {
+        background-position: 100% calc(0 * 100% / 3), 50% calc(1 * 100% / 3), 0 calc(2 * 100% / 3),
+            0 calc(3 * 100% / 3);
+    }
+    60% {
+        background-position: 100% calc(0 * 100% / 3), 100% calc(1 * 100% / 3),
+            50% calc(2 * 100% / 3), 0 calc(3 * 100% / 3);
+    }
+    80% {
+        background-position: 100% calc(0 * 100% / 3), 100% calc(1 * 100% / 3),
+            100% calc(2 * 100% / 3), 50% calc(3 * 100% / 3);
+    }
+    95%,
+    100% {
+        background-position: 100% calc(0 * 100% / 3), 100% calc(1 * 100% / 3),
+            100% calc(2 * 100% / 3), 100% calc(3 * 100% / 3);
+    }
+}
+
+.bars-7 {
+    width: 45px;
+    aspect-ratio: 1;
+    --c: no-repeat repeating-linear-gradient(90deg, #000 0 calc(100% / 7), #0000 0 calc(200% / 7));
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 140% 26%;
+    background-repeat: no-repeat;
+    animation: b7 0.75s infinite linear;
+}
+
+@keyframes b7 {
+    0%,
+    20% {
+        background-position: 0 calc(0 * 100% / 3), 100% calc(1 * 100% / 3), 0 calc(2 * 100% / 3),
+            100% calc(3 * 100% / 3);
+    }
+    80%,
+    100% {
+        background-position: 100% calc(0 * 100% / 3), 0 calc(1 * 100% / 3), 100% calc(2 * 100% / 3),
+            0 calc(3 * 100% / 3);
+    }
+}
+
+.bars-8 {
+    height: 45px;
+    aspect-ratio: 1.4;
+    --c: no-repeat repeating-linear-gradient(90deg, #000 0 20%, #0000 0 40%);
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 72% 26%;
+    animation: b8 1s infinite;
+}
+
+@keyframes b8 {
+    0%,
+    20% {
+        background-position: 50% calc(0 * 100% / 3), 50% calc(1 * 100% / 3), 50% calc(2 * 100% / 3),
+            50% calc(3 * 100% / 3);
+    }
+    40% {
+        background-position: 50% calc(0 * 100% / 3), 100% calc(1 * 100% / 3), 0 calc(2 * 100% / 3),
+            50% calc(3 * 100% / 3);
+    }
+    60% {
+        background-position: 50% calc(0 * 100% / 3), 0 calc(1 * 100% / 3), 100% calc(2 * 100% / 3),
+            50% calc(3 * 100% / 3);
+    }
+    80%,
+    100% {
+        background-position: 50% calc(0 * 100% / 3), 50% calc(1 * 100% / 3), 50% calc(2 * 100% / 3),
+            50% calc(3 * 100% / 3);
+    }
+}
+
+.bars-9 {
+    width: 9px;
+    height: 9px;
+    background: #000;
+    box-shadow: -18px -9px, 0 -9px, 18px -9px, -18px 0, 18px 0, -18px 9px, 0 9px, 18px 9px,
+        -18px 18px, 0 18px, 18px 18px;
+    animation: b9 2s infinite;
+}
+
+@keyframes b9 {
+    10% {
+        box-shadow: -18px -9px, 0 -9px, 18px -9px, -18px 0, 18px 0, -18px 9px #0000, 0 9px,
+            18px 9px #0000, -18px 18px, 0 18px, 18px 18px;
+    }
+    20% {
+        box-shadow: -18px -9px, 0 -9px, 18px -9px, -18px 0, 18px 0, -18px 9px, 0 9px, 18px 9px #0000,
+            -18px 18px #0000, 0 18px, 18px 18px;
+    }
+    30% {
+        box-shadow: -18px -9px, 0 -9px #0000, 18px -9px, -18px 0 #0000, 18px 0, -18px 9px,
+            0 9px #0000, 18px 9px, -18px 18px #0000, 0 18px, 18px 18px #0000;
+    }
+    40% {
+        box-shadow: -18px -9px, 0 -9px, 18px -9px, -18px 0 #0000, 18px 0 #0000, -18px 9px, 0 9px,
+            18px 9px, -18px 18px, 0 18px, 18px 18px;
+    }
+    50% {
+        box-shadow: -18px -9px, 0 -9px, 18px -9px, -18px 0, 18px 0 #0000, -18px 9px #0000, 0 9px,
+            18px 9px, -18px 18px, 0 18px, 18px 18px;
+    }
+    60% {
+        box-shadow: -18px -9px, 0 -9px #0000, 18px -9px, -18px 0, 18px 0, -18px 9px #0000, 0 9px,
+            18px 9px, -18px 18px #0000, 0 18px, 18px 18px;
+    }
+    70% {
+        box-shadow: -18px -9px, 0 -9px #0000, 18px -9px #0000, -18px 0, 18px 0, -18px 9px, 0 9px,
+            18px 9px, -18px 18px #0000, 0 18px, 18px 18px;
+    }
+    80% {
+        box-shadow: -18px -9px #0000, 0 -9px, 18px -9px, -18px 0, 18px 0, -18px 9px, 0 9px, 18px 9px,
+            -18px 18px, 0 18px, 18px 18px #0000;
+    }
+    90% {
+        box-shadow: -18px -9px #0000, 0 -9px, 18px -9px, -18px 0, 18px 0, -18px 9px, 0 9px #0000,
+            18px 9px, -18px 18px, 0 18px, 18px 18px #0000;
+    }
+}
+
+.bars-10 {
+    width: 9px;
+    height: 9px;
+    background: #000;
+    box-shadow: -18px -9px, 0 -9px, 18px -9px, -18px 0, 18px 0, -18px 9px, 0 9px, 18px 9px,
+        -18px 18px, 0 18px, 18px 18px;
+    animation: b10 2s infinite;
+}
+
+@keyframes b10 {
+    10% {
+        box-shadow: -18px -9px, 0 -9px, 18px -9px, -18px 0, 18px 0, -18px 9px 0 2px, 0 9px,
+            18px 9px 0 2px, -18px 18px, 0 18px, 18px 18px;
+    }
+    20% {
+        box-shadow: -18px -9px, 0 -9px, 18px -9px, -18px 0, 18px 0, -18px 9px, 0 9px, 18px 9px 0 2px,
+            -18px 18px 0 2px, 0 18px, 18px 18px;
+    }
+    30% {
+        box-shadow: -18px -9px, 0 -9px, 18px -9px, -18px 0 0 2px, 18px 0, -18px 9px, 0 9px 0 2px,
+            18px 9px, -18px 18px 0 2px, 0 18px, 18px 18px 0 2px;
+    }
+    40% {
+        box-shadow: -18px -9px, 0 -9px, 18px -9px, -18px 0 0 2px, 18px 0 0 2px, -18px 9px, 0 9px,
+            18px 9px, -18px 18px, 0 18px, 18px 18px 0 2px;
+    }
+    50% {
+        box-shadow: -18px -9px, 0 -9px, 18px -9px, -18px 0, 18px 0 0 2px, -18px 9px 0 2px, 0 9px,
+            18px 9px, -18px 18px, 0 18px, 18px 18px;
+    }
+    60% {
+        box-shadow: -18px -9px, 0 -9px 0 2px, 18px -9px, -18px 0, 18px 0, -18px 9px 0 2px, 0 9px,
+            18px 9px, -18px 18px 0 2px, 0 18px, 18px 18px;
+    }
+    70% {
+        box-shadow: -18px -9px, 0 -9px 0 2px, 18px -9px 0 2px, -18px 0, 18px 0, -18px 9px, 0 9px,
+            18px 9px, -18px 18px 0 2px, 0 18px, 18px 18px;
+    }
+    80% {
+        box-shadow: -18px -9px 0 2px, 0 -9px, 18px -9px, -18px 0, 18px 0, -18px 9px, 0 9px, 18px 9px,
+            -18px 18px, 0 18px, 18px 18px 0 2px;
+    }
+    90% {
+        box-shadow: -18px -9px 0 2px, 0 -9px, 18px -9px, -18px 0, 18px 0, -18px 9px, 0 9px 0 2px,
+            18px 9px, -18px 18px, 0 18px, 18px 18px 0 2px;
+    }
+}
+
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
