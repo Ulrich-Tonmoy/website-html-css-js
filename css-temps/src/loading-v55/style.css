@@ -1,0 +1,199 @@
+.nature-1 {
+    width: calc(6 * 30px);
+    height: 50px;
+    display: flex;
+    color: #8d7958;
+    filter: drop-shadow(30px 25px 0 currentColor) drop-shadow(60px 0 0 currentColor)
+        drop-shadow(120px 0 0 currentColor);
+    clip-path: inset(0 100% 0 0);
+    animation: a1 2s infinite steps(7);
+}
+.nature-1:before {
+    content: "";
+    width: 30px;
+    height: 25px;
+    background: currentColor;
+    clip-path: polygon(0 50%, 30% 40%, 100% 0, 60% 40%, 100% 50%, 60% 60%, 100% 100%, 30% 60%);
+}
+
+@keyframes a1 {
+    100% {
+        clip-path: inset(0 -30px 0 0);
+    }
+}
+
+.nature-2 {
+    width: calc(6 * 30px);
+    height: 50px;
+    display: flex;
+    color: #8d7958;
+    filter: drop-shadow(30px 25px 0 currentColor) drop-shadow(60px 0 0 currentColor)
+        drop-shadow(120px 0 0 currentColor);
+    clip-path: inset(0 100% 0 0);
+    animation: a2 2s infinite steps(7);
+}
+.nature-2:before {
+    content: "";
+    width: 30px;
+    height: 25px;
+    --c: radial-gradient(farthest-side, currentColor 92%, #0000);
+    background: var(--c) left / 70% 70%, var(--c) right/20% 20%, var(--c) top 0 right 15%/20% 20%,
+        var(--c) bottom 0 right 15%/20% 20%;
+    background-repeat: no-repeat;
+}
+
+@keyframes a2 {
+    100% {
+        clip-path: inset(0 -30px 0 0);
+    }
+}
+
+.nature-3 {
+    width: calc(6 * 30px);
+    height: 50px;
+    display: flex;
+    color: #8d7958;
+    filter: drop-shadow(30px 25px 0 currentColor) drop-shadow(60px 0 0 currentColor)
+        drop-shadow(120px 0 0 currentColor);
+    clip-path: inset(0 100% 0 0);
+    animation: a3 2s infinite steps(7);
+}
+.nature-3:before {
+    content: "";
+    width: 30px;
+    height: 25px;
+    background: radial-gradient(farthest-side at right, currentColor 92%, #0000) left/20px 100%
+            no-repeat,
+        radial-gradient(farthest-side, currentColor 92%, #0000) right/17px 9px repeat-y;
+}
+
+@keyframes a3 {
+    100% {
+        clip-path: inset(0 -30px 0 0);
+    }
+}
+
+.nature-4 {
+    width: calc(6 * 30px);
+    height: 50px;
+    display: grid;
+    color: #8d7958;
+    filter: drop-shadow(30px 25px 0 currentColor) drop-shadow(60px 0 0 currentColor)
+        drop-shadow(120px 0 0 currentColor);
+    clip-path: inset(0 100% 0 0);
+    animation: a3 2s infinite steps(7);
+}
+.nature-4:before,
+.nature-4:after {
+    content: "";
+    width: 24px;
+    grid-area: 1/1;
+    height: 9px;
+    background: radial-gradient(farthest-side, currentColor 90%, #0000) left/10px 9px,
+        conic-gradient(from -106deg at right, #0000, currentColor 2deg 29deg, #0000 33deg)
+            right/17px 11px;
+    background-repeat: no-repeat;
+    transform: rotate(7deg);
+    transform-origin: 5px 50%;
+}
+.nature-4:after {
+    margin-top: 12px;
+    transform: rotate(-7deg);
+}
+
+@keyframes a4 {
+    100% {
+        clip-path: inset(0 -30px 0 0);
+    }
+}
+
+.nature-5 {
+    width: 80px;
+    height: 40px;
+    background: #83def1;
+    position: relative;
+    overflow: hidden;
+}
+
+.nature-5:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    height: 20px;
+    width: 30px;
+    background: radial-gradient(farthest-side, #000 50%, #fff 52% 80%, #0000) 78% 22%/5px 5px,
+        radial-gradient(farthest-side, #fb4f05 92%, #0000) right/80% 100%,
+        radial-gradient(farthest-side at left, #fb4f05 92%, #0000) left/35% 80%;
+    background-repeat: no-repeat;
+    clip-path: polygon(0 0, 100% 0, 100% 40%, 81% 50%, 100% 60%, 100% 100%, 0 100%, 20% 50%);
+    animation: n5 1.5s infinite;
+}
+
+@keyframes n5 {
+    0% {
+        transform: translate(-100%);
+    }
+    40% {
+        transform: translate(15px);
+    }
+    80%,
+    100% {
+        transform: translate(100px);
+    }
+}
+
+.nature-6 {
+    width: 20px;
+    height: 80px;
+    background: #935936;
+    position: relative;
+}
+
+.nature-6:before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: -22px;
+    width: 25px;
+    height: 60px;
+    background: radial-gradient(farthest-side, #fff 92%, #0000) 60% 6px/4px 4px,
+        radial-gradient(50% 60%, #53707b 92%, #0000) center/70% 55%,
+        radial-gradient(farthest-side, #53707b 92%, #0000) 50% 3px/14px 14px,
+        radial-gradient(142% 100% at bottom right, #0000 64%, #53707b 65%) bottom/57% 40%,
+        conic-gradient(from -120deg at right, #53707b 36deg, #0000 0) 100% 3px/51% 12px,
+        conic-gradient(from 120deg at top left, #0000, #ef524a 2deg 40deg, #0000 43deg) top/100%
+            10px;
+    background-repeat: no-repeat;
+    transform: rotate(-26deg);
+    transform-origin: 100% 80%;
+    animation: n6 0.25s infinite linear alternate;
+}
+.nature-6:after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    left: -6px;
+    bottom: 15px;
+    border-radius: 100px 0 0 100px;
+    background: #53707b;
+}
+
+@keyframes n6 {
+    100% {
+        transform: rotate(0);
+    }
+}
+
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
