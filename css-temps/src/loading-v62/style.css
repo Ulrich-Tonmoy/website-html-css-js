@@ -1,0 +1,368 @@
+.colorful-1 {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    --c: linear-gradient(90deg, #ffd412 25%, #abd406 0 50%, #ff821c 0 75%, #ffd412 0);
+}
+.colorful-1:before,
+.colorful-1:after {
+    content: "";
+    flex: 1;
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 400% 26%;
+    background-repeat: no-repeat;
+    animation: co1 2s infinite;
+}
+.colorful-1:after {
+    transform: scaleX(-1);
+}
+
+@keyframes co1 {
+    0% {
+        background-position: calc(3 * 100% / 3) calc(0 * 100% / 3),
+            calc(3 * 100% / 3) calc(1 * 100% / 3), calc(3 * 100% / 3) calc(2 * 100% / 3),
+            calc(3 * 100% / 3) calc(3 * 100% / 3);
+    }
+    8.33% {
+        background-position: calc(2 * 100% / 3) calc(0 * 100% / 3),
+            calc(3 * 100% / 3) calc(1 * 100% / 3), calc(3 * 100% / 3) calc(2 * 100% / 3),
+            calc(3 * 100% / 3) calc(3 * 100% / 3);
+    }
+    16.67% {
+        background-position: calc(2 * 100% / 3) calc(0 * 100% / 3),
+            calc(2 * 100% / 3) calc(1 * 100% / 3), calc(3 * 100% / 3) calc(2 * 100% / 3),
+            calc(3 * 100% / 3) calc(3 * 100% / 3);
+    }
+    25% {
+        background-position: calc(2 * 100% / 3) calc(0 * 100% / 3),
+            calc(2 * 100% / 3) calc(1 * 100% / 3), calc(2 * 100% / 3) calc(2 * 100% / 3),
+            calc(3 * 100% / 3) calc(3 * 100% / 3);
+    }
+    30%,
+    33.33% {
+        background-position: calc(2 * 100% / 3) calc(0 * 100% / 3),
+            calc(2 * 100% / 3) calc(1 * 100% / 3), calc(2 * 100% / 3) calc(2 * 100% / 3),
+            calc(2 * 100% / 3) calc(3 * 100% / 3);
+    }
+    41.67% {
+        background-position: calc(1 * 100% / 3) calc(0 * 100% / 3),
+            calc(2 * 100% / 3) calc(1 * 100% / 3), calc(2 * 100% / 3) calc(2 * 100% / 3),
+            calc(2 * 100% / 3) calc(3 * 100% / 3);
+    }
+    50% {
+        background-position: calc(1 * 100% / 3) calc(0 * 100% / 3),
+            calc(1 * 100% / 3) calc(1 * 100% / 3), calc(2 * 100% / 3) calc(2 * 100% / 3),
+            calc(2 * 100% / 3) calc(3 * 100% / 3);
+    }
+    58.33% {
+        background-position: calc(1 * 100% / 3) calc(0 * 100% / 3),
+            calc(1 * 100% / 3) calc(1 * 100% / 3), calc(1 * 100% / 3) calc(2 * 100% / 3),
+            calc(2 * 100% / 3) calc(3 * 100% / 3);
+    }
+    63%,
+    66.67% {
+        background-position: calc(1 * 100% / 3) calc(0 * 100% / 3),
+            calc(1 * 100% / 3) calc(1 * 100% / 3), calc(1 * 100% / 3) calc(2 * 100% / 3),
+            calc(1 * 100% / 3) calc(3 * 100% / 3);
+    }
+    75% {
+        background-position: calc(0 * 100% / 3) calc(0 * 100% / 3),
+            calc(1 * 100% / 3) calc(1 * 100% / 3), calc(1 * 100% / 3) calc(2 * 100% / 3),
+            calc(1 * 100% / 3) calc(3 * 100% / 3);
+    }
+    83.33% {
+        background-position: calc(0 * 100% / 3) calc(0 * 100% / 3),
+            calc(0 * 100% / 3) calc(1 * 100% / 3), calc(1 * 100% / 3) calc(2 * 100% / 3),
+            calc(1 * 100% / 3) calc(3 * 100% / 3);
+    }
+    91.67% {
+        background-position: calc(0 * 100% / 3) calc(0 * 100% / 3),
+            calc(0 * 100% / 3) calc(1 * 100% / 3), calc(0 * 100% / 3) calc(2 * 100% / 3),
+            calc(1 * 100% / 3) calc(3 * 100% / 3);
+    }
+    97%,
+    100% {
+        background-position: calc(0 * 100% / 3) calc(0 * 100% / 3),
+            calc(0 * 100% / 3) calc(1 * 100% / 3), calc(0 * 100% / 3) calc(2 * 100% / 3),
+            calc(0 * 100% / 3) calc(3 * 100% / 3);
+    }
+}
+
+.colorful-2 {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(#ed303c 0 0), linear-gradient(#3b8183 0 0),
+        linear-gradient(#ff9c5b 0 0) #ed303c;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: co2 2s infinite;
+}
+
+@keyframes co2 {
+    0% {
+        background-size: 100% 100%, 100% 100%, 100% 100%;
+    }
+    33% {
+        background-size: 0px 0px, 100% 100%, 100% 100%;
+    }
+    66% {
+        background-size: 0px 0px, 0px 0px, 100% 100%;
+    }
+    100% {
+        background-size: 0px 0px, 0px 0px, 0px 0px;
+    }
+}
+
+.colorful-3 {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    --c: #cff09e 25%, #79bd9a 0 50%, #0b486b 0 75%, #cff09e 0;
+}
+.colorful-3:before,
+.colorful-3:after {
+    content: "";
+    background: linear-gradient(90deg, var(--c)), linear-gradient(-90deg, var(--c));
+    background-size: 400% 52%;
+    background-repeat: no-repeat;
+    animation: co3 2s infinite;
+}
+@keyframes co3 {
+    0% {
+        background-position: calc(3 * 100% / 3) 0, calc(0 * 100% / 3) 100%;
+    }
+    23%,
+    33% {
+        background-position: calc(2 * 100% / 3) 0, calc(1 * 100% / 3) 100%;
+    }
+    56%,
+    66% {
+        background-position: calc(1 * 100% / 3) 0, calc(2 * 100% / 3) 100%;
+    }
+    90%,
+    100% {
+        background-position: calc(0 * 100% / 3) 0, calc(3 * 100% / 3) 100%;
+    }
+}
+
+.colorful-4 {
+    width: 50px;
+    height: 50px;
+    transform: translate(-100%, 100%);
+    animation: co4 2s infinite;
+}
+@keyframes co4 {
+    0% {
+        box-shadow: 50px -50px #b5ac01, 50px -50px #ecba09, 50px -50px #0000, 50px -50px #0000,
+            50px -50px #0000;
+    }
+    25% {
+        box-shadow: 100px -50px #0000, 50px -50px #ecba09, 50px -50px #e86e1c, 50px -50px #0000,
+            50px -50px #0000;
+    }
+    50% {
+        box-shadow: 100px -50px #0000, 50px -100px #0000, 50px -50px #e86e1c, 50px -50px #d41e45,
+            50px -50px #0000;
+    }
+    75% {
+        box-shadow: 100px -50px #0000, 50px -100px #0000, 0px -50px #0000, 50px -50px #d41e45,
+            50px -50px #b5ac01;
+    }
+    100% {
+        box-shadow: 100px -50px #0000, 50px -100px #0000, 0px -50px #0000, 50px 0px #0000,
+            50px -50px #b5ac01;
+    }
+}
+
+.colorful-5 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(#ff003c 0 0), linear-gradient(#ff003c 0 0),
+        linear-gradient(#ff003c 0 0), linear-gradient(#ff003c 0 0), linear-gradient(#00c176 0 0),
+        linear-gradient(#00c176 0 0), linear-gradient(#00c176 0 0), linear-gradient(#00c176 0 0),
+        #ff003c;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    animation: co5 2s infinite;
+}
+@keyframes co5 {
+    0% {
+        background-size: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    40%,
+    50% {
+        background-size: 0 0, 0 0, 0 0, 0 0, 51% 51%, 51% 51%, 51% 51%, 51% 51%;
+    }
+    90%,
+    100% {
+        background-size: 51% 51%, 51% 51%, 51% 51%, 51% 51%, 51% 51%, 51% 51%, 51% 51%, 51% 51%;
+    }
+}
+
+.colorful-6 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(#cc333f 0 0), linear-gradient(#cc333f 0 0),
+        linear-gradient(#cc333f 0 0), linear-gradient(#cc333f 0 0), linear-gradient(#00a0b0 0 0),
+        linear-gradient(#00a0b0 0 0), linear-gradient(#00a0b0 0 0), linear-gradient(#00a0b0 0 0),
+        #cc333f;
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    animation: co6 2s infinite;
+}
+@keyframes co6 {
+    0% {
+        background-size: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0;
+    }
+    12.5% {
+        background-size: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 51% 51%;
+    }
+    25% {
+        background-size: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 51% 51%, 51% 51%;
+    }
+    37.5% {
+        background-size: 0 0, 0 0, 0 0, 0 0, 0 0, 51% 51%, 51% 51%, 51% 51%;
+    }
+    50% {
+        background-size: 0 0, 0 0, 0 0, 0 0, 51% 51%, 51% 51%, 51% 51%, 51% 51%;
+    }
+    62.5% {
+        background-size: 0 0, 0 0, 0 0, 51% 51%, 51% 51%, 51% 51%, 51% 51%, 51% 51%;
+    }
+    75% {
+        background-size: 0 0, 0 0, 51% 51%, 51% 51%, 51% 51%, 51% 51%, 51% 51%, 51% 51%;
+    }
+    87.5% {
+        background-size: 0 0, 51% 51%, 51% 51%, 51% 51%, 51% 51%, 51% 51%, 51% 51%, 51% 51%;
+    }
+    100% {
+        background-size: 51% 51%, 51% 51%, 51% 51%, 51% 51%, 51% 51%, 51% 51%, 51% 51%, 51% 51%;
+    }
+}
+
+.colorful-7 {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    transform-origin: 50% 116.5%;
+    animation: co7 2s infinite linear;
+}
+.colorful-7:before {
+    content: "";
+    min-width: 233%;
+    height: 233%;
+    background: radial-gradient(farthest-side, #00da3c 90%, #0000) top,
+        radial-gradient(farthest-side, #00cbe7 90%, #0000) left,
+        radial-gradient(farthest-side, #fd8603 90%, #0000) bottom,
+        radial-gradient(farthest-side, #f4f328 90%, #0000) right;
+    background-size: 43% 43%;
+    background-repeat: no-repeat;
+    animation: inherit;
+    animation-direction: reverse;
+}
+@keyframes co7 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.colorful-8 {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(90deg, #cee879 50%, #ff5254 0) top/100% 50% no-repeat,
+        linear-gradient(90deg, #fcb653 50%, #5cacc4 0);
+    -webkit-mask: linear-gradient(#000 0 0) 0 0/50% 50% no-repeat;
+    animation: co8 2s infinite;
+}
+@keyframes co8 {
+    0% {
+        -webkit-mask-position: 0 0;
+    }
+    25% {
+        -webkit-mask-position: 100% 0;
+    }
+    50% {
+        -webkit-mask-position: 100% 100%;
+    }
+    75% {
+        -webkit-mask-position: 0 100%;
+    }
+    100% {
+        -webkit-mask-position: 0 0;
+    }
+}
+
+.colorful-9 {
+    width: 40px;
+    height: calc(80px * 0.866);
+    clip-path: polygon(0 0, 100% 100%, 0 100%, 100% 0);
+    position: relative;
+    animation: co9 2s infinite linear;
+    overflow: hidden;
+}
+.colorful-9:before {
+    content: "";
+    position: absolute;
+    inset: -150% -150%;
+    background: repeating-conic-gradient(
+        from 30deg,
+        #ffabab 0 60deg,
+        #abe4ff 0 120deg,
+        #ff7373 0 180deg
+    );
+    animation: inherit;
+    animation-direction: reverse;
+}
+@keyframes co9 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.colorful-10 {
+    width: 70px;
+    height: 70px;
+    background: conic-gradient(
+        from -45deg,
+        #8a8780 90deg,
+        #94ba65 0 180deg,
+        #2790b0 0 270deg,
+        #2b4e72 0
+    );
+    animation: co10 2s infinite;
+}
+@keyframes co10 {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 50% 50%);
+    }
+    25% {
+        clip-path: polygon(100% 0, 100% 100%, 50% 50%);
+    }
+    50% {
+        clip-path: polygon(100% 100%, 0 100%, 50% 50%);
+    }
+    75% {
+        clip-path: polygon(0 100%, 0 0, 50% 50%);
+    }
+    100% {
+        clip-path: polygon(0 0, 100% 0, 50% 50%);
+    }
+}
+
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+}
+
+* {
+    box-sizing: border-box;
+}
