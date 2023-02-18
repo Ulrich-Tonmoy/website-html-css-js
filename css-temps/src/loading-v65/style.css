@@ -1,0 +1,442 @@
+.cut-1 {
+    width: 70px;
+    height: 26px;
+    background: #ffd600;
+    border-radius: 50px;
+    --c: radial-gradient(farthest-side, #000 92%, #0000);
+    --s: 18px 18px;
+    -webkit-mask: var(--c) left 4px top 50%, var(--c) center, var(--c) right 4px top 50%,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-repeat: no-repeat;
+    animation: cu1 1.5s infinite;
+}
+
+@keyframes cu1 {
+    0% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, auto;
+    }
+    16.67% {
+        -webkit-mask-size: var(--s), 0 0, 0 0, auto;
+    }
+    33.33% {
+        -webkit-mask-size: var(--s), var(--s), 0 0, auto;
+    }
+    50% {
+        -webkit-mask-size: var(--s), var(--s), var(--s), auto;
+    }
+    66.67% {
+        -webkit-mask-size: 0 0, var(--s), var(--s), auto;
+    }
+    83.33% {
+        -webkit-mask-size: 0 0, 0 0, var(--s), auto;
+    }
+    100% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, auto;
+    }
+}
+
+.cut-2 {
+    width: 70px;
+    height: 26px;
+    background: #3fd97f;
+    --c: linear-gradient(#000 0 0);
+    --s: 18px 18px;
+    -webkit-mask: var(--c) left 4px top 50%, var(--c) center, var(--c) right 4px top 50%,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-repeat: no-repeat;
+    animation: cu2 1.5s infinite;
+}
+
+@keyframes cu2 {
+    0% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, auto;
+    }
+    16.67% {
+        -webkit-mask-size: var(--s), 0 0, 0 0, auto;
+    }
+    33.33% {
+        -webkit-mask-size: var(--s), var(--s), 0 0, auto;
+    }
+    50% {
+        -webkit-mask-size: var(--s), var(--s), var(--s), auto;
+    }
+    66.67% {
+        -webkit-mask-size: 0 0, var(--s), var(--s), auto;
+    }
+    83.33% {
+        -webkit-mask-size: 0 0, 0 0, var(--s), auto;
+    }
+    100% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, auto;
+    }
+}
+
+.cut-3 {
+    width: 78px;
+    height: calc(27px * 0.866 + 8px);
+    background: #fd135a;
+    --c1: conic-gradient(from 150deg at top, #000 60deg, #0000 0);
+    --c2: conic-gradient(from -30deg at bottom, #000 60deg, #0000 0);
+    --s: 27px calc(27px * 0.866);
+    clip-path: polygon(18.1px 0, calc(100% - 18.1px) 0, 100% 100%, 0 100%);
+    -webkit-mask: var(--c1) left 8px top 50%, var(--c2) center, var(--c1) right 8px top 50%,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-repeat: no-repeat;
+    animation: cu3 1.5s infinite;
+}
+
+@keyframes cu3 {
+    0% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, auto;
+    }
+    16.67% {
+        -webkit-mask-size: var(--s), 0 0, 0 0, auto;
+    }
+    33.33% {
+        -webkit-mask-size: var(--s), var(--s), 0 0, auto;
+    }
+    50% {
+        -webkit-mask-size: var(--s), var(--s), var(--s), auto;
+    }
+    66.67% {
+        -webkit-mask-size: 0 0, var(--s), var(--s), auto;
+    }
+    83.33% {
+        -webkit-mask-size: 0 0, 0 0, var(--s), auto;
+    }
+    100% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, auto;
+    }
+}
+
+.cut-4 {
+    width: 48px;
+    height: 48px;
+    background: #ffd600;
+    border-radius: 9px;
+    --c: radial-gradient(farthest-side, #000 92%, #0000);
+    --s: 18px 18px;
+    -webkit-mask: var(--c) left 4px top 4px, var(--c) right 4px top 4px,
+        var(--c) right 4px bottom 4px, var(--c) left 4px bottom 4px, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-repeat: no-repeat;
+    animation: cu4 1.5s infinite;
+}
+
+@keyframes cu4 {
+    0% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, 0 0, auto;
+    }
+    12.5% {
+        -webkit-mask-size: var(--s), 0 0, 0 0, 0 0, auto;
+    }
+    25% {
+        -webkit-mask-size: var(--s), var(--s), 0 0, 0 0, auto;
+    }
+    37.5% {
+        -webkit-mask-size: var(--s), var(--s), var(--s), 0 0, auto;
+    }
+    50% {
+        -webkit-mask-size: var(--s), var(--s), var(--s), var(--s), auto;
+    }
+    62.5% {
+        -webkit-mask-size: 0 0, var(--s), var(--s), var(--s), auto;
+    }
+    75% {
+        -webkit-mask-size: 0 0, 0 0, var(--s), var(--s), auto;
+    }
+    87.5% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, var(--s), auto;
+    }
+    100% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, 0 0, auto;
+    }
+}
+
+.cut-5 {
+    width: 48px;
+    height: 48px;
+    background: #3fd97f;
+    --c: linear-gradient(#000 0 0);
+    --s: 18px 18px;
+    -webkit-mask: var(--c) left 4px top 4px, var(--c) right 4px top 4px,
+        var(--c) right 4px bottom 4px, var(--c) left 4px bottom 4px, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-repeat: no-repeat;
+    animation: cu5 1.5s infinite;
+}
+
+@keyframes cu5 {
+    0% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, 0 0, auto;
+    }
+    12.5% {
+        -webkit-mask-size: var(--s), 0 0, 0 0, 0 0, auto;
+    }
+    25% {
+        -webkit-mask-size: var(--s), var(--s), 0 0, 0 0, auto;
+    }
+    37.5% {
+        -webkit-mask-size: var(--s), var(--s), var(--s), 0 0, auto;
+    }
+    50% {
+        -webkit-mask-size: var(--s), var(--s), var(--s), var(--s), auto;
+    }
+    62.5% {
+        -webkit-mask-size: 0 0, var(--s), var(--s), var(--s), auto;
+    }
+    75% {
+        -webkit-mask-size: 0 0, 0 0, var(--s), var(--s), auto;
+    }
+    87.5% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, var(--s), auto;
+    }
+    100% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, 0 0, auto;
+    }
+}
+
+.cut-6 {
+    width: 74px;
+    height: calc(27px * 0.866 + 6px);
+    display: grid;
+}
+.cut-6:before,
+.cut-6:after {
+    content: "";
+    grid-area: 1/1;
+    background: #fd135a;
+    --c1: conic-gradient(from 150deg at top, #000 60deg, #0000 0);
+    --c2: conic-gradient(from -30deg at bottom, #000 60deg, #0000 0);
+    --s: 27px calc(27px * 0.866);
+    clip-path: polygon(17px 0, calc(100% - 17px) 0, 100% 100%, 0 100%);
+    -webkit-mask: var(--c1) left 6px top 4px, var(--c2) center, var(--c1) right 6px top 4px,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-repeat: no-repeat;
+    animation: cu6 2s infinite both;
+}
+.cut-6:after {
+    transform: rotate(180deg);
+    transform-origin: 50% 99%;
+    animation-delay: 0.5s;
+}
+
+@keyframes cu6 {
+    0% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, auto;
+    }
+    8.33% {
+        -webkit-mask-size: var(--s), 0 0, 0 0, auto;
+    }
+    16.67% {
+        -webkit-mask-size: var(--s), var(--s), 0 0, auto;
+    }
+    25%,
+    50% {
+        -webkit-mask-size: var(--s), var(--s), var(--s), auto;
+    }
+    58.33% {
+        -webkit-mask-size: 0 0, var(--s), var(--s), auto;
+    }
+    66.67% {
+        -webkit-mask-size: 0 0, 0 0, var(--s), auto;
+    }
+    75%,
+    100% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, auto;
+    }
+}
+
+.cut-7 {
+    width: 48px;
+    height: 48px;
+    background: #ffd600;
+    border-radius: 50%;
+    --c: linear-gradient(#000 0 0);
+    --s: 15px 15px;
+    -webkit-mask: var(--c) top, var(--c) right, var(--c) bottom, var(--c) left,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-repeat: no-repeat;
+    animation: cu7 1.5s infinite;
+}
+
+@keyframes cu7 {
+    0% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, 0 0, auto;
+    }
+    12.5% {
+        -webkit-mask-size: var(--s), 0 0, 0 0, 0 0, auto;
+    }
+    25% {
+        -webkit-mask-size: var(--s), var(--s), 0 0, 0 0, auto;
+    }
+    37.5% {
+        -webkit-mask-size: var(--s), var(--s), var(--s), 0 0, auto;
+    }
+    45%,
+    55% {
+        -webkit-mask-size: var(--s), var(--s), var(--s), var(--s), auto;
+    }
+    62.5% {
+        -webkit-mask-size: 0 0, var(--s), var(--s), var(--s), auto;
+    }
+    75% {
+        -webkit-mask-size: 0 0, 0 0, var(--s), var(--s), auto;
+    }
+    87.5% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, var(--s), auto;
+    }
+    100% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, 0 0, auto;
+    }
+}
+
+.cut-8 {
+    width: 48px;
+    height: 48px;
+    background: #3fd97f;
+    --c: radial-gradient(farthest-side, #000 92%, #0000);
+    --s: 20px 20px;
+    -webkit-mask: var(--c) top -8px left 50%, var(--c) right -8px top 50%,
+        var(--c) bottom -8px left 50%, var(--c) left -8px top 50%, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-repeat: no-repeat;
+    animation: cu8 1.5s infinite;
+}
+
+@keyframes cu8 {
+    0% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, 0 0, auto;
+    }
+    12.5% {
+        -webkit-mask-size: var(--s), 0 0, 0 0, 0 0, auto;
+    }
+    25% {
+        -webkit-mask-size: var(--s), var(--s), 0 0, 0 0, auto;
+    }
+    37.5% {
+        -webkit-mask-size: var(--s), var(--s), var(--s), 0 0, auto;
+    }
+    45%,
+    55% {
+        -webkit-mask-size: var(--s), var(--s), var(--s), var(--s), auto;
+    }
+    62.5% {
+        -webkit-mask-size: 0 0, var(--s), var(--s), var(--s), auto;
+    }
+    75% {
+        -webkit-mask-size: 0 0, 0 0, var(--s), var(--s), auto;
+    }
+    87.5% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, var(--s), auto;
+    }
+    100% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, 0 0, auto;
+    }
+}
+
+.cut-9 {
+    width: 50px;
+    height: calc(50px * 0.866);
+    background: #fd135a;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    --c: at 50% 66%, #000 60deg, #0000 0;
+    -webkit-mask: conic-gradient(from 30deg var(--c)) right,
+        conic-gradient(from 150deg var(--c)) bottom, conic-gradient(from -90deg var(--c)) left,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-repeat: no-repeat;
+    animation: cu9 1.5s infinite;
+}
+
+@keyframes cu9 {
+    0% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, auto;
+    }
+    13.33% {
+        -webkit-mask-size: 100% 100%, 0 0, 0 0, auto;
+    }
+    26.67% {
+        -webkit-mask-size: 100% 100%, 100% 100%, 0 0, auto;
+    }
+    40%,
+    60% {
+        -webkit-mask-size: 100% 100%, 100% 100%, 100% 100%, auto;
+    }
+    73.33% {
+        -webkit-mask-size: 0 0, 100% 100%, 100% 100%, auto;
+    }
+    86.67% {
+        -webkit-mask-size: 0 0, 0 0, 100% 100%, auto;
+    }
+    100% {
+        -webkit-mask-size: 0 0, 0 0, 0 0, auto;
+    }
+}
+
+.cut-10 {
+    width: 70px;
+    height: 70px;
+    background: #398eb6;
+    border-radius: 50px;
+    -webkit-mask: radial-gradient(circle 31px at 50% calc(100% + 13px), #000 95%, #0000) top 4px
+            left 50%,
+        radial-gradient(circle 31px, #000 95%, #0000) center,
+        radial-gradient(circle 31px at 50% -13px, #000 95%, #0000) bottom 4px left 50%,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    -webkit-mask-repeat: no-repeat;
+    animation: cu10 1.5s infinite;
+}
+
+@keyframes cu10 {
+    0% {
+        -webkit-mask-size: 0 18px, 0 18px, 0 18px, auto;
+    }
+    16.67% {
+        -webkit-mask-size: 100% 18px, 0 18px, 0 18px, auto;
+    }
+    33.33% {
+        -webkit-mask-size: 100% 18px, 100% 18px, 0 18px, auto;
+    }
+    50% {
+        -webkit-mask-size: 100% 18px, 100% 18px, 100% 18px, auto;
+    }
+    66.67% {
+        -webkit-mask-size: 0 18px, 100% 18px, 100% 18px, auto;
+    }
+    83.33% {
+        -webkit-mask-size: 0 18px, 0 18px, 100% 18px, auto;
+    }
+    100% {
+        -webkit-mask-size: 0 18px, 0 18px, 0 18px, auto;
+    }
+}
+
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+    background: repeating-linear-gradient(45deg, #0000 0 10px, #eee 0 15px);
+}
+
+* {
+    box-sizing: border-box;
+}
