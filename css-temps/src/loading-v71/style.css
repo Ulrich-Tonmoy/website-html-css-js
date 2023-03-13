@@ -1,0 +1,52 @@
+.full {
+    position: fixed;
+    inset: 0;
+    z-index: 116;
+    display: grid;
+    background: #fff;
+}
+.full:before {
+    content: "";
+    grid-area: 1/1;
+    --s: 67px; /* shape size */
+    --m: 4px; /* line thickness */
+
+    --v1: #fff 119.5deg, #0000 120.5deg;
+    --v2: #000 119.5deg, #0000 120.5deg;
+    background: conic-gradient(at var(--m) calc(var(--s) * 0.5777), transparent 270deg, #000 0deg),
+        conic-gradient(
+            at calc(100% - var(--m)) calc(var(--s) * 0.5777),
+            #000 90deg,
+            transparent 0deg
+        ),
+        conic-gradient(from -60deg at 50% calc(var(--s) * 0.8662), var(--v1)),
+        conic-gradient(from -60deg at 50% calc(var(--s) * 0.8662 + 2 * var(--m)), var(--v2)),
+        conic-gradient(from 120deg at 50% calc(var(--s) * 1.4435 + 3 * var(--m)), var(--v1)),
+        conic-gradient(from 120deg at 50% calc(var(--s) * 1.4435 + var(--m)), var(--v2)),
+        linear-gradient(90deg, #fff calc(50% - var(--m)), #000 0 calc(50% + var(--m)), #fff 0);
+    background-size: calc(var(--s) + 2 * var(--m)) calc(var(--s) * 1.732 + 3 * var(--m));
+    -webkit-mask: linear-gradient(
+            -60deg,
+            #0000 calc(50% - 4 * var(--s)),
+            #000,
+            #0000 calc(50% + 4 * var(--s))
+        )
+        right/300% 100% no-repeat;
+    animation: f 3s infinite linear;
+}
+.full:after {
+    content: "Loading...";
+    grid-area: 1/1;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 13vmin;
+    margin: auto;
+    mix-blend-mode: difference;
+    color: #fff;
+}
+
+@keyframes f {
+    100% {
+        -webkit-mask-position: left;
+    }
+}
