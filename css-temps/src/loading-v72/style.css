@@ -1,0 +1,21 @@
+.full {
+    position: fixed;
+    inset: -80px;
+    z-index: 969;
+    display: flex;
+    background: #fff;
+    filter: blur(9px) contrast(90);
+}
+.full:before {
+    content: "";
+    flex: 1;
+    background: radial-gradient(farthest-side, #000 70%, #0000 72%) center/80px 80px space;
+    -webkit-mask: linear-gradient(-45deg, #0009 40%, #000, #0008 60%) right/280% 100% no-repeat;
+    animation: f 2s infinite linear alternate;
+}
+
+@keyframes f {
+    100% {
+        -webkit-mask-position: left;
+    }
+}
