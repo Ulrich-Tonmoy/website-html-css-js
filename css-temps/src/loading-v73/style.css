@@ -1,0 +1,40 @@
+.full {
+    position: fixed;
+    inset: 0;
+    z-index: 801;
+    display: flex;
+    background: linear-gradient(
+            -60deg,
+            #f7f799,
+            #e0d124,
+            #f0823f,
+            #bd374c,
+            #443a37,
+            #4e3e34,
+            #5e976e,
+            #d2e78f,
+            #fce99f
+        )
+        0 0/400% 400%;
+    animation: f 4s infinite alternate -2s linear;
+}
+.full:before {
+    content: "";
+    flex: 1;
+    background-image: inherit;
+    background-size: inherit;
+    background-position: 0 0;
+    -webkit-mask: conic-gradient(from -90deg at 80% 80%, #000 90deg, #0000 0),
+        conic-gradient(from 90deg at 20% 20%, #0000 90deg, #000 0);
+    -webkit-mask-size: 50px 50px;
+    -webkit-mask-position: center;
+    -webkit-mask-composite: source-out;
+    mask-composite: subtract;
+    animation: f 4s infinite alternate linear;
+}
+
+@keyframes f {
+    100% {
+        background-position: 100% 100%;
+    }
+}
