@@ -1,0 +1,31 @@
+.full {
+    position: fixed;
+    inset: -80px;
+    z-index: 969;
+    display: flex;
+    background: #fff;
+    filter: blur(9px) contrast(90) hue-rotate(250deg);
+}
+.full:before {
+    content: "";
+    flex: 1;
+    background: repeating-radial-gradient(circle, #ff00ff 0 20px, #0000 0 40px);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 80px), #000 0 99%, #0000)
+            center/0 0 no-repeat,
+        radial-gradient(farthest-side, #0000 calc(100% - 80px), #000 0 99%, #0000) center/0 0
+            no-repeat,
+        linear-gradient(#000b 0 0);
+    animation: f 2s infinite linear;
+}
+
+@keyframes f {
+    33% {
+        -webkit-mask-size: 75vmax 75vmax, 0 0, auto;
+    }
+    66% {
+        -webkit-mask-size: 150vmax 150vmax, 75vmax 75vmax, auto;
+    }
+    100% {
+        -webkit-mask-size: 150vmax 150vmax, 150vmax 150vmax, auto;
+    }
+}
