@@ -1,0 +1,348 @@
+.maze-1 {
+    width: 40px;
+    aspect-ratio: 1;
+    outline: 2px solid #fff;
+    background: radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px no-repeat,
+        conic-gradient(from 90deg at 10px 10px, #0000 90deg, #fff 0),
+        conic-gradient(from -90deg at 30px 30px, #0000 90deg, #fff 0);
+    animation: m1 1.5s infinite;
+}
+@keyframes m1 {
+    0% {
+        background-position: 0 0;
+    }
+    25% {
+        background-position: 100% 0;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    75% {
+        background-position: 0 100%;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.maze-2 {
+    width: 70px;
+    height: 40px;
+    outline: 2px solid #fff;
+    background: radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px no-repeat,
+        linear-gradient(#fff 0 0) center/10px 100% no-repeat,
+        conic-gradient(from 90deg at 10px 10px, #0000 90deg, #fff 0),
+        conic-gradient(from -90deg at 60px 30px, #0000 90deg, #fff 0);
+    animation: m2 2s infinite;
+}
+@keyframes m2 {
+    0% {
+        background-position: 0 0, center;
+    }
+    12.5% {
+        background-position: 50% 0, center;
+    }
+    25% {
+        background-position: 50% 100%, center;
+    }
+    37.5% {
+        background-position: 100% 100%, center;
+    }
+    50% {
+        background-position: 100% 0, center;
+    }
+    62.5% {
+        background-position: 50% 0, center;
+    }
+    75% {
+        background-position: 50% 100%, center;
+    }
+    82.5% {
+        background-position: 0 100%, center;
+    }
+    100% {
+        background-position: 0 0, center;
+    }
+}
+
+.maze-3 {
+    width: 40px;
+    aspect-ratio: 1;
+    outline: 2px solid #fff;
+    background: radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px no-repeat,
+        conic-gradient(from 90deg at 10px 10px, #0000 90deg, #fff 0),
+        conic-gradient(from -90deg at 30px 30px, #0000 90deg, #fff 0);
+    animation: m3 1.5s infinite;
+}
+@keyframes m3 {
+    0% {
+        background-position: 0 0;
+        clip-path: circle(15px at left 4px top 4px);
+    }
+    25% {
+        background-position: 100% 0;
+        clip-path: circle(15px at right 4px top 4px);
+    }
+    50% {
+        background-position: 100% 100%;
+        clip-path: circle(15px at right 4px bottom 4px);
+    }
+    75% {
+        background-position: 0 100%;
+        clip-path: circle(15px at left 4px bottom 4px);
+    }
+    100% {
+        background-position: 0 0;
+        clip-path: circle(15px at left 4px top 4px);
+    }
+}
+
+.maze-4 {
+    width: 70px;
+    height: 40px;
+    outline: 2px solid #fff;
+    background: radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px no-repeat,
+        linear-gradient(#fff 0 0) center/10px 100% no-repeat,
+        conic-gradient(from 90deg at 10px 10px, #0000 90deg, #fff 0),
+        conic-gradient(from -90deg at 60px 30px, #0000 90deg, #fff 0);
+    animation: m4 2s infinite;
+}
+@keyframes m4 {
+    0% {
+        background-position: 0 0, center;
+        clip-path: circle(15px at left 4px top 4px);
+    }
+    12.5% {
+        background-position: 50% 0, center;
+        clip-path: circle(15px at left 50% top 4px);
+    }
+    25% {
+        background-position: 50% 100%, center;
+        clip-path: circle(15px at left 50% bottom 4px);
+    }
+    37.5% {
+        background-position: 100% 100%, center;
+        clip-path: circle(15px at right 4px bottom 4px);
+    }
+    50% {
+        background-position: 100% 0, center;
+        clip-path: circle(15px at right 4px top 4px);
+    }
+    62.5% {
+        background-position: 50% 0, center;
+        clip-path: circle(15px at right 50% top 4px);
+    }
+    75% {
+        background-position: 50% 100%, center;
+        clip-path: circle(15px at right 50% bottom 4px);
+    }
+    82.5% {
+        background-position: 0 100%, center;
+        clip-path: circle(15px at left 4px bottom 4px);
+    }
+    100% {
+        background-position: 0 0, center;
+        clip-path: circle(15px at left 4px top 4px);
+    }
+}
+
+.maze-5 {
+    width: 70px;
+    aspect-ratio: 1;
+    background: radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px no-repeat,
+        conic-gradient(from -90deg at 30px 30px, #0000 90deg, #fff 0) 0 0/40px 40px,
+        conic-gradient(from 90deg at 10px 10px, #0000 90deg, #fff 0) 0 0/40px 40px no-repeat,
+        conic-gradient(from -90deg at 30px 30px, #0000 90deg, #fff 0) 100% 100%/40px 40px no-repeat;
+    animation: m5 2s infinite;
+}
+@keyframes m5 {
+    0% {
+        background-position: left 1px top 1px, 0 0, 0 0, 100% 100%;
+    }
+    16.67% {
+        background-position: left 50% top 1px, 0 0, 0 0, 100% 100%;
+    }
+    33.33% {
+        background-position: left 50% bottom 1px, 0 0, 0 0, 100% 100%;
+    }
+    50% {
+        background-position: right 1px bottom 1px, 0 0, 0 0, 100% 100%;
+    }
+    66.67% {
+        background-position: right 1px bottom 50%, 0 0, 0 0, 100% 100%;
+    }
+    83.33% {
+        background-position: left 1px bottom 50%, 0 0, 0 0, 100% 100%;
+    }
+    100% {
+        background-position: left 1px top 1px, 0 0, 0 0, 100% 100%;
+    }
+}
+
+.maze-6 {
+    width: 70px;
+    aspect-ratio: 2;
+    background: radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px,
+        linear-gradient(#fff 0 0) 100% 0/30px 10px, linear-gradient(#fff 0 0) 0 100%/30px 10px,
+        repeating-linear-gradient(90deg, #fff 0 10px, #0000 0 30px);
+    background-repeat: no-repeat;
+    animation: m6 2s infinite;
+}
+@keyframes m6 {
+    0% {
+        background-position: left 1px bottom 1px, 100% 0, 0 100%, 0 0;
+    }
+    12.5% {
+        background-position: left 50% bottom 1px, 100% 0, 0 100%, 0 0;
+    }
+    25% {
+        background-position: left 50% top 1px, 100% 0, 0 100%, 0 0;
+    }
+    37.5% {
+        background-position: right 1px top 1px, 100% 0, 0 100%, 0 0;
+    }
+    50% {
+        background-position: right 1px bottom 1px, 0 0, 100% 100%, 0 0;
+    }
+    62.5% {
+        background-position: right 50% bottom 1px, 0 0, 100% 100%, 0 0;
+    }
+    75% {
+        background-position: right 50% top 1px, 0 0, 100% 100%, 0 0;
+    }
+    87.5% {
+        background-position: left 1px top 1px, 0 0, 100% 100%, 0 0;
+    }
+    100% {
+        background-position: left 1px bottom 1px, 100% 0, 0 100%, 0 0;
+    }
+}
+
+.maze-7 {
+    width: 40px;
+    aspect-ratio: 1;
+    background: radial-gradient(farthest-side, #000 90%, #0000) 50%/8px 8px no-repeat,
+        conic-gradient(from -90deg at 15px 15px, #0000 90deg, #fff 0) 0 0/25px 25px;
+    animation: m7 1s infinite;
+}
+@keyframes m7 {
+    0% {
+        background-position: 50%, 0 0;
+    }
+    50% {
+        background-position: 50%, 25px 0;
+    }
+    100% {
+        background-position: 50%, 25px 25px;
+    }
+}
+
+.maze-8 {
+    width: 40px;
+    aspect-ratio: 1;
+    background: radial-gradient(farthest-side, #000 90%, #0000) 50%/8px 8px no-repeat,
+        conic-gradient(from -90deg at 15px 15px, #0000 90deg, #fff 0) 0 0/25px 25px;
+    animation: m8 1.5s infinite;
+}
+@keyframes m8 {
+    0% {
+        background-position: left -10px top 50%, 0 0;
+    }
+    50% {
+        background-position: right -10px top 50%, 0 0;
+    }
+    50.01% {
+        background-position: right 50% top -10px, 0 0;
+    }
+    100% {
+        background-position: right 50% bottom -10px, 0 0;
+    }
+}
+
+.maze-9 {
+    width: 70px;
+    height: 40px;
+    outline: 2px solid #fff;
+    background: radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px no-repeat,
+        radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px no-repeat,
+        linear-gradient(#fff 0 0) center/10px 100% no-repeat,
+        conic-gradient(from 90deg at 10px 10px, #0000 90deg, #fff 0),
+        conic-gradient(from -90deg at 60px 30px, #0000 90deg, #fff 0);
+    animation: m9 2s infinite;
+}
+@keyframes m9 {
+    0% {
+        background-position: 50% 100%, 0 0, center;
+    }
+    12.5% {
+        background-position: 0 100%, 50% 0, center;
+    }
+    25% {
+        background-position: 0 0, 50% 100%, center;
+    }
+    37.5% {
+        background-position: 50% 0, 100% 100%, center;
+    }
+    50% {
+        background-position: 50% 100%, 100% 0, center;
+    }
+    62.5% {
+        background-position: 100% 100%, 50% 0, center;
+    }
+    75% {
+        background-position: 100% 0, 50% 100%, center;
+    }
+    82.5% {
+        background-position: 50% 0, 0 100%, center;
+    }
+    100% {
+        background-position: 50% 100%, 0 0, center;
+    }
+}
+
+.maze-10 {
+    height: 30px;
+    aspect-ratio: 2;
+    background: radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
+        radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
+        radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
+        radial-gradient(farthest-side, red 90%, #0000) 0 0/8px 8px,
+        radial-gradient(farthest-side, #000 90%, #0000) 0 0/8px 8px,
+        linear-gradient(#fff 0 0) center/100% 10px, linear-gradient(#fff 0 0) right/50% 100%;
+    background-repeat: no-repeat;
+    animation: m10 2s infinite;
+}
+@keyframes m10 {
+    0% {
+        background-position: top 1px right 1px, right 1px bottom 1px, top 1px left 31px,
+            bottom 1px left 31px, -10px 50%, 50%, right;
+    }
+    50%,
+    60% {
+        background-position: top 1px right 1px, right 1px bottom 1px, top 1px left 31px,
+            bottom 1px left 31px, left 75% top 50%, 50%, right;
+    }
+    80% {
+        background-position: 75% 50%, 75% 50%, 75% 50%, 75% 50%, left 75% top 50%, 50%, right;
+    }
+    80.01% {
+        background-position: 75% 50%, 75% 50%, 75% 50%, 75% 50%, -10px 50%, 50%, right;
+    }
+    100% {
+        background-position: top 1px right 1px, right 1px bottom 1px, top 1px left 31px,
+            bottom 1px left 31px, -10px 50%, 50%, right;
+    }
+}
+
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+    background: #000;
+}
+
+* {
+    box-sizing: border-box;
+}

@@ -1,0 +1,247 @@
+.factory-1 {
+    width: 90px;
+    height: 14px;
+    box-shadow: 0 3px 0 #fff;
+    background: repeating-linear-gradient(90deg, #fff 0 14px, #0000 0 100%) 0 0 / calc(100% / 4)
+        100%;
+    animation: f1 1s infinite linear;
+}
+
+@keyframes f1 {
+    100% {
+        background-position: calc(100% / 3) 0;
+    }
+}
+
+.factory-2 {
+    width: 90px;
+    height: 14px;
+    box-shadow: 0 3px 0 #fff;
+    background: linear-gradient(#fff 0 0) center/2px 100% no-repeat;
+    display: grid;
+}
+.factory-2:before,
+.factory-2:after {
+    content: "";
+    grid-area: 1/1;
+    background: repeating-linear-gradient(90deg, #fff 0 14px, #0000 0 100%) 0 0 / calc(100% / 4)
+        100%;
+    clip-path: inset(0 50% 0 0);
+    animation: f2 1s infinite linear;
+}
+.factory-2:before {
+    background: radial-gradient(circle 7px at 7px 50%, #fff 92%, #0000) 0 0 / calc(100% / 4) 100%;
+    clip-path: inset(0 0 0 50%);
+}
+@keyframes f2 {
+    100% {
+        background-position: calc(100% / 3) 0;
+    }
+}
+
+.factory-3 {
+    width: 90px;
+    height: 14px;
+    box-shadow: 0 3px 0 #fff;
+    background: linear-gradient(#fff 0 0) center/2px 100% no-repeat;
+    display: grid;
+}
+.factory-3:before,
+.factory-3:after {
+    content: "";
+    grid-area: 1/1;
+    background: radial-gradient(circle closest-side, var(--c, #fff) 92%, #0000) 0 0 / calc(100% / 4)
+        100%;
+    clip-path: inset(0 50% 0 0);
+    animation: f3 1s infinite linear;
+}
+.factory-3:after {
+    --c: red;
+    clip-path: inset(0 0 0 50%);
+}
+@keyframes f3 {
+    100% {
+        background-position: calc(100% / 3) 0;
+    }
+}
+
+.factory-4 {
+    width: 90px;
+    height: 14px;
+    box-shadow: 0 3px 0 #fff;
+    display: grid;
+}
+.factory-4:before,
+.factory-4:after {
+    content: "";
+    grid-area: 1/1;
+    background: radial-gradient(circle closest-side, var(--c, red) 92%, #0000) 0 0 / calc(100% / 4)
+        100%;
+    animation: f4 1s infinite linear;
+}
+.factory-4:after {
+    --c: #000;
+    background-color: #fff;
+    box-shadow: 0 -2px 0 0 #fff;
+    clip-path: inset(-2px calc(50% - 10px));
+}
+@keyframes f4 {
+    100% {
+        background-position: calc(100% / 3) 0;
+    }
+}
+
+.factory-5 {
+    width: 80px;
+    height: 16px;
+    box-shadow: 0 15px 0 #fff;
+    position: relative;
+    clip-path: polygon(0 -10px, 100% -10px, 100% 100%, 50% calc(100% + 15px), 0 100%);
+}
+.factory-5:before,
+.factory-5:after {
+    content: "";
+    position: absolute;
+    inset: auto 0 0;
+    aspect-ratio: 1;
+    background: radial-gradient(farthest-side, lightblue 98%, #0000) bottom/14px 14px,
+        radial-gradient(farthest-side, red 98%, #0000) top / 14px 14px,
+        linear-gradient(#fff 0 0) center/4px 95%;
+    background-repeat: no-repeat;
+    animation: f5 1.5s infinite linear;
+    mix-blend-mode: lighten;
+}
+.factory-5:after {
+    --d: -90deg;
+}
+@keyframes f5 {
+    0% {
+        transform: translateY(14px) rotate(calc(0deg + var(--d, 0deg)));
+    }
+    100% {
+        transform: translateY(14px) rotate(calc(-90deg + var(--d, 0deg)));
+    }
+}
+
+.factory-6 {
+    width: 90px;
+    height: 14px;
+    box-shadow: 0 3px 0 #fff;
+    position: relative;
+    display: grid;
+    clip-path: inset(-60px 0 -5px);
+}
+.factory-6:after {
+    content: "";
+    position: relative;
+    background: repeating-linear-gradient(
+            90deg,
+            #0000 0 calc(50% - 8px),
+            #ccc 0 calc(50% + 8px),
+            #0000 0 100%
+        )
+        0 0 / calc(100% / 3) 100%;
+    animation: f6-1 1s infinite;
+}
+.factory-6:before {
+    content: "";
+    position: absolute;
+    width: 14px;
+    aspect-ratio: 1;
+    left: calc(50% - 7px);
+    bottom: 0;
+    border-radius: 50%;
+    background: lightblue;
+    animation: f6-2 1s infinite;
+}
+@keyframes f6-1 {
+    50%,
+    100% {
+        background-position: calc(100% / 2) 0;
+    }
+}
+@keyframes f6-2 {
+    0%,
+    50% {
+        transform: translateY(-80px);
+    }
+}
+
+.factory-7 {
+    width: 90px;
+    height: 14px;
+    box-shadow: 0 3px 0 #fff;
+    position: relative;
+    clip-path: inset(-40px 0 -5px);
+}
+.factory-7:before {
+    content: "";
+    position: absolute;
+    inset: auto calc(50% - 17px) 0;
+    height: 50px;
+    --g: linear-gradient(#ccc 0 0);
+    background: var(--g), var(--g), var(--g), var(--g);
+    background-size: 16px 14px;
+    background-repeat: no-repeat;
+    animation: f7-1 2s infinite linear, f7-2 2s infinite linear;
+}
+@keyframes f7-1 {
+    0%,
+    100% {
+        background-position: 0 -50px, 100% -50px;
+    }
+    17.5% {
+        background-position: 0 100%, 100% -50px, 0 -50px, 100% -50px;
+    }
+    35% {
+        background-position: 0 100%, 100% 100%, 0 -50px, 100% -50px;
+    }
+    52.5% {
+        background-position: 0 100%, 100% 100%, 0 calc(100% - 16px), 100% -50px;
+    }
+    70%,
+    98% {
+        background-position: 0 100%, 100% 100%, 0 calc(100% - 16px), 100% calc(100% - 16px);
+    }
+}
+@keyframes f7-2 {
+    0%,
+    70% {
+        transform: translate(0);
+    }
+    100% {
+        transform: translate(200%);
+    }
+}
+
+.factory-8 {
+    width: 90px;
+    height: 30px;
+    box-shadow: 0 3px 0 #fff;
+    --g: repeating-linear-gradient(90deg, #ccc 0 16px, #0000 0 18px, #ccc 0 34px, #0000 0 100%);
+    background: var(--g), var(--g);
+    background-size: 60px 14px, 60px 14px;
+    background-repeat: repeat-x;
+    animation: f8 1s infinite linear;
+}
+@keyframes f8 {
+    0% {
+        background-position: 0 0, 0 100%;
+    }
+    100% {
+        background-position: 60px 0, 60px 100%;
+    }
+}
+
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+    background: #000;
+}
+
+* {
+    box-sizing: border-box;
+}

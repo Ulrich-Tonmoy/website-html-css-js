@@ -1,0 +1,35 @@
+.full {
+    position: fixed;
+    inset: 0;
+    z-index: 262;
+    display: flex;
+    background: #fff;
+}
+.full:before,
+.full:after {
+    content: "loading...";
+    font-family: monospace;
+    line-height: 1em;
+    text-transform: uppercase;
+    width: 10ch;
+    flex-shrink: 0;
+    font-size: 40px;
+    font-weight: bold;
+    filter: drop-shadow(10ch 1em) drop-shadow(0 2em) drop-shadow(0 4em) drop-shadow(0 8em)
+        drop-shadow(0 16em) drop-shadow(20ch 0) drop-shadow(40ch 0) drop-shadow(80ch 0);
+    margin-right: 0;
+    animation: f 1s steps(4) infinite;
+    overflow: hidden;
+}
+.full:after {
+    animation-delay: -0.5s;
+    color: red;
+    filter: drop-shadow(-10ch 1em) drop-shadow(0 2em) drop-shadow(0 4em) drop-shadow(0 8em)
+        drop-shadow(0 16em) drop-shadow(20ch 0) drop-shadow(40ch 0) drop-shadow(80ch 0);
+}
+@keyframes f {
+    100% {
+        width: 6ch;
+        margin-right: 4ch;
+    }
+}

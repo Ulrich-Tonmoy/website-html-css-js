@@ -1,0 +1,438 @@
+.d-1 {
+    --s: 25px;
+
+    --_d: calc(0.353 * var(--s));
+    width: calc(var(--s) + var(--_d));
+    aspect-ratio: 1;
+    clip-path: polygon(
+        var(--_d) 0,
+        100% 0,
+        100% calc(100% - var(--_d)),
+        calc(100% - var(--_d)) 100%,
+        0 100%,
+        0 var(--_d)
+    );
+    background: conic-gradient(
+        from -90deg at var(--s) var(--_d),
+        #fff 135deg,
+        #666 0 270deg,
+        #aaa 0
+    );
+    animation: d1 1s infinite cubic-bezier(0.5, 300, 0.5, -300);
+}
+@keyframes d1 {
+    50%,
+    100% {
+        transform: translateY(0.1px);
+    }
+}
+
+.d-2 {
+    --s: 25px;
+
+    --_d: calc(0.353 * var(--s));
+    width: calc(var(--s) + var(--_d));
+    aspect-ratio: 1;
+    display: grid;
+    filter: drop-shadow(0 0 0 #fff);
+    animation: d2 0.8s infinite;
+}
+.d-2:before {
+    content: "";
+    clip-path: polygon(
+        var(--_d) 0,
+        100% 0,
+        100% calc(100% - var(--_d)),
+        calc(100% - var(--_d)) 100%,
+        0 100%,
+        0 var(--_d)
+    );
+    background: conic-gradient(
+        from -90deg at var(--s) var(--_d),
+        #fff 135deg,
+        #666 0 270deg,
+        #aaa 0
+    );
+}
+@keyframes d2 {
+    50% {
+        filter: drop-shadow(0 0 5px #fff);
+    }
+}
+
+.d-3 {
+    --s: 25px;
+    --_d: calc(0.353 * var(--s));
+
+    height: calc(var(--s) + var(--_d));
+    aspect-ratio: 1;
+    display: grid;
+}
+.d-3:before {
+    content: "";
+    height: 100%;
+    margin: auto 0;
+    clip-path: polygon(
+        var(--_d) 0,
+        100% 0,
+        100% calc(100% - var(--_d)),
+        calc(100% - var(--_d)) 100%,
+        0 100%,
+        0 var(--_d)
+    );
+    background: conic-gradient(
+        from -90deg at var(--s) var(--_d),
+        #fff 135deg,
+        #666 0 270deg,
+        #aaa 0
+    );
+    animation: d3 0.8s infinite alternate;
+}
+@keyframes d3 {
+    100% {
+        height: 40%;
+    }
+}
+
+.d-4 {
+    --s: 25px;
+
+    --_d: calc(0.353 * var(--s));
+    width: calc(var(--s) + var(--_d));
+    aspect-ratio: 1;
+    display: grid;
+}
+.d-4:before,
+.d-4:after {
+    content: "";
+    clip-path: polygon(
+        var(--_d) 0,
+        100% 0,
+        100% calc(100% - var(--_d)),
+        calc(100% - var(--_d)) 100%,
+        0 100%,
+        0 var(--_d)
+    );
+    background: conic-gradient(
+        from -90deg at var(--s) var(--_d),
+        #fff 135deg,
+        #666 0 270deg,
+        #aaa 0
+    );
+    animation: d4 1.2s infinite;
+}
+.d-4:before {
+    z-index: 1;
+    margin-bottom: calc(var(--_d) / -2 - 1px);
+}
+.d-4:after {
+    margin-top: calc(var(--_d) / -2 - 1px);
+    animation-delay: 0.6s;
+}
+@keyframes d4 {
+    0% {
+        transform: translate(0);
+    }
+    16.67% {
+        transform: translate(-10px);
+    }
+    33.33% {
+        transform: translate(10px);
+    }
+    50%,
+    100% {
+        transform: translate(0);
+    }
+}
+
+.d-5 {
+    --s: 25px;
+
+    --_d: calc(0.353 * var(--s));
+    width: calc(var(--s) + var(--_d));
+    aspect-ratio: 1;
+    display: flex;
+}
+.d-5:before,
+.d-5:after {
+    content: "";
+    flex: 1;
+    clip-path: polygon(
+        var(--_d) 0,
+        100% 0,
+        100% calc(100% - var(--_d)),
+        calc(100% - var(--_d)) 100%,
+        0 100%,
+        0 var(--_d)
+    );
+    background: conic-gradient(
+        from -90deg at calc(100% - var(--_d)) var(--_d),
+        #fff 135deg,
+        #666 0 270deg,
+        #aaa 0
+    );
+    animation: d5 1.2s infinite;
+}
+.d-5:before {
+    margin-right: calc(var(--_d) / -2 - 1px);
+}
+.d-5:after {
+    margin-left: calc(var(--_d) / -2 - 1px);
+    animation-delay: 0.6s;
+}
+@keyframes d5 {
+    0% {
+        transform: translateY(0);
+    }
+    16.67% {
+        transform: translateY(-10px);
+    }
+    33.33% {
+        transform: translateY(10px);
+    }
+    50%,
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.d-6 {
+    --s: 20px;
+
+    --_d: calc(0.353 * var(--s));
+    width: calc(var(--s) + var(--_d));
+    aspect-ratio: 1;
+    display: grid;
+}
+.d-6:before,
+.d-6:after {
+    content: "";
+    grid-area: 1/1;
+    clip-path: polygon(
+        var(--_d) 0,
+        100% 0,
+        100% calc(100% - var(--_d)),
+        calc(100% - var(--_d)) 100%,
+        0 100%,
+        0 var(--_d)
+    );
+    background: conic-gradient(
+        from -90deg at calc(100% - var(--_d)) var(--_d),
+        #fff 135deg,
+        #666 0 270deg,
+        #aaa 0
+    );
+    animation: d6 2s infinite;
+}
+.d-6:after {
+    animation-delay: -1s;
+}
+@keyframes d6 {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(30px, 0);
+    }
+    50% {
+        transform: translate(30px, 30px);
+    }
+    75% {
+        transform: translate(0, 30px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+.d-7 {
+    --s: 25px;
+    --g: 5px;
+
+    width: calc(3 * (1.353 * var(--s) + var(--g)));
+    aspect-ratio: 3;
+    background: linear-gradient(#ff1818 0 0) left/33% 100% no-repeat,
+        conic-gradient(
+            from -90deg at var(--s) calc(0.353 * var(--s)),
+            #fff 135deg,
+            #666 0 270deg,
+            #aaa 0
+        );
+    background-blend-mode: multiply;
+    --_m: linear-gradient(
+            to bottom right,
+            #0000 calc(0.25 * var(--s)),
+            #000 0 calc(100% - calc(0.25 * var(--s)) - 1.414 * var(--g)),
+            #0000 0
+        ),
+        conic-gradient(from -90deg at right var(--g) bottom var(--g), #000 90deg, #0000 0);
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    background-size: calc(100% / 3) 100%;
+    -webkit-mask-size: calc(100% / 3) 100%;
+    mask-size: calc(100% / 3) 100%;
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+    animation: d7 steps(3) 1.5s infinite;
+}
+@keyframes d7 {
+    to {
+        background-position: 150% 0%;
+    }
+}
+
+.d-8 {
+    --s: 25px;
+    --g: 5px;
+
+    width: calc(3 * (1.353 * var(--s) + var(--g)));
+    display: grid;
+    justify-items: end;
+    aspect-ratio: 3;
+    overflow: hidden;
+    --_m: linear-gradient(90deg, #0000, #000 15px calc(100% - 15px), #0000);
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+}
+.d-8:before {
+    content: "";
+    width: calc(4 * 100% / 3);
+    background: conic-gradient(
+        from -90deg at var(--s) calc(0.353 * var(--s)),
+        #fff 135deg,
+        #666 0 270deg,
+        #aaa 0
+    );
+    --_m: linear-gradient(
+            to bottom right,
+            #0000 calc(0.25 * var(--s)),
+            #000 0 calc(100% - calc(0.25 * var(--s)) - 1.414 * var(--g)),
+            #0000 0
+        ),
+        conic-gradient(from -90deg at right var(--g) bottom var(--g), #000 90deg, #0000 0);
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    background-size: calc(100% / 4) 100%;
+    -webkit-mask-size: calc(100% / 4) 100%;
+    mask-size: calc(100% / 4) 100%;
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+    animation: d8 1s infinite linear;
+}
+@keyframes d8 {
+    to {
+        transform: translate(calc(100% / 4));
+    }
+}
+
+.d-9 {
+    --s: 25px;
+    --g: 5px;
+
+    width: calc(2 * (1.353 * var(--s) + var(--g)));
+    aspect-ratio: 1;
+    background: linear-gradient(#ff1818 0 0) left/50% 100% no-repeat,
+        conic-gradient(
+            from -90deg at var(--s) calc(0.353 * var(--s)),
+            #fff 135deg,
+            #666 0 270deg,
+            #aaa 0
+        );
+    background-blend-mode: multiply;
+    --_m: linear-gradient(
+            to bottom right,
+            #0000 calc(0.25 * var(--s)),
+            #000 0 calc(100% - calc(0.25 * var(--s)) - 1.414 * var(--g)),
+            #0000 0
+        ),
+        conic-gradient(from -90deg at right var(--g) bottom var(--g), #000 90deg, #0000 0);
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    background-size: 50% 50%;
+    -webkit-mask-size: 50% 50%;
+    mask-size: 50% 50%;
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+    animation: d9 1.5s infinite;
+}
+@keyframes d9 {
+    0%,
+    12.5% {
+        background-position: 0% 0%, 0 0;
+    }
+    12.6%,
+    37.5% {
+        background-position: 100% 0%, 0 0;
+    }
+    37.6%,
+    62.5% {
+        background-position: 100% 100%, 0 0;
+    }
+    62.6%,
+    87.5% {
+        background-position: 0% 100%, 0 0;
+    }
+    87.6%,
+    100% {
+        background-position: 0% 0%, 0 0;
+    }
+}
+
+.d-10 {
+    --s: 25px;
+    --g: 5px;
+
+    width: calc(3 * (1.353 * var(--s) + var(--g)));
+    display: grid;
+    justify-items: end;
+    aspect-ratio: 3;
+    overflow: hidden;
+    --_m: linear-gradient(90deg, #0000, #000 15px calc(100% - 15px), #0000);
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+}
+.d-10:before {
+    content: "";
+    width: 200%;
+    background: linear-gradient(90deg, #ff1818 50%, #0000 0),
+        conic-gradient(
+            from -90deg at var(--s) calc(0.353 * var(--s)),
+            #fff 135deg,
+            #666 0 270deg,
+            #aaa 0
+        );
+    background-blend-mode: multiply;
+    --_m: linear-gradient(
+            to bottom right,
+            #0000 calc(0.25 * var(--s)),
+            #000 0 calc(100% - calc(0.25 * var(--s)) - 1.414 * var(--g)),
+            #0000 0
+        ),
+        conic-gradient(from -90deg at right var(--g) bottom var(--g), #000 90deg, #0000 0);
+    -webkit-mask: var(--_m);
+    mask: var(--_m);
+    background-size: calc(100% / 3) 100%, calc(100% / 6) 100%;
+    -webkit-mask-size: calc(100% / 6) 100%;
+    mask-size: calc(100% / 6) 100%;
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+    animation: d10 1s infinite linear;
+}
+@keyframes d10 {
+    to {
+        transform: translate(calc(100% / 3));
+    }
+}
+
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+    background: #000;
+}
+
+* {
+    box-sizing: border-box;
+}

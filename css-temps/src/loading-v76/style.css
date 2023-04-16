@@ -1,0 +1,27 @@
+.full {
+    position: fixed;
+    inset: -80px;
+    z-index: 346;
+    display: grid;
+    background: #fff;
+    filter: blur(5px) contrast(10);
+}
+.full:before,
+.full:after {
+    content: "";
+    grid-area: 1/1;
+    background: repeating-linear-gradient(90deg, #000 0 15px, #0000 0 50px);
+    -webkit-mask: repeating-linear-gradient(#000 0 40px, #0000 0 80px);
+    animation: f 1.5s cubic-bezier(0.5, 180, 0.5, -180) infinite;
+}
+.full:after {
+    -webkit-mask: repeating-linear-gradient(#0000 0 40px, #000 0 80px);
+    animation-delay: 0.4s;
+}
+
+@keyframes f {
+    50%,
+    100% {
+        transform: translate(0.1px);
+    }
+}

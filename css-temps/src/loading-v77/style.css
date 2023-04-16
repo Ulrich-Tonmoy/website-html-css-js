@@ -1,0 +1,35 @@
+.full {
+    position: fixed;
+    inset: 0;
+    z-index: 994;
+    display: grid;
+    background: #fff;
+}
+.full:before,
+.full:after {
+    content: "";
+    grid-area: 1/1;
+    background: repeating-linear-gradient(-45deg, #000 0 5px, #0000 0 10px);
+    opacity: 0.1;
+}
+.full:after {
+    content: "Loading...";
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 20vmin;
+    display: grid;
+    place-items: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #0000;
+    opacity: 1;
+    -webkit-mask: linear-gradient(90deg, #0000 30%, #000, #0000 70%) right/300% 100%;
+    animation: f 2s infinite linear;
+}
+
+@keyframes f {
+    80%,
+    100% {
+        -webkit-mask-position: left;
+    }
+}

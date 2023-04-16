@@ -1,0 +1,236 @@
+.infinity-1 {
+    width: 90px;
+    height: 14px;
+    background: radial-gradient(circle 7px at bottom, #fff 92%, #0000) 0 0,
+        radial-gradient(circle 7px at top, #fff 92%, #0000) 0 100%;
+    background-size: calc(100% / 4) 50%;
+    background-repeat: repeat-x;
+    animation: i1 1s infinite;
+}
+@keyframes i1 {
+    80%,
+    100% {
+        background-position: calc(100% / 3) 0, calc(100% / -3) 100%;
+    }
+}
+
+.infinity-2 {
+    width: 90px;
+    height: 14px;
+    background: conic-gradient(from 135deg at top, #fff 90deg, #0000 0) 0 0,
+        conic-gradient(from -45deg at bottom, #fff 90deg, #0000 0) 0 100%;
+    background-size: calc(100% / 4) 50%;
+    background-repeat: repeat-x;
+    animation: i2 1s infinite;
+}
+@keyframes i2 {
+    80%,
+    100% {
+        background-position: calc(100% / 3) 0, calc(100% / -3) 100%;
+    }
+}
+
+.infinity-3 {
+    width: 90px;
+    height: 14px;
+    background: radial-gradient(circle 7px at bottom, #fff 92%, #0000) calc(100% / 2) 0,
+        radial-gradient(circle 7px at top, #fff 92%, #0000) calc(100% / 2) 100%,
+        conic-gradient(from 135deg at top, #fff 90deg, #0000 0) 0 0,
+        conic-gradient(from -45deg at bottom, #fff 90deg, #0000 0) 0 100%;
+    background-size: calc(100% / 2) 50%;
+    background-repeat: repeat-x;
+    animation: i3 3s infinite;
+}
+@keyframes i3 {
+    0% {
+        background-position: calc(100% / 2) 0, calc(100% / 2) 100%, 0 0, 0 100%;
+    }
+    20%,
+    30% {
+        background-position: calc(3 * 100% / 4) 0, calc(100% / 4) 100%, calc(100% / 4) 0,
+            calc(100% / -4) 100%;
+    }
+    45%,
+    55% {
+        background-position: 100% 0, 0 100%, calc(100% / 2) 0, calc(100% / -2) 100%;
+    }
+    70%,
+    80% {
+        background-position: calc(5 * 100% / 4) 0, calc(100% / -4) 100%, calc(3 * 100% / 4) 0,
+            calc(3 * 100% / -4) 100%;
+    }
+    100% {
+        background-position: calc(3 * 100% / 2) 0, calc(100% / -2) 100%, 100% 0, -100% 100%;
+    }
+}
+
+.infinity-4 {
+    width: 90px;
+    height: 14px;
+    background: radial-gradient(circle closest-side, #fff 92%, #0000) calc(100% / -4) 0,
+        radial-gradient(circle closest-side, #fff 92%, #0000) calc(100% / 4) 0;
+    background-size: calc(100% / 2) 100%;
+    animation: i4 1.5s infinite;
+}
+@keyframes i4 {
+    0% {
+        background-position: calc(100% / -4) 0, calc(100% / 4) 0;
+    }
+    50% {
+        background-position: calc(100% / -4) -14px, calc(100% / 4) 14px;
+    }
+    100% {
+        background-position: calc(100% / 4) -14px, calc(3 * 100% / 4) 14px;
+    }
+}
+
+.infinity-5 {
+    width: 60px;
+    aspect-ratio: 1;
+    --g: conic-gradient(from -90deg at 10px 10px, #fff 90deg, #0000 0);
+    background: var(--g), var(--g) 10px 10px, var(--g) 20px 20px;
+    background-size: 50% 50%;
+    animation: i5 1s infinite;
+}
+@keyframes i5 {
+    90%,
+    100% {
+        background-position: -30px 30px, -20px 40px, -10px 50px;
+    }
+}
+
+.infinity-6 {
+    width: 60px;
+    aspect-ratio: 1;
+    --g: conic-gradient(from -90deg at 10px 10px, #fff 90deg, #0000 0);
+    background: var(--g), var(--g), var(--g);
+    background-size: 50% 50%;
+    animation: i6 1s infinite;
+}
+@keyframes i6 {
+    0% {
+        background-position: 0 0, 10px 10px, 20px 20px;
+    }
+    50% {
+        background-position: 0 20px, 10px 10px, 20px 0;
+    }
+    100% {
+        background-position: 20px 20px, 10px 10px, 0 0;
+    }
+}
+
+.infinity-7 {
+    width: 60px;
+    aspect-ratio: 1;
+    --g: conic-gradient(from -90deg at 10px 10px, #fff 90deg, #0000 0);
+    background: var(--g), var(--g), var(--g);
+    background-size: 50% 50%;
+    animation: i7 1s infinite;
+}
+@keyframes i7 {
+    0% {
+        background-position: 0 0, 10px 10px, 20px 20px;
+    }
+    33% {
+        background-position: -30px 0, 10px 10px, 20px 20px;
+    }
+    66% {
+        background-position: -30px 0, -20px 10px, 20px 20px;
+    }
+    100% {
+        background-position: -30px 0, -20px 10px, -10px 20px;
+    }
+}
+
+.infinity-8 {
+    width: 60px;
+    aspect-ratio: 1;
+    --g: conic-gradient(from -90deg at 10px 10px, #fff 90deg, #0000 0);
+    background: var(--g), var(--g), var(--g);
+    background-size: 50% 50%;
+    animation: i8 1s infinite;
+}
+@keyframes i8 {
+    0% {
+        background-position: 0 0, 10px 10px, 20px 20px;
+    }
+    33% {
+        background-position: -30px 0, 10px 10px, 20px 20px;
+    }
+    66% {
+        background-position: -30px 0, 10px 40px, 20px 20px;
+    }
+    100% {
+        background-position: -30px 0, 10px 40px, 50px 20px;
+    }
+}
+
+.infinity-9 {
+    width: 60px;
+    aspect-ratio: 1;
+    --g: conic-gradient(from -90deg at 10px 10px, #fff 90deg, #0000 0);
+    background: var(--g), var(--g), var(--g);
+    background-size: 50% 50%;
+    animation: i9 1s infinite;
+}
+@keyframes i9 {
+    0% {
+        background-position: 0 0, 10px 10px, 20px 20px;
+    }
+    33% {
+        background-position: 10px 10px;
+    }
+    66% {
+        background-position: 0 20px, 10px 10px, 20px 0;
+    }
+    100% {
+        background-position: 0 0, 10px 10px, 20px 20px;
+    }
+}
+
+.infinity-10 {
+    width: 60px;
+    display: flex;
+    align-items: flex-start;
+    aspect-ratio: 1;
+}
+.infinity-10:before,
+.infinity-10:after {
+    content: "";
+    flex: 1;
+    aspect-ratio: 1;
+    --g: conic-gradient(from -90deg at 10px 10px, #fff 90deg, #0000 0);
+    background: var(--g), var(--g), var(--g);
+    filter: drop-shadow(30px 30px 0 #fff);
+    animation: i10 1s infinite;
+}
+.infinity-10:after {
+    transform: scaleX(-1);
+}
+@keyframes i10 {
+    0% {
+        background-position: 0 0, 10px 10px, 20px 20px;
+    }
+    33% {
+        background-position: 10px 10px;
+    }
+    66% {
+        background-position: 0 20px, 10px 10px, 20px 0;
+    }
+    100% {
+        background-position: 0 0, 10px 10px, 20px 20px;
+    }
+}
+
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+    background: #000;
+}
+
+* {
+    box-sizing: border-box;
+}

@@ -1,0 +1,362 @@
+.circle-1 {
+    width: 65px;
+    display: grid;
+    --mask: radial-gradient(12px at left 15px top 50%, #0000 95%, #000),
+        radial-gradient(12px at right 15px top 50%, #0000 95%, #000);
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+    animation: c1 1s infinite alternate;
+}
+.circle-1:before,
+.circle-1:after {
+    content: "";
+    grid-area: 1/1;
+    height: 30px;
+    aspect-ratio: 1;
+    background: #fff;
+    border-radius: 50%;
+}
+.circle-1:after {
+    margin-left: auto;
+}
+@keyframes c1 {
+    to {
+        width: 40px;
+    }
+}
+
+.circle-2 {
+    width: 100px;
+    display: grid;
+    background: radial-gradient(farthest-side, #fff 98%, #0000) center/30px 100% no-repeat;
+    --mask: radial-gradient(12px at left 15px top 50%, #0000 95%, #000),
+        radial-gradient(12px at center, #0000 95%, #000),
+        radial-gradient(12px at right 15px top 50%, #0000 95%, #000);
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+    animation: c2 1s infinite alternate;
+}
+.circle-2:before,
+.circle-2:after {
+    content: "";
+    grid-area: 1/1;
+    height: 30px;
+    aspect-ratio: 1;
+    background: #fff;
+    border-radius: 50%;
+}
+.circle-2:after {
+    margin-left: auto;
+}
+@keyframes c2 {
+    to {
+        width: 50px;
+    }
+}
+
+.circle-3 {
+    width: 65px;
+    height: 30px;
+    position: relative;
+}
+.circle-3:before {
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 0 3px inset #fff;
+    animation: c3 0.75s infinite alternate;
+}
+@keyframes c3 {
+    0% {
+        inset: 0 35px 0 0;
+    }
+    50% {
+        inset: 0 0 0 0;
+    }
+    100% {
+        inset: 0 0 0 35px;
+    }
+}
+
+.circle-4 {
+    width: 65px;
+    aspect-ratio: 1;
+    position: relative;
+}
+.circle-4:before,
+.circle-4:after {
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 0 3px inset #fff;
+    animation: c4 2.5s infinite;
+}
+.circle-4:after {
+    animation-delay: -1.25s;
+}
+@keyframes c4 {
+    0% {
+        inset: 0 35px 35px 0;
+    }
+    12.5% {
+        inset: 0 35px 0 0;
+    }
+    25% {
+        inset: 35px 35px 0 0;
+    }
+    37.5% {
+        inset: 35px 0 0 0;
+    }
+    50% {
+        inset: 35px 0 0 35px;
+    }
+    62.5% {
+        inset: 0 0 0 35px;
+    }
+    75% {
+        inset: 0 0 35px 35px;
+    }
+    87.5% {
+        inset: 0 0 35px 0;
+    }
+    100% {
+        inset: 0 35px 35px 0;
+    }
+}
+
+.circle-5 {
+    width: 65px;
+    aspect-ratio: 1;
+    position: relative;
+}
+.circle-5:before,
+.circle-5:after {
+    content: "";
+    position: absolute;
+    inset: 0 auto auto 0;
+    aspect-ratio: 1;
+    border-radius: 50px;
+    box-shadow: 0 0 0 3px inset #fff;
+    animation: c5 1s infinite linear alternate;
+}
+.circle-5:after {
+    inset: auto 0 0 auto;
+    animation-delay: -1s;
+}
+@keyframes c5 {
+    0% {
+        width: 20px;
+    }
+    100% {
+        width: 50px;
+    }
+}
+
+.circle-6 {
+    width: 50px;
+    aspect-ratio: 1;
+    box-shadow: 0 0 0 3px #fff inset;
+    border-radius: 50%;
+    position: relative;
+    animation: c6 1.5s linear infinite;
+}
+.circle-6:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    box-shadow: inherit;
+    width: 25px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+@keyframes c6 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.circle-7 {
+    width: 50px;
+    aspect-ratio: 1;
+    box-shadow: 0 0 0 3px #fff inset;
+    border-radius: 50%;
+    position: relative;
+}
+.circle-7:before,
+.circle-7:after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: calc(50% - 12.5px);
+    box-shadow: inherit;
+    width: 25px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transform-origin: 50% calc(100% - 5px);
+    animation: c7 1.5s linear infinite;
+}
+.circle-7:after {
+    top: calc(100% + 2px);
+    transform-origin: 50% -27px;
+    animation-delay: -0.75s;
+}
+@keyframes c7 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.circle-8 {
+    width: 50px;
+    aspect-ratio: 1;
+    box-shadow: 0 0 0 3px #fff inset;
+    border-radius: 50%;
+    position: relative;
+    animation: c8-0 1.5s linear infinite;
+}
+.circle-8:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 2px);
+    box-shadow: inherit;
+    width: 25px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    animation: c8-1 1.5s linear infinite;
+}
+@keyframes c8-1 {
+    0% {
+        transform-origin: -27px 50%;
+        width: 20px;
+        transform: translateY(-50%) rotate(0);
+    }
+    100% {
+        transform-origin: -12px 50%;
+        width: 50px;
+        transform: translateY(-50%) rotate(180deg);
+    }
+}
+@keyframes c8-0 {
+    0% {
+        width: 50px;
+        transform: translate(0);
+    }
+    100% {
+        width: 20px;
+        transform: translate(37px);
+    }
+}
+
+.circle-9 {
+    width: 100px;
+    height: 40px;
+    --g1: radial-gradient(
+            farthest-side,
+            #0000 calc(95% - 3px),
+            #fff calc(100% - 3px) 98%,
+            #0000 101%
+        )
+        no-repeat;
+    background: var(--g1), var(--g1), var(--g1);
+    background-size: 30px 30px;
+    animation: c9 1s infinite alternate;
+}
+@keyframes c9 {
+    0% {
+        background-position: 0 50%, 50% 50%, 100% 50%;
+    }
+    20% {
+        background-position: 0 0, 50% 50%, 100% 50%;
+    }
+    40% {
+        background-position: 0 100%, 50% 0, 100% 50%;
+    }
+    60% {
+        background-position: 0 50%, 50% 100%, 100% 0;
+    }
+    80% {
+        background-position: 0 50%, 50% 50%, 100% 100%;
+    }
+    100% {
+        background-position: 0 50%, 50% 50%, 100% 50%;
+    }
+}
+
+.circle-10 {
+    width: 65px;
+    aspect-ratio: 1;
+    --g1: radial-gradient(
+            farthest-side,
+            #0000 calc(95% - 3px),
+            #fff calc(100% - 3px) 98%,
+            #0000 101%
+        )
+        no-repeat;
+    background: var(--g1), var(--g1), var(--g1);
+    background-size: 30px 30px;
+    animation: c10 1.5s infinite;
+}
+@keyframes c10 {
+    0% {
+        background-position: 0 0, 0 100%, 100% 100%;
+    }
+    25% {
+        background-position: 100% 0, 0 100%, 100% 100%;
+    }
+    50% {
+        background-position: 100% 0, 0 0, 100% 100%;
+    }
+    75% {
+        background-position: 100% 0, 0 0, 0 100%;
+    }
+    100% {
+        background-position: 100% 100%, 0 0, 0 100%;
+    }
+}
+
+.circle-11 {
+    width: 50px;
+    aspect-ratio: 1;
+    box-shadow: 0 0 0 3px #fff inset;
+    border-radius: 50%;
+    position: relative;
+    animation: c11 7s infinite;
+}
+.circle-11:before,
+.circle-11:after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 3px);
+    left: calc(50% - 12.5px);
+    box-shadow: inherit;
+    width: 25px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    transform-origin: 50% -28px;
+    animation: c11 1.5s infinite;
+}
+.circle-11:after {
+    animation-delay: -0.75s;
+}
+@keyframes c11 {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+    background: #000;
+}
+
+* {
+    box-sizing: border-box;
+}

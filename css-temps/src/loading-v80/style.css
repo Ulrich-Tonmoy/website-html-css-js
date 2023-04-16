@@ -1,0 +1,353 @@
+.moving-1 {
+    height: 40px;
+    aspect-ratio: 1.5;
+    --c: linear-gradient(#fff 0 0);
+    background: var(--c), var(--c);
+    background-size: 66% 50%;
+    background-repeat: no-repeat;
+    animation: m1 1.5s infinite linear;
+}
+@keyframes m1 {
+    0% {
+        background-position: 0 0, 0 100%;
+    }
+    25% {
+        background-position: 100% 0, 0 100%;
+    }
+    47%,
+    53% {
+        background-position: 100% 0, 100% 100%;
+    }
+    75% {
+        background-position: 0 0, 100% 100%;
+    }
+    100% {
+        background-position: 0 0, 0 100%;
+    }
+}
+
+.moving-2 {
+    height: 60px;
+    aspect-ratio: 1;
+    --c: linear-gradient(#fff 0 0);
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 33.4% 33.4%;
+    background-repeat: no-repeat;
+    animation: m2 2s infinite linear;
+}
+@keyframes m2 {
+    0% {
+        background-position: 0 0, 50% 0, 0 50%, 50% 50%;
+    }
+    12.5% {
+        background-position: 50% 0, 100% 0, 0 50%, 50% 50%;
+    }
+    25% {
+        background-position: 50% 0, 100% 0, 50% 50%, 100% 50%;
+    }
+    37.5% {
+        background-position: 50% 0, 100% 50%, 50% 50%, 100% 100%;
+    }
+    50% {
+        background-position: 50% 50%, 100% 50%, 50% 100%, 100% 100%;
+    }
+    62.5% {
+        background-position: 50% 50%, 100% 50%, 0 100%, 50% 100%;
+    }
+    75% {
+        background-position: 0 50%, 50% 50%, 0 100%, 50% 100%;
+    }
+    87.5% {
+        background-position: 0 0, 50% 50%, 0 50%, 50% 100%;
+    }
+    100% {
+        background-position: 0 0, 50% 0, 0 50%, 50% 50%;
+    }
+}
+
+.moving-3 {
+    height: 40px;
+    aspect-ratio: 1.5;
+    --c: linear-gradient(#fff 0 0);
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 33.4% 50%;
+    background-repeat: no-repeat;
+    animation: m3 2s infinite linear;
+}
+@keyframes m3 {
+    0% {
+        background-position: 0 0, 50% 0, 0 100%, 50% 100%;
+    }
+    12.5% {
+        background-position: 0 0, 100% 0, 0 100%, 50% 100%;
+    }
+    25% {
+        background-position: 50% 0, 100% 0, 0 100%, 50% 100%;
+    }
+    37.5% {
+        background-position: 50% 0, 100% 0, 0 100%, 100% 100%;
+    }
+    50% {
+        background-position: 50% 0, 100% 0, 50% 100%, 100% 100%;
+    }
+    62.5% {
+        background-position: 0 0, 100% 0, 50% 100%, 100% 100%;
+    }
+    75% {
+        background-position: 0 0, 50% 0, 50% 100%, 100% 100%;
+    }
+    87.5% {
+        background-position: 0 0, 50% 0, 0 100%, 100% 100%;
+    }
+    100% {
+        background-position: 0 0, 50% 0, 0 100%, 50% 100%;
+    }
+}
+
+.moving-4 {
+    height: 80px;
+    aspect-ratio: 1;
+    display: grid;
+}
+.moving-4:before,
+.moving-4:after {
+    content: "";
+    --c: linear-gradient(#fff 0 0);
+    background: var(--c), var(--c);
+    background-size: 25% 50%;
+    background-repeat: no-repeat;
+    animation: m4 1.5s infinite linear;
+}
+.moving-4:after {
+    transform: scale(-1);
+}
+@keyframes m4 {
+    0%,
+    10% {
+        background-position: 33.4% 100%, 66.6% 100%;
+    }
+    40% {
+        background-position: 33.4% 0, 100% 100%;
+    }
+    70% {
+        background-position: 0 100%, 66.6% 0;
+    }
+    100% {
+        background-position: 33.4% 100%, 66.6% 100%;
+    }
+}
+
+.moving-5 {
+    height: 80px;
+    aspect-ratio: 1;
+    display: grid;
+}
+.moving-5:before,
+.moving-5:after {
+    content: "";
+    --c: linear-gradient(#fff 0 0);
+    background: var(--c), var(--c);
+    background-size: 25% 50%;
+    background-repeat: no-repeat;
+    animation: m5 1.5s infinite linear;
+}
+.moving-5:after {
+    transform: scale(-1);
+}
+@keyframes m5 {
+    0%,
+    5% {
+        background-position: 33.4% 100%, 66.6% 100%;
+    }
+    25% {
+        background-position: 33.4% 100%, 100% 0;
+    }
+    50% {
+        background-position: 0 0, 100% 0;
+    }
+    75% {
+        background-position: 0 0, 66.6% 100%;
+    }
+    95%,
+    100% {
+        background-position: 33.4% 100%, 66.6% 100%;
+    }
+}
+
+.moving-6 {
+    height: 40px;
+    aspect-ratio: 1.5;
+    --c: linear-gradient(#fff 0 0);
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 33.4% 50%;
+    background-repeat: no-repeat;
+    animation: m6 2s infinite linear;
+}
+@keyframes m6 {
+    0% {
+        background-position: 0 0, 50% 0, 0 100%, 50% 100%;
+    }
+    12.5% {
+        background-position: 0 0, 100% 0, 0 100%, 50% 100%;
+    }
+    25% {
+        background-position: 0 0, 100% 0, 0 100%, 50% 0;
+    }
+    37.5% {
+        background-position: 0 0, 100% 0, 50% 100%, 50% 0;
+    }
+    50% {
+        background-position: 0 100%, 100% 0, 50% 100%, 50% 0;
+    }
+    62.5% {
+        background-position: 0 100%, 100% 0, 50% 100%, 0 0;
+    }
+    75% {
+        background-position: 0 100%, 100% 100%, 50% 100%, 0 0;
+    }
+    87.5% {
+        background-position: 0 100%, 100% 100%, 50% 0, 0 0;
+    }
+    100% {
+        background-position: 0 100%, 50% 100%, 50% 0, 0 0;
+    }
+}
+
+.moving-7 {
+    height: 60px;
+    aspect-ratio: 1;
+    --c: linear-gradient(#fff 0 0);
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 33.4% 33.4%;
+    background-repeat: no-repeat;
+    animation: m7 1.5s infinite linear;
+}
+@keyframes m7 {
+    0%,
+    5% {
+        background-position: 0 0, 50% 0, 0 50%, 50% 50%;
+    }
+    25% {
+        background-position: 0 0, 100% 0, 0 100%, 50% 50%;
+    }
+    50% {
+        background-position: 50% 0, 100% 0, 0 100%, 0 50%;
+    }
+    75% {
+        background-position: 50% 0, 100% 50%, 0 100%, 0 0;
+    }
+    95%,
+    100% {
+        background-position: 50% 0, 50% 50%, 0 50%, 0 0;
+    }
+}
+
+.moving-8 {
+    height: 60px;
+    aspect-ratio: 2/3;
+    --c: linear-gradient(#fff 0 0);
+    background: var(--c), var(--c), var(--c), var(--c);
+    background-size: 50% 33.4%;
+    background-repeat: no-repeat;
+    animation: m8 1.5s infinite linear;
+}
+@keyframes m8 {
+    0%,
+    5% {
+        background-position: 0 25%, 100% 25%, 0 75%, 100% 75%;
+    }
+    33% {
+        background-position: 0 50%, 100% 0, 0 100%, 100% 50%;
+    }
+    66% {
+        background-position: 0 50%, 0 0, 100% 100%, 100% 50%;
+    }
+    95%,
+    100% {
+        background-position: 0 75%, 0 25%, 100% 75%, 100% 25%;
+    }
+}
+
+.moving-9 {
+    height: 40px;
+    aspect-ratio: 1.5;
+    --c: #fff 96%, #0000;
+    background: radial-gradient(farthest-side at 100% 100%, var(--c)),
+        radial-gradient(farthest-side at 0 100%, var(--c)),
+        radial-gradient(farthest-side at 100% 0, var(--c)),
+        radial-gradient(farthest-side at 0 0, var(--c));
+    background-size: 33.4% 50%;
+    background-repeat: no-repeat;
+    animation: m3 2s infinite linear;
+}
+@keyframes m3 {
+    0% {
+        background-position: 0 0, 50% 0, 0 100%, 50% 100%;
+    }
+    12.5% {
+        background-position: 0 0, 100% 0, 0 100%, 50% 100%;
+    }
+    25% {
+        background-position: 50% 0, 100% 0, 0 100%, 50% 100%;
+    }
+    37.5% {
+        background-position: 50% 0, 100% 0, 0 100%, 100% 100%;
+    }
+    50% {
+        background-position: 50% 0, 100% 0, 50% 100%, 100% 100%;
+    }
+    62.5% {
+        background-position: 0 0, 100% 0, 50% 100%, 100% 100%;
+    }
+    75% {
+        background-position: 0 0, 50% 0, 50% 100%, 100% 100%;
+    }
+    87.5% {
+        background-position: 0 0, 50% 0, 0 100%, 100% 100%;
+    }
+    100% {
+        background-position: 0 0, 50% 0, 0 100%, 50% 100%;
+    }
+}
+
+.moving-10 {
+    height: 40px;
+    aspect-ratio: 1.5;
+    display: grid;
+}
+.moving-10:before,
+.moving-10:after {
+    content: "";
+    background: #fff;
+    border-radius: 80px 80px 0 0;
+    animation: m10 1s infinite alternate both;
+}
+.moving-10:after {
+    transform: scale(-1);
+    animation-delay: 0.2s;
+}
+@keyframes m10 {
+    0%,
+    10% {
+        margin-inline: 0 33%;
+    }
+    50% {
+        margin-inline: 0 0;
+    }
+    90%,
+    100% {
+        margin-inline: 33% 0;
+    }
+}
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+    background: #000;
+}
+
+* {
+    box-sizing: border-box;
+}

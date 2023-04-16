@@ -1,0 +1,322 @@
+.eyes-1 {
+    height: 30px;
+    aspect-ratio: 1;
+    background: radial-gradient(farthest-side, #000 15%, #0000 18%),
+        radial-gradient(50% 100% at 50% 160%, #fff 95%, #0000) top/100% 50%,
+        radial-gradient(50% 100% at 50% -60%, #fff 95%, #0000) bottom/100% 50%;
+    background-repeat: no-repeat;
+    display: grid;
+}
+.eyes-1:before {
+    content: "";
+    background: inherit;
+    opacity: 0.6;
+    animation: e1 1s infinite;
+}
+@keyframes e1 {
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+.eyes-2 {
+    height: 30px;
+    aspect-ratio: 2;
+    background: radial-gradient(farthest-side, #000 15%, #0000 18%) 0 0/50% 100%,
+        radial-gradient(50% 100% at 50% 160%, #fff 95%, #0000) 0 0 /50% 50%,
+        radial-gradient(50% 100% at 50% -60%, #fff 95%, #0000) 0 100%/50% 50%;
+    background-repeat: repeat-x;
+    display: grid;
+    animation: e2 1.5s infinite linear;
+}
+@keyframes e2 {
+    0%,
+    15% {
+        background-position: 0 0, 0 0, 0 100%;
+    }
+    20%,
+    40% {
+        background-position: 5px 0, 0 0, 0 100%;
+    }
+    45%,
+    55% {
+        background-position: 0 0, 0 0, 0 100%;
+    }
+    60%,
+    80% {
+        background-position: -5px 0, 0 0, 0 100%;
+    }
+    85%,
+    100% {
+        background-position: 0 0, 0 0, 0 100%;
+    }
+}
+
+.eyes-3 {
+    height: 30px;
+    aspect-ratio: 2;
+    background: radial-gradient(50% 100%, #000 95%, #0000) 0 0 /50% 0%,
+        radial-gradient(farthest-side, #000 15%, #0000 18%) 0 0/50% 100%,
+        radial-gradient(50% 100% at 50% 160%, #fff 95%, #0000) 0 0 /50% 50%,
+        radial-gradient(50% 100% at 50% -60%, #fff 95%, #0000) 0 100%/50% 50%;
+    background-repeat: repeat-x;
+    animation: e3 1.5s infinite alternate ease-in;
+}
+@keyframes e3 {
+    0%,
+    70% {
+        background-size: 50% 0, 50% 100%, 50% 50%, 50% 50%;
+    }
+    85% {
+        background-size: 50% 100%, 50% 100%, 50% 50%, 50% 50%;
+    }
+    100% {
+        background-size: 50% 0, 50% 100%, 50% 50%, 50% 50%;
+    }
+}
+
+.eyes-4 {
+    height: 30px;
+    aspect-ratio: 2;
+    background: radial-gradient(50% 100%, #000 95%, #0000) 0 0 /50% 0%,
+        radial-gradient(farthest-side, #000 15%, #0000 18%) 0 0/50% 100%,
+        radial-gradient(50% 100% at 50% 160%, #fff 95%, #0000) 0 0 /50% 50%,
+        radial-gradient(50% 100% at 50% -60%, #fff 95%, #0000) 0 100%/50% 50%;
+    background-repeat: repeat-x;
+    display: grid;
+    animation: e4 1.5s infinite alternate ease-in;
+}
+.eyes-4:before,
+.eyes-4:after {
+    content: "";
+    background: inherit;
+    grid-area: 1/1;
+    animation: e4 1s infinite alternate ease-in;
+}
+.eyes-4:before {
+    transform: translateY(-70%);
+}
+.eyes-4:after {
+    transform: translateY(70%);
+    animation-delay: 0.6s;
+}
+@keyframes e4 {
+    0%,
+    70% {
+        background-size: 50% 0, 50% 100%, 50% 50%, 50% 50%;
+    }
+    85% {
+        background-size: 50% 100%, 50% 100%, 50% 50%, 50% 50%;
+    }
+    100% {
+        background-size: 50% 0, 50% 100%, 50% 50%, 50% 50%;
+    }
+}
+
+.eyes-5 {
+    display: flex;
+    gap: 10px;
+}
+.eyes-5:before,
+.eyes-5:after {
+    content: "";
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, #000 95%, #0000) 35% 35%/6px 6px no-repeat #fff;
+    animation: e5 3s infinite;
+}
+@keyframes e5 {
+    0%,
+    11% {
+        background-position: 35% 35%;
+    }
+    14%,
+    36% {
+        background-position: 65% 35%;
+    }
+    38%,
+    61% {
+        background-position: 65% 65%;
+    }
+    64%,
+    86% {
+        background-position: 35% 65%;
+    }
+    88%,
+    100% {
+        background-position: 35% 35%;
+    }
+}
+
+.eyes-6 {
+    display: flex;
+    gap: 10px;
+}
+.eyes-6:before,
+.eyes-6:after {
+    content: "";
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, #000 95%, #0000) 35% 35%/6px 6px no-repeat #fff;
+    transform: scaleX(var(--s, 1)) rotate(0deg);
+    animation: e6 1s infinite linear;
+}
+.eyes-6:after {
+    --s: -1;
+    animation-delay: -0.1s;
+}
+@keyframes e6 {
+    100% {
+        transform: scaleX(var(--s, 1)) rotate(360deg);
+    }
+}
+
+.eyes-7 {
+    display: flex;
+    gap: 10px;
+}
+.eyes-7:before,
+.eyes-7:after {
+    content: "";
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(#222 0 0) top/100% 40% no-repeat,
+        radial-gradient(farthest-side, #000 95%, #0000) 50%/8px 8px no-repeat #fff;
+    animation: e7 1.5s infinite alternate ease-in;
+}
+
+@keyframes e7 {
+    0%,
+    70% {
+        background-size: 100% 40%, 8px 8px;
+    }
+    85% {
+        background-size: 100% 120%, 8px 8px;
+    }
+    100% {
+        background-size: 100% 40%, 8px 8px;
+    }
+}
+
+.eyes-8 {
+    display: flex;
+    gap: 10px;
+}
+.eyes-8:before,
+.eyes-8:after {
+    content: "";
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(#222 0 0) top/100% 40% no-repeat,
+        radial-gradient(farthest-side, #000 95%, #0000) 50%/8px 8px no-repeat #fff;
+    animation: 2.5s infinite;
+    animation-name: e8-1, e8-2;
+}
+
+@keyframes e8-1 {
+    0%,
+    40%,
+    100% {
+        background-size: 100% 40%, 8px 8px;
+    }
+    50%,
+    80% {
+        background-size: 100% 0%, 8px 8px;
+    }
+}
+@keyframes e8-2 {
+    0%,
+    50% {
+        background-position: top, 50% 50%;
+    }
+    60%,
+    65% {
+        background-position: top, 70% 50%;
+    }
+    70%,
+    75% {
+        background-position: top, 30% 50%;
+    }
+    90%,
+    100% {
+        background-position: top, 50% 50%;
+    }
+}
+
+.eyes-9 {
+    display: flex;
+    gap: 10px;
+}
+.eyes-9:before,
+.eyes-9:after {
+    content: "";
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: linear-gradient(#222 0 0) top/100% 0% no-repeat,
+        radial-gradient(farthest-side, #000 95%, #0000) 50%/8px 8px no-repeat #fff;
+    animation: e9 4s infinite ease-in;
+}
+
+@keyframes e9 {
+    0% {
+        background-size: 100% 0%, 8px 8px;
+        background-position: top, 50% 50%;
+    }
+    80% {
+        background-size: 100% 70%, 8px 8px;
+        background-position: top, 50% 70%;
+    }
+    84%,
+    100% {
+        background-size: 100% 0%, 8px 8px;
+        background-position: top, 50% 50%;
+    }
+}
+
+.eyes-10 {
+    display: flex;
+    gap: 10px;
+}
+.eyes-10:before,
+.eyes-10:after {
+    content: "";
+    height: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: radial-gradient(farthest-side, #000 95%, #0000) 50%/8px 8px no-repeat #fff;
+    aspect-ratio: 1;
+    animation: e10 1.5s infinite alternate;
+}
+.eyes-10:after {
+    --s: -1;
+}
+@keyframes e10 {
+    0%,
+    20% {
+        transform: scaleX(var(--s, 1)) rotate(0deg);
+        clip-path: inset(0);
+    }
+    60%,
+    100% {
+        transform: scaleX(var(--s, 1)) rotate(30deg);
+        clip-path: inset(40% 0 0);
+    }
+}
+/**/
+body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 130px;
+    place-items: center;
+    background: #000;
+}
+
+* {
+    box-sizing: border-box;
+}
