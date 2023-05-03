@@ -1,0 +1,44 @@
+body {
+  background-color: #111;
+}
+
+.container {
+  gap: 8px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: min(90%, 300px);
+}
+
+.box {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.box:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.box::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  transition: opacity 500ms;
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.6),
+    transparent 20%
+  );
+  position: absolute;
+  z-index: 1;
+}
+
+.box-content {
+  background-color: #111;
+  position: absolute;
+  z-index: 2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 3px;
+}
