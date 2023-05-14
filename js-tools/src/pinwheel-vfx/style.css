@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  background-color: black;
+  overflow: hidden;
+}
+#myCanvas {
+  width: 100%;
+  max-height: 100vh;
+}
+label {
+  color: #ffffff;
+}
+#detectionColor {
+  background-color: white;
+}
