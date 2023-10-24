@@ -1,5 +1,3 @@
-import Effect from "./effect.js";
-
 window.addEventListener("load", function () {
   const ctx = canvas.getContext("2d");
   canvas.width = window.innerWidth;

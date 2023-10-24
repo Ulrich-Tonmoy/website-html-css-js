@@ -1,5 +1,3 @@
-import Particle from "./particle.js";
-
 class Effect {
   constructor(canvas, context) {
     this.canvas = canvas;
