@@ -1,9 +1,10 @@
+let gradient;
 window.addEventListener("load", function () {
   const ctx = canvas.getContext("2d");
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
 
-  let gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+  gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
   gradient.addColorStop(0, "white");
   gradient.addColorStop(0.5, "magenta");
   gradient.addColorStop(1, "pink");
