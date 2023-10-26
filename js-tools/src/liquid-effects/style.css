@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#canvas1 {
+  background: black;
+  filter: blur(7px) contrast(20);
+  -webkit-filter: blur(7px) contrast(20);
+}
